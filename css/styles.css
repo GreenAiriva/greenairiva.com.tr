@@ -10950,7 +10950,7 @@ p {
   }
 }
 header.masthead {
-  padding-top: 5rem;
+  padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
@@ -10985,6 +10985,7 @@ header.masthead .masthead-heading {
 header.masthead .container {
   display: inline-block;
   text-align: left;
+  margin-top: -7rem;
 }
 @media (min-width: 768px) {
   header.masthead {
