@@ -10,6 +10,21 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .lang-switch {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .lang-switch:hover {
+            background-color: #f47a29;
+            color: white;
+        }
+    </style>
 </head>
 <body id="page-top">
     <!-- Navigation -->
@@ -26,6 +41,10 @@
                     <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <div class="lang-switch" onclick="window.location.href='index_tr.html'">TR</div>
+                        <div class="lang-switch" onclick="window.location.href='index.html'">EN</div>
+                    </li>
                 </ul>
             </div>
         </div>
