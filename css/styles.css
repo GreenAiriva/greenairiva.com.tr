@@ -1,9 +1,10 @@
 @font-face {
-    font-family: 'The Youngest Script';
-    src: url('assets/fonts/the-youngest-script.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'The Youngest Script';
+  src: url('../assets/fonts/the-youngest-script.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
