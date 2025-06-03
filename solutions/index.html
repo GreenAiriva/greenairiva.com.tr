@@ -39,7 +39,7 @@
                     <li class="nav-item"><a class="nav-link" href="../solutions/">Solutions</a></li>
                     <li class="nav-item"><a class="nav-link" href="../blog/">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" id="scrollToContact" href="#contact">Contact</a></li>
                     <li class="nav-item">
                         <div class="lang-switch" onclick="window.location.href='../solutions/tr/'">TR</div>
                         <div class="lang-switch" onclick="window.location.href='../solutions/'">EN</div>
@@ -54,7 +54,7 @@
             <div class="masthead-heading">Rise<br>for a</div>
             <div class="masthead-subheading-script">Cleaner</div>
             <div class="masthead-heading">Planet</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#solutions">Discover Our Solutions</a>
+            <a class="btn btn-primary btn-xl text-uppercase" id="scrollToSolutions" href="#solutions">Discover Our Solutions</a>
         </div>
     </header>
     <!-- Solutions -->
@@ -423,5 +423,38 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToSolutions = document.getElementById("scrollToSolutions");
+        const targetSection = document.getElementById("solutions");
+
+        if (scrollToSolutions && targetSection) {
+          scrollToSolutions.addEventListener("click", function (e) {
+            e.preventDefault();
+            targetSection.scrollIntoView({
+              behavior: "smooth"
+            });
+            if (history.pushState) {
+              history.pushState(null, null, window.location.pathname);
+            }
+          });
+    }
+    const scrollToContact = document.getElementById("scrollToContact");
+    const targetContact = document.getElementById("contact");
+
+    if (scrollToContact && targetContact) {
+      scrollToContact.addEventListener("click", function (e) {
+        e.preventDefault();
+        targetContact.scrollIntoView({
+          behavior: "smooth"
+        });
+        if (history.pushState) {
+          history.pushState(null, null, window.location.pathname);
+        }
+      });
+    }
+      });
+    </script>
+</body>   
+</body>
 </html>
