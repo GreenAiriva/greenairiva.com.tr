@@ -36,19 +36,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                  <li class="nav-item"><a class="nav-link" href="./solutions/">Solutions</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./blog/">Blog</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">Çözümler</a>
+                  <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="solutionsDropdown">
+                      <li><a class="dropdown-item custom-dropdown-item" href="../solutions/tr/a/">A</a></li>
+                      <li><a class="dropdown-item custom-dropdown-item" href="../solutions/tr/b/">B</a></li>
+                      <li><a class="dropdown-item custom-dropdown-item" href="../solutions/tr/c/">C</a></li>
+                   </ul>
+                </li>
+                    <li class="nav-item"><a class="nav-link" href="../blog/tr/">Blog</a></li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
                     <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#vision">Vision</a></li>
-                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#mission">Mission</a></li>
-                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#team">Our Team</a></li>
-                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#join">Join Us</a></li>
+                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#vision">Vizyon</a></li>
+                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#mission">Misyon</a></li>
+                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#team">Takımımız</a></li>
+                      <li><a class="dropdown-item custom-dropdown-item" href="/about/#join">JBize Katıl</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" id="scrollToContact" href="#contact">Contact</a></li>
-                  <li class="nav-item">
                       <div class="lang-switch" onclick="window.location.href='/tr/'">TR</div>
                       <div class="lang-switch" onclick="window.location.href='/'">EN</div>
                   </li>
