@@ -50,17 +50,28 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // ---- GreenAiriva: Smooth scroll to Contact section ---- //
-    const scrollToContact = document.getElementById('scrollToContact');
-    const contactSection = document.getElementById('contact');
-    if (scrollToContact && contactSection) {
-        scrollToContact.addEventListener('click', function(e) {
-            e.preventDefault();
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-            if (history.pushState) {
-                history.pushState(null, null, window.location.pathname);
-            }
-        });
-    }
+    // ---- GreenAiriva: Generic Smooth Scroll Handler for all scroll buttons ---- //
+    // Herhangi bir scroll-to butonunda href veya # kullanmak gerekmez. 
+    // Sadece id'leri eşleştir.
+    const smoothScrollButtons = [
+        { buttonId: 'scrollToContact', sectionId: 'contact' },
+        { buttonId: 'scrollToSolutions', sectionId: 'solutions' },
+        { buttonId: 'scrollToabout', sectionId: 'about' },
+        { buttonId: 'scrollToTeam', sectionId: 'team' }
+        // İhtiyaca göre yeni buton ve section eklenebilir.
+    ];
+    smoothScrollButtons.forEach(({ buttonId, sectionId }) => {
+        const btn = document.getElementById(buttonId);
+        const section = document.getElementById(sectionId);
+        if (btn && section) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                section.scrollIntoView({ behavior: 'smooth' });
+                if (history.pushState) {
+                    history.pushState(null, null, window.location.pathname);
+                }
+            });
+        }
+    });
 
 });
