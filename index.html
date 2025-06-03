@@ -538,7 +538,21 @@
               history.pushState(null, null, window.location.pathname);
             }
           });
+    }
+    const scrollToContact = document.getElementById("scrollToContact");
+    const targetContact = document.getElementById("contact");
+
+    if (scrollToContact && targetContact) {
+      scrollToContact.addEventListener("click", function (e) {
+        e.preventDefault();
+        targetContact.scrollIntoView({
+          behavior: "smooth"
+        });
+        if (history.pushState) {
+          history.pushState(null, null, window.location.pathname);
         }
+      });
+    }
       });
     </script>
 </body>   
