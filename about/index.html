@@ -54,7 +54,7 @@
             <div class="masthead-heading">Rise<br>for a</div>
             <div class="masthead-subheading-script">Cleaner</div>
             <div class="masthead-heading">Planet</div>
-            <a class="btn btn-primary btn-xl text-uppercase" id="scrollToSolutions" href="#about">Who We Are</a>
+            <a class="btn btn-primary btn-xl text-uppercase" id="scrollToabout" href="#about">Who We Are</a>
         </div>
     </header>
 <!-- About Us -->
@@ -229,11 +229,11 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const scrollToSolutions = document.getElementById("scrollToSolutions");
-        const targetSection = document.getElementById("solutions");
+        const scrollToabout = document.getElementById("scrollToabout");
+        const targetSection = document.getElementById("abouts");
 
-        if (scrollToSolutions && targetSection) {
-          scrollToSolutions.addEventListener("click", function (e) {
+        if (scrollToabout && targetSection) {
+          scrollToabout.addEventListener("click", function (e) {
             e.preventDefault();
             targetSection.scrollIntoView({
               behavior: "smooth"
