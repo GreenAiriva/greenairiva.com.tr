@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-
     };
 
     // Shrink the navbar 
@@ -50,5 +49,18 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    // ---- GreenAiriva: Smooth scroll to Contact section ---- //
+    const scrollToContact = document.getElementById('scrollToContact');
+    const contactSection = document.getElementById('contact');
+    if (scrollToContact && contactSection) {
+        scrollToContact.addEventListener('click', function(e) {
+            e.preventDefault();
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+            if (history.pushState) {
+                history.pushState(null, null, window.location.pathname);
+            }
+        });
+    }
 
 });
