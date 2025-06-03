@@ -38,7 +38,17 @@
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="../solutions/">Solutions</a></li>
                     <li class="nav-item"><a class="nav-link" href="../blog/">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../about/" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item custom-dropdown-item" href="../about/?goto=vision">Vision</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="../about/?goto=mission">Mission</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="../about/?goto=team">Our Team</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="../about/?goto=join">Join Us</a></li>
+                    </ul>
+                </li>
                     <li class="nav-item"><a class="nav-link" id="scrollToContact" href="#contact">Contact</a></li>
                     <li class="nav-item">
                         <div class="lang-switch" onclick="window.location.href='../about/tr/'">TR</div>
