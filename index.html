@@ -523,5 +523,24 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToSolutions = document.getElementById("scrollToSolutions");
+        const targetSection = document.getElementById("solutions");
+
+        if (scrollToSolutions && targetSection) {
+          scrollToSolutions.addEventListener("click", function (e) {
+            e.preventDefault();
+            targetSection.scrollIntoView({
+              behavior: "smooth"
+            });
+            if (history.pushState) {
+              history.pushState(null, null, window.location.pathname);
+            }
+          });
+        }
+      });
+    </script>
+</body>   
+</body>
 </html>
