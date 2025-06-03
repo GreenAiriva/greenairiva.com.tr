@@ -3,32 +3,30 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
 */
-//
-// Scripts
 // 
+// GreenAiriva Universal Scripts
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
+    // 1. Navbar shrink function (scroll ile navbar'ı koyult/şeffaf yap)
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
         }
     };
 
-    // Shrink the navbar 
+    // Sayfa yüklenince ve scroll olunca fonksiyon tetiklenir
     navbarShrink();
-
-    // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    //  Activate Bootstrap scrollspy on the main nav element
+    // 2. Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -37,10 +35,11 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
+    // 3. Responsive navbar'ı mobilde linke tıklayınca kapat
+    // NOT: Artık sadece dropdown-toggle OLMAYAN nav-link'lerde çalışıyor!
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
+        document.querySelectorAll('#navbarResponsive .nav-link:not(.dropdown-toggle)')
     );
     responsiveNavItems.map(function (responsiveNavItem) {
         responsiveNavItem.addEventListener('click', () => {
@@ -50,15 +49,13 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // ---- GreenAiriva: Generic Smooth Scroll Handler for all scroll buttons ---- //
-    // Herhangi bir scroll-to butonunda href veya # kullanmak gerekmez. 
-    // Sadece id'leri eşleştir.
+    // 4. GreenAiriva: ID ile scroll-to fonksiyonları (özelleştirilebilir)
     const smoothScrollButtons = [
         { buttonId: 'scrollToContact', sectionId: 'contact' },
         { buttonId: 'scrollToSolutions', sectionId: 'solutions' },
         { buttonId: 'scrollToabout', sectionId: 'about' },
         { buttonId: 'scrollToTeam', sectionId: 'team' }
-        // İhtiyaca göre yeni buton ve section eklenebilir.
+        // Ekstra buton ve section burada eklenebilir
     ];
     smoothScrollButtons.forEach(({ buttonId, sectionId }) => {
         const btn = document.getElementById(buttonId);
@@ -73,5 +70,29 @@ window.addEventListener('DOMContentLoaded', event => {
             });
         }
     });
+
+    // 5. Genel: Tüm anchor (href="#...") linklerinde smooth scroll desteği
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth" });
+                if (history.pushState) {
+                    history.pushState(null, null, window.location.pathname);
+                }
+            }
+        });
+    });
+
+    // 6. Sayfa hash ile açıldıysa otomatik smooth scroll (örn. /about/#vision)
+    if (window.location.hash) {
+        var section = document.querySelector(window.location.hash);
+        if (section) {
+            setTimeout(function() {
+                section.scrollIntoView({ behavior: "smooth" });
+            }, 150); // sayfa yüklenince biraz bekleyip kaydır
+        }
+    }
 
 });
