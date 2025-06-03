@@ -11361,3 +11361,32 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+/* ==== Custom ABOUT Dropdown Styles (GreenAiriva) ==== */
+.custom-dropdown-menu {
+    background-color: #111 !important;
+    min-width: 180px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 0.5rem 0;
+    margin-top: 5px;
+}
+
+.custom-dropdown-item {
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem !important;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.custom-dropdown-item:hover, .custom-dropdown-item:focus {
+    background-color: #f47a29 !important;
+    color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.dropdown-toggle::after {
+    color: #f47a29;
+}
+/* ==== END Custom ABOUT Dropdown Styles ==== */
+
