@@ -11428,3 +11428,50 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 /* ==== Masthead Mobile Responsive Düzenleme (NavBar Çakışma & Yazı Boyutu) Sonu ==== */
+
+/* ==== Section Heading Mobil Küçültme ==== */
+@media (max-width: 575.98px) {
+  .section-heading.text-uppercase {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .section-subheading {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+  .page-section .row.align-items-center > [class*="col-"] {
+    text-align: left !important;
+    margin-bottom: 1.2rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .page-section .row.align-items-center img {
+    margin-bottom: 1rem !important;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+/* ==== Responsive Video/Medya Kutusu ==== */
+.responsive-media {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 oran */
+  height: 0;
+  overflow: hidden;
+  background: #eee;
+}
+.responsive-media iframe,
+.responsive-media video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+/* ==== End of latest Revision === */
+
