@@ -11392,31 +11392,37 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* ==== Masthead Mobile Responsive Düzenleme (NavBar Çakışma & Yazı Boyutu) ==== */
 @media (max-width: 575.98px) {
-  .masthead {
+  header.masthead {
     padding-top: 110px !important;
     padding-bottom: 48px !important;
     min-height: 420px;
     text-align: center;
   }
-  .masthead-heading {
+  header.masthead .masthead-heading {
     font-size: 2rem !important;
     line-height: 1.18 !important;
     margin-bottom: 0.3em !important;
     margin-top: 0 !important;
     word-break: break-word;
   }
-  .masthead-subheading-script {
+  header.masthead .masthead-subheading-script {
     font-size: 2.1rem !important;
     line-height: 1 !important;
     margin: 0.4em 0 !important;
     word-break: break-word;
   }
-  .masthead .btn {
+  header.masthead .btn {
     font-size: 1rem !important;
     padding: 0.75rem 1.25rem !important;
     margin-top: 24px !important;
     width: 100%;
     max-width: 330px;
   }
+  header.masthead .container {
+    margin-top: 0 !important;
+    text-align: center !important;
+    display: block !important;
+  }
 }
+
 /* ==== Masthead Mobile Responsive Düzenleme (NavBar Çakışma & Yazı Boyutu) Sonu ==== */
