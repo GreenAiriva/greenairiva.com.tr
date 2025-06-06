@@ -11396,7 +11396,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     padding-top: 110px !important;
     padding-bottom: 48px !important;
     min-height: 420px;
-    text-align: center;
+    text-align: left;
   }
   header.masthead .masthead-heading {
     font-size: 2rem !important;
@@ -11404,12 +11404,14 @@ section#contact form#contactForm :-ms-input-placeholder {
     margin-bottom: 0.3em !important;
     margin-top: 0 !important;
     word-break: break-word;
+    text-align: left !important;   /* Ekstra garanti için */
   }
   header.masthead .masthead-subheading-script {
     font-size: 2.1rem !important;
     line-height: 1 !important;
     margin: 0.4em 0 !important;
     word-break: break-word;
+    text-align: left !important;   /* Ekstra garanti için */
   }
   header.masthead .btn {
     font-size: 1rem !important;
@@ -11420,7 +11422,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   header.masthead .container {
     margin-top: 0 !important;
-    text-align: center !important;
+    text-align: left !important;
     display: block !important;
   }
 }
