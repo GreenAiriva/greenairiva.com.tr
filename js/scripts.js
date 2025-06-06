@@ -96,3 +96,12 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+// Mobil menüde bir linke tıklandığında menüyü kapat
+document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function(element) {
+  element.addEventListener('click', function() {
+    var navbarCollapse = document.getElementById('navbarResponsive');
+    if (navbarCollapse.classList.contains('show')) {
+      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: true});
+    }
+  });
+});
