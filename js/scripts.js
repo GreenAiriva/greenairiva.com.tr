@@ -96,9 +96,15 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
-// Mobil menüde bir linke tıklandığında menüyü kapat
+// Sadece dropdown içindeki item veya gerçek nav-link'e tıklanınca menüyü kapat
 document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function(element) {
-  element.addEventListener('click', function() {
+  element.addEventListener('click', function(e) {
+    // Eğer tıklanan element bir dropdown ana başlığı ise (yani dropdown-toggle class'ı varsa), menüyü kapatma
+    if (element.classList.contains('dropdown-toggle')) {
+      // Sadece dropdown'ı aç/kapat, menüyü kapatma
+      return;
+    }
+    // Eğer tıklanan dropdown menü içindeki bir item veya menüdeki gerçek bir link ise, menüyü kapat
     var navbarCollapse = document.getElementById('navbarResponsive');
     if (navbarCollapse.classList.contains('show')) {
       var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: true});
