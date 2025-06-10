@@ -10978,7 +10978,7 @@ p {
   }
 }
 header.masthead {
-  padding-top: 15.5rem;
+  padding-top: 20rem;
   padding-bottom: 5rem;
   text-align: center;
   color: #fff;
@@ -11019,7 +11019,7 @@ header.masthead .container {
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 15.5rem;
+    padding-top: 20rem;
     padding-bottom: 5rem;
   }
   header.masthead .masthead-subheading {
