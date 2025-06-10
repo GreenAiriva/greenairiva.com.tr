@@ -10999,7 +10999,7 @@ header.masthead .masthead-subheading-script {
   font-size: 5rem;
   font-weight: 700;
   line-height: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #f49a27;
   font-family: 'The Youngest Script', cursive;
 }
@@ -11007,7 +11007,7 @@ header.masthead .masthead-heading {
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 3.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .container {
