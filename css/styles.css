@@ -11433,8 +11433,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   header.masthead .masthead-subheading-script {
     font-size: 3rem !important;
     line-height: 1 !important;
-    margin-bottom: 0.2em !important;
-    margin-top: 0.1em !important;
+    margin-bottom: 0.1em !important;
+    margin-top: 0.3em !important;
     word-break: break-word;
     text-align: left !important;   /* Ekstra garanti için */
   }
