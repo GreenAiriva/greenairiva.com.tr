@@ -11444,17 +11444,17 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   header.masthead .masthead-heading {
     font-size: 2rem !important;
-    line-height: 1.18 !important;
+    line-height: 2 !important;
     margin-bottom: 0.2em !important;
     margin-top: 0.2em !important;
     word-break: break-word;
     text-align: left !important;   /* Ekstra garanti için */
   }
   header.masthead .masthead-subheading-script {
-    font-size: 3rem !important;
-    line-height: 1 !important;
-    margin-bottom: 0.1em !important;
-    margin-top: 0.3em !important;
+    font-size: 2rem !important;
+    line-height: 1.8rem !important;
+    margin-bottom: 0em !important;
+    margin-top: 0em !important;
     word-break: break-word;
     text-align: left !important;   /* Ekstra garanti için */
   }
