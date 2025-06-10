@@ -10978,7 +10978,7 @@ p {
   }
 }
 header.masthead {
-  padding-top: 30rem;
+  /*padding-top: 30rem;
   padding-bottom: 10rem;
   text-align: center;
   color: #fff;
@@ -10986,7 +10986,22 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
+  background-size: cover; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Ortalar */
+  align-items: center;       /* Ortalar */
+  text-align: center;
+  color: #fff;
+  background-image: url("../assets/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
   background-size: cover;
+  padding-top: 72px;      /* Navbar yüksekliği kadar boşluk */
+  padding-bottom: 48px;   /* Aşağıda biraz boşluk kalır */
+  box-sizing: border-box;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
