@@ -11034,8 +11034,13 @@ header.masthead .container {
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 20rem;
-    padding-bottom: 5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 72px;   /* Dilersen artır/azalt */
+    padding-bottom: 48px;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
