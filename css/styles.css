@@ -11433,7 +11433,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   header.masthead .masthead-subheading-script {
     font-size: 3rem !important;
     line-height: 1 !important;
-    margin-bottom: 0.1em !important;
+    margin-bottom: 0.2em !important;
     margin-top: 0.1em !important;
     word-break: break-word;
     text-align: left !important;   /* Ekstra garanti için */
@@ -11504,8 +11504,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 .masthead-btn-row {
   display: flex;
   justify-content: flex-end;
-  margin-top: -80px;
-  margin-right: 20px;
+  margin-top: -100px;
+  margin-right: 40px;
   margin-bottom: 0;
 }
 
