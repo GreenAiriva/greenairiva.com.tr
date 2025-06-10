@@ -11497,18 +11497,18 @@ section#contact form#contactForm :-ms-input-placeholder {
   .masthead-btn-row {
     display: flex;
     justify-content: flex-end;
-    margin-top: -80px;      /* Yukarıya taşı: Negatif değerle yukarı çek */
-    margin-right: 20px;     /* Sağa olan mesafeyi arttır */
+    margin-top: -80px;
+    margin-right: 20px;
     margin-bottom: 0;
   }
   .masthead-btn-row .btn-xl {
-    width: 70vw;
-    max-width: 260px;
-    min-width: 120px;
-    padding: 0.9em 0.4em;
-    font-size: 0.95rem;
-    text-align: right;
-    border-radius: 1.2em;
+    width: auto;         /* Yazı kadar genişlik */
+    min-width: 0;
+    max-width: 95vw;     /* Taşmayı engelle */
+    padding: 1em 1.8em;  /* Dikey padding daha fazla, yatay makul */
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1.7em;
     word-break: break-word;
     white-space: normal;
   }
