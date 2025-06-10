@@ -11495,33 +11495,22 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 @media (max-width: 575.98px) {
   .masthead-btn-row {
-    margin-top: 18px;
+    display: flex;
     justify-content: flex-end;
+    margin-top: 16px;
   }
-  .masthead .btn-xl {
-    width: auto;
-    min-width: 110px;
-    max-width: 65vw;
-    padding: 1.05em 1.4em;
-    font-size: 0.98rem;
+  .masthead-btn-row .btn-xl {
+    width: auto !important;
+    min-width: 90px !important;
+    max-width: 140px !important;      /* Sabit ve dar tut */
+    padding: 0.7em 0.8em !important;  /* Yüksekliği artır, yanlardan daralt */
+    font-size: 0.95rem !important;
+    text-align: right !important;     /* Sağda dursun */
     border-radius: 1.2em;
+    white-space: nowrap !important;   /* Butonun tek satır kalmasını zorla */
   }
 }
 
-@media (max-width: 575.98px) {
-  .masthead-btn-row {
-    margin-top: 18px;
-    justify-content: flex-end;
-  }
-  .masthead .btn-xl {
-    width: auto;
-    min-width: 110px;
-    max-width: 240px;           /* Daha dar limit: örn. 65vw yerine sabit px */
-    padding: 1.05em 1.2em;
-    font-size: 0.98rem;
-    border-radius: 1.2em;
-  }
-}
 
 /* ==== Masthead Butonunu Web ve Mobilde Sağa Yasla ve Optimize Et Sonu ==== */
 
