@@ -11404,11 +11404,23 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* ==== Masthead Mobile Responsive Düzenleme (NavBar Çakışma & Yazı Boyutu) ==== */
 @media (max-width: 575.98px) {
-  header.masthead {
+ /* header.masthead {
     padding-top: 110px !important;
     padding-bottom: 48px !important;
     min-height: 420px;
     text-align: left;
+*/
+
+  header.masthead {
+    padding-top: 20rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("../assets/img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
   }
   header.masthead .masthead-heading {
     font-size: 2rem !important;
