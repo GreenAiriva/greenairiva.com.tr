@@ -11479,7 +11479,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 .masthead-btn-row {
   display: flex;
   justify-content: flex-end;
-  margin-top: 28px;
+  margin-top: -80px;
+  margin-right: 20px;
+  margin-bottom: 0;
 }
 
 .masthead .btn-xl {
