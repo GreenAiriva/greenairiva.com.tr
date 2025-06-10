@@ -10999,8 +10999,8 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  padding-top: 72px;      /* Navbar yüksekliği kadar boşluk */
-  padding-bottom: 48px;   /* Aşağıda biraz boşluk kalır */
+  padding-top: 104px;      /* Navbar yüksekliği kadar boşluk */
+  padding-bottom: 16px;   /* Aşağıda biraz boşluk kalır */
   box-sizing: border-box;
 }
 header.masthead .masthead-subheading {
@@ -11039,8 +11039,8 @@ header.masthead .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 72px;   /* Dilersen artır/azalt */
-    padding-bottom: 48px;
+    padding-top: 104px;   /* Dilersen artır/azalt */
+    padding-bottom: 16px;
   }
   header.masthead .masthead-subheading {
     font-size: 1.5rem;
