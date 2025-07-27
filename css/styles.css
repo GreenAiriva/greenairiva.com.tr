@@ -11523,76 +11523,136 @@ section#contact form#contactForm :-ms-input-placeholder {
     padding: 1rem;
   }
 }
-.modul-card {
-  background: #fff;
-  border-radius: 1.2rem;
-  overflow: hidden;
-  box-shadow: 0 2px 16px 0 rgba(40,60,80,0.10);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: box-shadow .2s cubic-bezier(.4,0,.2,1);
-  border: 1px solid #f2f2f2;
+
+:root {
+  --font-heading: 'Inter', 'Rubik', Arial, sans-serif;
+  --font-body: 'Open Sans', Arial, sans-serif;
 }
-.modul-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(40,60,80,0.16);
+
+body {
+  font-family: var(--font-body) !important;
+  letter-spacing: 0.01em;
+  color: #232323;
+  background: #f7f8fa;
 }
-.modul-card-img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.01em;
+  font-weight: 700 !important;
 }
-.modul-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .2s cubic-bezier(.4,0,.2,1);
+
+/* Responsive Grid Override */
+.row.g-4, .row.g-3, .row.g-2, .row {
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
-.modul-card:hover .modul-card-img img {
-  transform: scale(1.04);
+
+/* Blog Card Tasarımı */
+.blog-card {
+  background: #fff !important;
+  border-radius: 1.2rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 16px 0 rgba(40,60,80,0.10) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  border: 1px solid #e7e7e7 !important;
+  transition: box-shadow .2s cubic-bezier(.4,0,.2,1) !important;
+  position: relative;
 }
-.modul-card-body {
-  flex: 1 1 auto;
-  padding: 1.2rem 1.3rem 1.7rem 1.3rem;
-  display: flex;
-  flex-direction: column;
+
+.blog-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(40,60,80,0.18) !important;
 }
-.modul-card-body h3 {
-  font-size: 1.18rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: #1a1a1a;
+
+.blog-card-img {
+  width: 100% !important;
+  aspect-ratio: 4/3 !important;
+  background: #eaeaea !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
 }
-.modul-card-body p {
-  font-size: 1rem;
-  color: #495057;
-  margin-bottom: 1.1rem;
-  flex: 1;
+
+.blog-card-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform .2s cubic-bezier(.4,0,.2,1) !important;
+  border-radius: 0 !important;
+  background: #f5f5f5;
 }
-.modul-card .btn {
-  font-weight: 600;
-  border-radius: 2rem;
-  padding: 0.7rem 1.1rem;
-  font-size: 1rem;
-  letter-spacing: .01em;
-  background: #f49a26;
-  border: none;
-  color: #fff;
-  box-shadow: 0 1px 2px rgba(80,80,80,0.03);
-  transition: background .15s;
+
+.blog-card:hover .blog-card-img img {
+  transform: scale(1.04) !important;
 }
-.modul-card .btn:hover {
-  background: #dd801b;
-  color: #fff;
+
+.blog-card-body {
+  flex: 1 1 auto !important;
+  padding: 1.2rem 1.3rem 1.7rem 1.3rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.blog-card-body h3 {
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.45rem !important;
+  color: #1a1a1a !important;
+}
+
+.blog-card-body p {
+  font-size: 1rem !important;
+  color: #495057 !important;
+  margin-bottom: 1.1rem !important;
+  flex: 1 1 100%;
+}
+
+.blog-card .btn {
+  font-weight: 600 !important;
+  border-radius: 2rem !important;
+  padding: 0.7rem 1.1rem !important;
+  font-size: 1rem !important;
+  letter-spacing: .01em !important;
+  background: #f49a26 !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 1px 2px rgba(80,80,80,0.03) !important;
+  width: 100% !important;
+  transition: background .15s !important;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.blog-card .btn:hover,
+.blog-card .btn:focus {
+  background: #dd801b !important;
+  color: #fff !important;
+}
+
+@media (max-width: 991px) {
+  .blog-card-body { padding: 1.1rem 0.7rem 1.3rem 0.7rem !important; }
+  .blog-card-img { aspect-ratio: 16/10 !important; }
 }
 
 @media (max-width: 575px) {
-  .modul-card-body { padding: 1rem 0.7rem 1.1rem 0.7rem; }
-  .modul-card-img { aspect-ratio: 16/10; }
+  .blog-card-body { padding: 1rem 0.5rem 1.1rem 0.5rem !important; }
+  .blog-card-img { aspect-ratio: 16/11 !important; }
+  .blog-card-body h3 { font-size: 1rem !important; }
 }
 
+/* Responsive Sütun ve Kart Yüksekliği */
+.row.g-4 > [class^="col-"], .row.g-4 > [class*=" col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.blog-card {
+  flex: 1 1 100% !important;
+  min-height: 0 !important;
+}
