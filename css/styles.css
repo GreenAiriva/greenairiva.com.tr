@@ -11694,4 +11694,33 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 }
+/* ---- ROADMAP (TIMELINE) TASARIMI ---- */
+.timeline li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 1.4rem;
+}
+.timeline li:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: #2980ef;
+  border-radius: 50%;
+}
+.timeline li:last-child { margin-bottom: 0; }
 
+/* ---- FAQ/ACCORDION TASARIMI ---- */
+.accordion-button, .accordion-header {
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem;
+}
+#faq .accordion-item {
+  border-radius: 1.2rem;
+  margin-bottom: 1.1rem;
+  border: none;
+  box-shadow: 0 1px 8px rgba(41,128,239,0.07);
+}
