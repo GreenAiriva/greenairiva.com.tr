@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Sayfa açıklaması -->
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.{% endif %}" />
+
+  <!-- Yazar -->
+  <meta name="author" content="GreenAiriva" />
+
+  <!-- Dinamik başlık -->
+  <title>{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Innovative Air Purification Solutions{% endif %}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+  <!-- Ana stil dosyası -->
+  <link href="{{ site.baseurl }}/css/styles.css" rel="stylesheet" />
+
+  <!-- Lang-switch butonu için ekstra stiller -->
+  <style>
+    .lang-switch {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+    .lang-switch:hover {
+      background-color: #f47a29;
+    }
+  </style>
+</head>
