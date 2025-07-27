@@ -2,7 +2,7 @@ title: GreenAiriva
 email: info@greenairiva.com.tr
 description: >-
   GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.
-baseurl: "/phantom" # GitHub Pages için (ör: https://greenairiva.github.io/phantom/)
+baseurl: "" # GitHub Pages için (ör: https://greenairiva.github.io/phantom/)
 # baseurl: "" # Kendi domainine geçtiğinde bunu kullanacaksın (ör: https://www.greenairiva.com.tr)
 url: "" # Kendi domainin olursa "https://www.greenairiva.com.tr" olarak yazabilirsin
 twitter_username: greenairiva
