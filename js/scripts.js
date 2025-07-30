@@ -92,7 +92,8 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     }
 
-    // 7. Timeline Carousel (YENİ EKLEDİĞİN KOD BURADA)
+    // 7. Timeline Carousel (GÜNCELLENEN KISIM BURADA)
+    // HTML'de .greenairiva-timeline > .timeline-outer > .timeline-carousel > butonlar ve #timeline-cards olmalı
     const timelineData = [
         {
             title: "Q3 2025",
@@ -124,7 +125,7 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     ];
 
-    let focus = 2; // Başlangıçta ortadaki iki kart aktif
+    let focus = 2; // Başlangıçta ortadaki iki kart aktif (örnek 3. ve 4. kart)
     const $cards = document.getElementById('timeline-cards');
     const total = timelineData.length;
 
@@ -245,4 +246,5 @@ function switchToEN() {
         window.location.href = '/index.html';
     }
 }
+
 
