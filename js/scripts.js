@@ -6,24 +6,20 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // 1. Navbar shrink function (scroll ile navbar'ı koyult/şeffaf yap)
+    // 1. Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
+        if (!navbarCollapsible) return;
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink');
         } else {
             navbarCollapsible.classList.add('navbar-shrink');
         }
     };
-
-    // Sayfa yüklenince ve scroll olunca fonksiyon tetiklenir
     navbarShrink();
     document.addEventListener('scroll', navbarShrink);
 
-    // 2. Activate Bootstrap scrollspy on the main nav element
+    // 2. Activate Bootstrap scrollspy
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -33,7 +29,6 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     // 3. Responsive navbar'ı mobilde linke tıklayınca kapat
-    // NOT: Artık sadece dropdown-toggle OLMAYAN nav-link'lerde çalışıyor!
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link:not(.dropdown-toggle)')
@@ -46,13 +41,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // 4. GreenAiriva: ID ile scroll-to fonksiyonları (özelleştirilebilir)
+    // 4. GreenAiriva: ID ile scroll-to fonksiyonları
     const smoothScrollButtons = [
         { buttonId: 'scrollToContact', sectionId: 'contact' },
         { buttonId: 'scrollToSolutions', sectionId: 'solutions' },
         { buttonId: 'scrollToabout', sectionId: 'about' },
         { buttonId: 'scrollToTeam', sectionId: 'team' }
-        // Ekstra buton ve section burada eklenebilir
     ];
     smoothScrollButtons.forEach(({ buttonId, sectionId }) => {
         const btn = document.getElementById(buttonId);
@@ -82,18 +76,17 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // 6. Sayfa hash ile açıldıysa otomatik smooth scroll (örn. /about/#vision)
+    // 6. Sayfa hash ile açıldıysa otomatik smooth scroll
     if (window.location.hash) {
         var section = document.querySelector(window.location.hash);
         if (section) {
             setTimeout(function() {
                 section.scrollIntoView({ behavior: "smooth" });
-            }, 150); // sayfa yüklenince biraz bekleyip kaydır
+            }, 150);
         }
     }
 
-    // 7. Timeline Carousel (GÜNCELLENEN KISIM BURADA)
-    // HTML'de .greenairiva-timeline > .timeline-outer > .timeline-carousel > butonlar ve #timeline-cards olmalı
+    // 7. Timeline Carousel (YENİ CLASS'LAR İLE!)
     const timelineData = [
         {
             title: "Q3 2025",
@@ -125,7 +118,7 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     ];
 
-    let focus = 2; // Başlangıçta ortadaki iki kart aktif (örnek 3. ve 4. kart)
+    let focus = 2; // Başlangıçta ortadaki iki kart aktif
     const $cards = document.getElementById('timeline-cards');
     const total = timelineData.length;
 
@@ -134,10 +127,10 @@ window.addEventListener('DOMContentLoaded', event => {
         for (let i = 0; i < total; i++) {
             const d = timelineData[i];
             const $el = document.createElement("div");
-            $el.className = "timeline-card";
+            $el.className = "greenairiva-timeline-card";
             $el.innerHTML = `
-                <span class="timeline-bullet"></span>
-                <div class="timeline-content">
+                <span class="greenairiva-timeline-bullet"></span>
+                <div class="greenairiva-timeline-content">
                     <h3>${d.title}</h3>
                     <p>${d.desc}</p>
                 </div>
@@ -179,16 +172,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
 }); // window.addEventListener('DOMContentLoaded', ...)'un bitişi
 
-
 // Sadece dropdown içindeki item veya gerçek nav-link'e tıklanınca menüyü kapat
 document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function(element) {
     element.addEventListener('click', function(e) {
-        // Eğer tıklanan element bir dropdown ana başlığı ise (yani dropdown-toggle class'ı varsa), menüyü kapatma
-        if (element.classList.contains('dropdown-toggle')) {
-            // Sadece dropdown'ı aç/kapat, menüyü kapatma
-            return;
-        }
-        // Eğer tıklanan dropdown menü içindeki bir item veya menüdeki gerçek bir link ise, menüyü kapat
+        if (element.classList.contains('dropdown-toggle')) return;
         var navbarCollapse = document.getElementById('navbarResponsive');
         if (navbarCollapse.classList.contains('show')) {
             var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: true});
@@ -197,54 +184,27 @@ document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').f
 });
 
 /**
- * Dil geçişi fonksiyonları (Lang Switch) - GreenAiriva Çok Dilli Statik Site
- * Tüm EN ve TR sayfalarında çalışır. Navbar'daki "TR" ve "EN" butonlarında kullanılır.
- * Yazan: ChatGPT / 2025
- */
-
-/**
- * Kullanıcı İngilizce bir sayfadayken TR'ye geçmek isterse,
- * bulunduğu klasörde "tr/index.html" var mıysa oraya yönlendirir.
+ * Dil geçişi fonksiyonları (Lang Switch)
  */
 function switchToTR() {
-    // Mevcut sayfanın yolunu al (örn: /about/index.html)
     var path = window.location.pathname;
-
-    // Eğer yol / ile bitiyorsa (örn: /about/), index.html ekle
     if (path.endsWith('/')) path += 'index.html';
-
-    // Eğer zaten /tr/ içindeyse bir daha yönlendirme!
     if (!path.includes('/tr/')) {
-        // /index.html'i /tr/index.html'e çevir
         var newPath = path.replace(/\/index\.html$/, '/tr/index.html');
-        // Kullanıcıyı yeni yola yönlendir
         window.location.href = newPath;
     }
 }
-
-/**
- * Kullanıcı Türkçe bir sayfadayken EN'ye geçmek isterse,
- * bulunduğu klasörde bir üstteki "index.html"e yönlendirir.
- */
 function switchToEN() {
     var path = window.location.pathname;
-
-    // Eğer /tr/index.html içindeyse, /index.html'e çevir
     if (path.includes('/tr/index.html')) {
         var newPath = path.replace('/tr/index.html', '/index.html');
         window.location.href = newPath;
-    }
-    // Eğer yol /tr/ ile bitiyorsa (örn: /about/tr/), /about/index.html'e çevir
-    else if (path.endsWith('/tr/')) {
+    } else if (path.endsWith('/tr/')) {
         var newPath = path.replace('/tr/', '/');
         if (!newPath.endsWith('/')) newPath += '/';
         newPath += 'index.html';
         window.location.href = newPath;
-    }
-    // Eğer başka bir TR varyasyonu yoksa, ana EN ana sayfaya git
-    else {
+    } else {
         window.location.href = '/index.html';
     }
 }
-
-
