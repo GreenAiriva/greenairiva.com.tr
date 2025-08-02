@@ -1,17 +1,18 @@
 ---
 layout: jobdesc
 lang: en
-title: GreenAiriva – Innovative Air Purification Solutions
-description: GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.
+title: GreenAiriva – Career Vacancies
+description: Career opportunities to join the team taking action against Climate Change
 ---
-<!-- Masthead -->
 
+<!-- Masthead -->
 <header class="masthead article-masthead" id="article-masthead" style="height:60vh; min-height:350px; display:flex; align-items:end; background-size:cover; background-position:center; background-repeat:no-repeat;">
     <div class="container">
         <div class="article-masthead-info">
-            <span id="article-category-head" class="badge bg-success me-2"></span>
-            <span id="article-date-head" class="text-light small"></span>
             <h1 id="article-title-head" class="article-masthead-title text-white mt-2"></h1>
+            <p class="text-light mb-0">
+              <span id="article-location-head"></span> • <span id="article-type-head"></span>
+            </p>
         </div>
     </div>
 </header>
@@ -20,17 +21,55 @@ description: GreenAiriva is an innovative air purification solution that capture
 <main class="container my-5" id="article-main">
   <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-8">
-      <article class="blog-single border-0 shadow-none">
-        <img id="article-image" src="" alt="" class="img-fluid rounded mb-3" style="display:none; max-height:320px; object-fit:cover;">
-        <div class="mb-2">
-          <span id="article-category" class="badge bg-success me-2"></span>
-          <span id="article-date" class="text-muted small"></span>
-        </div>
-        <h1 id="article-title" class="blog-title"></h1>
-        <div id="article-summary" class="lead text-muted mb-3"></div>
-        <div id="article-content" class="blog-content"></div>
+      <article class="job-single border-0 shadow-none">
+        <div id="article-content" class="job-content"></div>
       </article>
-      <div id="article-notfound" class="alert alert-warning mt-4" style="display:none;">Article not found.</div>
+      <div id="article-notfound" class="alert alert-warning mt-4" style="display:none;">Job not found.</div>
     </div>
   </div>
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+  if (!slug) return;
+
+  fetch('{{ site.baseurl }}/career/jobs.json')
+    .then(res => res.json())
+    .then(jobs => {
+      const job = jobs.find(j => j.slug === slug);
+      if (!job) {
+        document.getElementById('article-notfound').style.display = 'block';
+        return;
+      }
+
+      // Başlık ve meta bilgileri doldur
+      const titleHead = document.getElementById('article-title-head');
+      if (titleHead) titleHead.textContent = job.title || '';
+
+      const locationHead = document.getElementById('article-location-head');
+      if (locationHead) locationHead.textContent = job.location || '';
+
+      const typeHead = document.getElementById('article-type-head');
+      if (typeHead) typeHead.textContent = job.type || '';
+
+      // Markdown içeriğini çek
+      if (job.url) {
+        fetch('{{ site.baseurl }}' + job.url)
+          .then(res => res.text())
+          .then(md => {
+            if (window.marked) {
+              document.getElementById('article-content').innerHTML = marked.parse(md);
+            } else {
+              document.getElementById('article-content').textContent = md;
+            }
+          });
+      }
+    })
+    .catch(err => console.error('Error loading job detail:', err));
+});
+</script>
+
+<!-- Markdown Parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
