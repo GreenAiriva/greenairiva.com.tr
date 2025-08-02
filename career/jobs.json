@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "chemical-engineer",
+    "title": "Chemical Engineer",
+    "location": "Ankara, Turkey",
+    "type": "Full-time",
+    "summary": "Develop advanced air purification materials and systems for pollutant capture and sustainable processing.",
+    "url": "/career/jobs/chemical-engineering.html"
+  },
+  {
+    "slug": "air-quality-analyst",
+    "title": "Air Quality Analyst",
+    "location": "Ankara, Turkey",
+    "type": "Full-time",
+    "summary": "Analyze real-time atmospheric data and support decision-making for cleaner and healthier urban environments.",
+    "url": "/career/jobs/environmental-engineering.html"
+  },
+  {
+    "slug": "data-analyst",
+    "title": "Data Analyst",
+    "location": "Remote",
+    "type": "Contract",
+    "summary": "Work with climate and pollution datasets to identify trends, forecast outcomes, and guide policy and strategy.",
+    "url": "/career/jobs/data-analyst.html"
+  }
+]
