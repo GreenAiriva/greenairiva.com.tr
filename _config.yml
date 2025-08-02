@@ -15,3 +15,7 @@ plugins:
   - jekyll-feed
 
 # Eğer başka özel ayarın yoksa bunlar yeterli.
+# Jekyll bu klasörü işlemeyecek → ham Markdown olarak bırakacak
+exclude:
+  - career/jobs
+  - career/tr/jobs
