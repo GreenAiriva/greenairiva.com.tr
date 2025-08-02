@@ -58,3 +58,52 @@ description: Career opportunities to join the team taking action against Climate
     </div>
   </div>
 </section>
+
+<!-- Career Jobs Loader -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (!document.getElementById('jobList')) return;
+
+  const jobList = document.getElementById('jobList');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const jobsPerPage = 6; // İlk yüklemede gösterilecek ilan sayısı
+  let currentIndex = 0;
+  let jobsData = [];
+
+  function renderJobs() {
+    const nextJobs = jobsData.slice(currentIndex, currentIndex + jobsPerPage);
+    nextJobs.forEach(job => {
+      const col = document.createElement('div');
+      col.className = 'col-12 col-md-6 col-lg-4';
+      col.innerHTML = `
+        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+          <h4 class="fw-bold">${job.title}</h4>
+          <p class="text-muted mb-1">Location: ${job.location}</p>
+          <p class="text-muted">${job.type}</p>
+          <p>${job.summary}</p>
+          <a href="{{ site.baseurl }}/career/jobdesc.html?slug=${job.slug}" 
+             class="btn btn-outline-primary mt-auto">View & Apply</a>
+        </div>
+      `;
+      jobList.appendChild(col);
+    });
+    currentIndex += jobsPerPage;
+
+    if (currentIndex >= jobsData.length) {
+      loadMoreBtn.style.display = 'none';
+    } else {
+      loadMoreBtn.style.display = 'inline-block';
+    }
+  }
+
+  fetch('{{ site.baseurl }}/career/jobs.json')
+    .then(res => res.json())
+    .then(data => {
+      jobsData = data;
+      renderJobs();
+    })
+    .catch(err => console.error('Error loading jobs:', err));
+
+  loadMoreBtn.addEventListener('click', renderJobs);
+});
+</script>
