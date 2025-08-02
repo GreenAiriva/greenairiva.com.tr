@@ -1,18 +1,16 @@
 ---
 layout: jobdesc
 lang: en
-title: GreenAiriva – Career Vacancies
-description: Career opportunities to join the team taking action against Climate Change
+title: GreenAiriva – Job Description
+description: Detailed job description for GreenAiriva career opportunities.
 ---
 
 <!-- Masthead -->
-<header class="masthead article-masthead" id="article-masthead" style="height:60vh; min-height:350px; display:flex; align-items:end; background-size:cover; background-position:center; background-repeat:no-repeat;">
+<header class="masthead article-masthead" id="article-masthead" style="height:40vh; min-height:250px; display:flex; align-items:end; background-size:cover; background-position:center; background-repeat:no-repeat; background-color:#212529;">
     <div class="container">
-        <div class="article-masthead-info">
-            <h1 id="article-title-head" class="article-masthead-title text-white mt-2"></h1>
-            <p class="text-light mb-0">
-              <span id="article-location-head"></span> • <span id="article-type-head"></span>
-            </p>
+        <div class="article-masthead-info text-white">
+            <h1 id="job-title-head" class="fw-bold"></h1>
+            <p class="mb-0"><span id="job-location-head"></span> • <span id="job-type-head"></span></p>
         </div>
     </div>
 </header>
@@ -22,13 +20,14 @@ description: Career opportunities to join the team taking action against Climate
   <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-8">
       <article class="job-single border-0 shadow-none">
-        <div id="article-content" class="job-content"></div>
+        <div id="job-content" class="job-content"></div>
       </article>
-      <div id="article-notfound" class="alert alert-warning mt-4" style="display:none;">Job not found.</div>
+      <div id="job-notfound" class="alert alert-warning mt-4" style="display:none;">Job not found.</div>
     </div>
   </div>
 </main>
 
+<!-- Job Loader Script -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const params = new URLSearchParams(window.location.search);
@@ -40,19 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(jobs => {
       const job = jobs.find(j => j.slug === slug);
       if (!job) {
-        document.getElementById('article-notfound').style.display = 'block';
+        document.getElementById('job-notfound').style.display = 'block';
         return;
       }
 
       // Başlık ve meta bilgileri doldur
-      const titleHead = document.getElementById('article-title-head');
-      if (titleHead) titleHead.textContent = job.title || '';
-
-      const locationHead = document.getElementById('article-location-head');
-      if (locationHead) locationHead.textContent = job.location || '';
-
-      const typeHead = document.getElementById('article-type-head');
-      if (typeHead) typeHead.textContent = job.type || '';
+      document.getElementById('job-title-head').textContent = job.title || '';
+      document.getElementById('job-location-head').textContent = job.location || '';
+      document.getElementById('job-type-head').textContent = job.type || '';
 
       // Markdown içeriğini çek
       if (job.url) {
@@ -60,14 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
           .then(res => res.text())
           .then(md => {
             if (window.marked) {
-              document.getElementById('article-content').innerHTML = marked.parse(md);
+              document.getElementById('job-content').innerHTML = marked.parse(md);
             } else {
-              document.getElementById('article-content').textContent = md;
+              document.getElementById('job-content').textContent = md;
             }
           });
       }
     })
-    .catch(err => console.error('Error loading job detail:', err));
+    .catch(err => {
+      console.error('Error loading job detail:', err);
+      document.getElementById('job-notfound').style.display = 'block';
+    });
 });
 </script>
 
