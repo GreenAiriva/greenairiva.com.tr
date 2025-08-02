@@ -1,89 +1,121 @@
----
-layout: default
-lang: en
-title: GreenAiriva – Career Page
-description: Career opportunities to join the team taken action against Climate Change
----
-
-<!-- Masthead (Hero) -->
-<header class="masthead">
-  <div class="container" style="height: 60vh">
-    <div class="masthead-heading">Rise<br>for a</div>
-    <div class="masthead-subheading-script">Cleaner</div>
-    <div class="masthead-heading">Planet</div>
-    <div class="masthead-btn-row">
-      <a class="btn btn-primary btn-xl text-uppercase" href="#solutions">Join to Us</a>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+  {% include head.html %}
+  <body id="page-top">
+    {% if page.lang == "tr" %}
+      {% include header_tr.html %}
+    {% else %}
+      {% include header.html %}
+    {% endif %}
+    <!--Masthead-->
+	<header class="masthead article-masthead" id="article-masthead" style="height:60vh; min-height:350px; display:flex; align-items:end; background-size:cover; background-position:center; background-repeat:no-repeat;">
+    <div class="container">
+        <div class="article-masthead-info">
+            <span id="article-category-head" class="badge bg-success me-2"></span>
+            <span id="article-date-head" class="text-light small"></span>
+            <h1 id="article-title-head" class="article-masthead-title text-white mt-2"></h1>
+        </div>
     </div>
-  </div>
 </header>
 
-<!-- Career -->
-
-<section class="page-section bg-light" id="career">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-heading text-uppercase">
-        <a href="{{ site.baseurl }}/assets/img/Solution/SDG-3.jpg" target="_blank" style="color:inherit;text-decoration:none;">Join Our Team</a>
-      </h2>
-      <h3 class="section-subheading text-muted">
-        Temiz bir gelecek için çalışmak isteyen yetenekli ekip arkadaşları arıyoruz.
-      </h3>
-    </div>
-    <div class="row g-4">
-      <!-- Blog Kart 1 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="assets/img/jobs/1.jpg" alt="Social Cost" />
-          </div>
-          <div class="blog-card-body">
-            <h3>Chemical Engineer</h3>
-            <p>
-              The social cost of greenhouse gases measures the long-term economic and environmental damages caused by emissions. Understanding this cost is crucial for designing effective climate policies and ensuring a healthier, more sustainable future for everyone.
-            </p>
-            <a href="{{ site.baseurl }}/career/jobs/chemical-engineering.html" target="_blank" rel="noopener" class="read-blog-btn">
-              Apply
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
+<!-- Article Main -->
+<main class="container my-5" id="article-main">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <article class="blog-single border-0 shadow-none">
+        <img id="article-image" src="" alt="" class="img-fluid rounded mb-3" style="display:none; max-height:320px; object-fit:cover;">
+        <div class="mb-2">
+          <span id="article-category" class="badge bg-success me-2"></span>
+          <span id="article-date" class="text-muted small"></span>
         </div>
-      </div>
-      <!-- Blog Kart 2 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="assets/img/jobs/2.jpg.png" alt="Urban Air Crisis" />
-          </div>
-          <div class="blog-card-body">
-            <h3>Air Quality Analyst</h3>
-            <p>
-              Urban air pollution requires innovative solutions. GreenAiriva’s advanced technology leverages real-time analytics, multi-pollutant capture, and renewable energy integration to help cities create a cleaner and healthier environment for all citizens.
-            </p>
-            <a href="{{ site.baseurl }}/career/jobs/environmental-engineering.html" target="_blank" rel="noopener" class="read-blog-btn">
-              Apply
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Kart 3 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="assets/img/jobs/3.jpg" alt="Atmosphere" />
-          </div>
-          <div class="blog-card-body">
-            <h3>Data Analysts</h3>
-            <p>
-              Atmospheric concentrations of pollutants like CO₂, CH₄, and N₂O have reached alarming levels. GreenAiriva addresses this challenge with smart adsorption materials and real-time monitoring to deliver actionable climate solutions.
-            </p>
-            <a href="{{ site.baseurl }}/career/jobs/data-analyst.html" target="_blank" rel="noopener" class="read-blog-btn">
-              Apply
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
+        <h1 id="article-title" class="blog-title"></h1>
+        <div id="article-summary" class="lead text-muted mb-3"></div>
+        <div id="article-content" class="blog-content"></div>
+      </article>
+      <div id="article-notfound" class="alert alert-warning mt-4" style="display:none;">Article not found.</div>
     </div>
   </div>
-</section>
+</main>
+
+<!-- Footer-->
+    {% if page.lang == "tr" %}
+      {% include footer_tr.html %}
+    {% else %}
+      {% include footer.html %}
+    {% endif %}
+
+		<!-- Scripts -->
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+			<script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+			<script src="/js/scripts.js"></script>
+	<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // 1. URL'den slug/id oku (?slug=2025-07-14-sera-gazlari gibi)
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+
+  // 2. posts.json'dan ilgili yazıyı bul
+  fetch('posts.json')
+    .then(response => response.json())
+    .then(posts => {
+      const post = posts.find(p => p.slug === slug);
+      if (!post) {
+        document.getElementById('article-notfound').style.display = 'block';
+        document.querySelector('.blog-single').style.display = 'none';
+        return;
+      }
+
+      if (post.image) {
+        document.getElementById('article-masthead').style.backgroundImage = `url('${post.image}')`;
+        document.getElementById('article-masthead').style.backgroundColor = "#212529";
+      }
+         document.getElementById('article-category-head').textContent = post.category || '';
+         document.getElementById('article-title-head').textContent = post.title || '';
+         document.getElementById('article-date-head').textContent = post.date ? new Date(post.date).toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }) : '';
+
+     
+      // 3. Alanları doldur
+//      if (post.image) {
+//        const img = document.getElementById('article-image');
+//        img.src = post.image;
+//        img.alt = post.title;
+//        img.style.display = 'block';
+//      }
+//      document.getElementById('article-category').textContent = post.category || '';
+//      document.getElementById('article-date').textContent = post.date ? new Date(post.date).toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }) : '';
+//      document.getElementById('article-title').textContent = post.title || '';
+//      document.getElementById('article-summary').textContent = post.summary || '';
+      // 4. İçerik dosyasını fetch et (ör: /posts/2025-07-14-sera-gazlari.md)
+      if (post.url) {
+        fetch(post.url)
+          .then(res => res.text())
+          .then(md => {
+            // Eğer markdown ise marked.js ile parse et, yoksa direkt göster
+            if (window.marked) {
+              document.getElementById('article-content').innerHTML = marked.parse(md);
+            } else {
+              document.getElementById('article-content').textContent = md;
+            }
+          });
+      }
+    });
+});
+</script>
+<!-- Optional: Markdown desteği için -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+      const trSwitch = document.querySelector('.lang-switch.tr-switch');
+      if (trSwitch && slug) {
+        trSwitch.onclick = () => window.location.href = `/tr/article.html?slug=${slug}`;
+      }
+    });
+    </script>
+	
+	</body>
+</html>
