@@ -45,41 +45,16 @@ description: Career opportunities to join the team taking action against Climate
       <h2 class="section-heading text-uppercase">Open Positions</h2>
       <h3 class="section-subheading text-muted">We are looking for talented people to join our mission.</h3>
     </div>
-    <div class="row g-4">
 
-      <!-- Job Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-          <h4 class="fw-bold">Chemical Engineer</h4>
-          <p class="text-muted mb-1">Location: Ankara, Turkey</p>
-          <p class="text-muted">Full-time</p>
-          <p>Develop advanced air purification materials and systems for pollutant capture and sustainable processing.</p>
-          <a href="{{ site.baseurl }}/career/jobs/chemical-engineering.html" class="btn btn-outline-primary mt-auto">View & Apply</a>
-        </div>
-      </div>
+    <!-- Job Cards Container -->
+    <div class="row g-4" id="jobList"></div>
 
-      <!-- Job Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-          <h4 class="fw-bold">Air Quality Analyst</h4>
-          <p class="text-muted mb-1">Location: Ankara, Turkey</p>
-          <p class="text-muted">Full-time</p>
-          <p>Analyze real-time atmospheric data and support decision-making for cleaner and healthier urban environments.</p>
-          <a href="{{ site.baseurl }}/career/jobs/environmental-engineering.html" class="btn btn-outline-primary mt-auto">View & Apply</a>
-        </div>
-      </div>
-
-      <!-- Job Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-          <h4 class="fw-bold">Data Analyst</h4>
-          <p class="text-muted mb-1">Location: Remote</p>
-          <p class="text-muted">Contract</p>
-          <p>Work with climate and pollution datasets to identify trends, forecast outcomes, and guide policy and strategy.</p>
-          <a href="{{ site.baseurl }}/career/jobs/data-analyst.html" class="btn btn-outline-primary mt-auto">View & Apply</a>
-        </div>
-      </div>
-
+    <!-- Load More Button -->
+    <div class="text-center my-4">
+      <button class="btn btn-success btn-lg px-5 py-2" id="loadMoreBtn" style="display:none;">
+        <span class="fw-semibold">Load More</span>
+        <i class="fas fa-angle-down ms-2"></i>
+      </button>
     </div>
   </div>
 </section>
