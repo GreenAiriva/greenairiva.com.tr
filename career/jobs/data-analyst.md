@@ -1,5 +1,7 @@
 ---
-layout: none
+title: "Data Analyst"
+location: "Remote"
+type: "Contract"
 ---
 
 ## About the Role
