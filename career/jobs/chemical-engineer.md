@@ -1,7 +1,5 @@
 ---
-title: "Chemical Engineer"
-location: "Ankara, Turkey"
-type: "Full-time"
+layout: none
 ---
 
 ## About the Role
