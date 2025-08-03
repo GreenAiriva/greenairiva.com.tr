@@ -19,7 +19,13 @@ plugins:
 include:
   - career/jobs.json
   - career/tr/jobs.json
-# Jekyll bu klasörü işlemeyecek → ham Markdown olarak bırakacak
-exclude:
-  - career/jobs
-  - career/tr/jobs
+
+defaults:
+  - scope:
+      path: "career/jobs"
+    values:
+      layout: none
+  - scope:
+      path: "career/tr/jobs"
+    values:
+      layout: none
