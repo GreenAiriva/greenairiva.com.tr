@@ -15,6 +15,10 @@ plugins:
   - jekyll-feed
 
 # Eğer başka özel ayarın yoksa bunlar yeterli.
+
+include:
+  - career/jobs.json
+  - career/tr/jobs.json
 # Jekyll bu klasörü işlemeyecek → ham Markdown olarak bırakacak
 exclude:
   - career/jobs
