@@ -1,7 +1,5 @@
 ---
-title: "Air Quality Analyst"
-location: "Ankara, Turkey"
-type: "Full-time"
+layout: none
 ---
 
 ## About the Role
@@ -25,3 +23,4 @@ We are looking for an **Air Quality Analyst** to monitor, analyze, and interpret
 - Contribute to public health and environmental sustainability
 
 [Apply Now](mailto:hr@greenairiva.com.tr)
+
