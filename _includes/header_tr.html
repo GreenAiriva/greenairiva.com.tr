@@ -21,10 +21,6 @@
             <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#misyon">Misyon</a></li>
             <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#neden">Neden GreenAiriva?</a></li>
             <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#katki">Sosyal ve Çevresel Katkı</a></li>
-            <!--
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#takim">Takımımız</a></li>
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#katil">Bize Katıl</a></li>
-            -->
           </ul>
         </li>
         <li class="nav-item">
@@ -33,12 +29,70 @@
         <li class="nav-item">
           <a class="nav-link" id="scrollToContact" href="#contact">İletişim</a>
         </li>
-        <!-- Dil geçişi için lang-switch butonları -->
+        <!-- Dil geçişi butonları -->
         <li class="nav-item d-flex align-items-center">
-          <div class="lang-switch" onclick="window.location.href='{{ site.baseurl }}/'">EN</div>
-          <div class="lang-switch" onclick="window.location.href='{{ site.baseurl }}/tr/'">TR</div>
+          <div class="lang-switch tr" style="cursor:pointer">TR</div>
+          <div class="lang-switch en" style="cursor:pointer">EN</div>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const path = window.location.pathname;
+
+  // TR butonu → TR versiyona git
+  const trButton = document.querySelector('.lang-switch.tr');
+  if (trButton) {
+    trButton.addEventListener('click', function () {
+      let newPath = '';
+
+      if (path.startsWith('/tr/')) {
+        newPath = path; // Zaten TR sayfa
+      } else if (path.startsWith('/career/career.html')) {
+        newPath = '/career/tr/kariyer.html';
+      } else if (path.startsWith('/career/vacancies.html')) {
+        newPath = '/career/tr/vacancies-tr.html' + window.location.search;
+      } else if (path.startsWith('/about/')) {
+        newPath = '/about/tr/' + path.split('/').pop();
+      } else if (path.startsWith('/solutions/')) {
+        newPath = '/solutions/tr/' + path.split('/').pop();
+      } else if (path === '/' || path.endsWith('/index.html')) {
+        newPath = '/tr/';
+      } else {
+        newPath = '/tr' + path;
+      }
+
+      window.location.href = newPath;
+    });
+  }
+
+  // EN butonu → EN versiyona git
+  const enButton = document.querySelector('.lang-switch.en');
+  if (enButton) {
+    enButton.addEventListener('click', function () {
+      let newPath = '';
+
+      if (!path.startsWith('/tr/')) {
+        newPath = path; // Zaten EN sayfa
+      } else if (path.startsWith('/career/tr/kariyer.html')) {
+        newPath = '/career/career.html';
+      } else if (path.startsWith('/career/tr/vacancies-tr.html')) {
+        newPath = '/career/vacancies.html' + window.location.search;
+      } else if (path.startsWith('/about/tr/')) {
+        newPath = '/about/' + path.split('/').pop();
+      } else if (path.startsWith('/solutions/tr/')) {
+        newPath = '/solutions/' + path.split('/').pop();
+      } else if (path === '/tr/' || path.endsWith('/tr/index.html')) {
+        newPath = '/';
+      } else {
+        newPath = path.replace(/^\/tr/, '');
+      }
+
+      window.location.href = newPath;
+    });
+  }
+});
+</script>
