@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "kimya-mühendisi",
+    "title": "Kimya Mühendisi",
+    "location": "Ankara, Türkiye",
+    "type": "Tam-zamanlı",
+    "summary": "Develop advanced air purification materials and systems for pollutant capture and sustainable processing.",
+    "url": "/career/tr/jobs/kimya-mühendisi.md.txt"
+  },
+  {
+    "slug": "hava-kalitesi-analisti",
+    "title": "Hava Kalitesi Analisti",
+    "location": "Ankara, Türkiye",
+    "type": "Tam Zamanlı",
+    "summary": "Analyze real-time atmospheric data and support decision-making for cleaner and healthier urban environments.",
+    "url": "/career/tr/jobs/hava-kalitesi-analisti.md.txt"
+  },
+  {
+    "slug": "veri-analisti",
+    "title": "Veri Analisti",
+    "location": "Uzaktan",
+    "type": "Sözleşmeli",
+    "summary": "Work with climate and pollution datasets to identify trends, forecast outcomes, and guide policy and strategy.",
+    "url": "/career/tr/jobs/veri-analisti.md.txt"
+  }
+]
