@@ -1,0 +1,104 @@
+---
+layout: jobdesc
+lang: tr
+title: GreenAiriva – İş İlanı Detayı
+description: GreenAiriva kariyer fırsatları için detaylı iş ilanı açıklaması.
+---
+
+<!-- İş İlanı Üst Başlık -->
+<header class="masthead" id="article-masthead" style="height:40vh; min-height:250px; display:flex; align-items:end; background-size:cover; background-position:center; background-repeat:no-repeat; background-color:#212529;">
+    <div class="container py-4">
+        <div>
+            <h1 id="job-title-head" class="fw-bold"></h1>
+            <p class="mb-0"><span id="job-location-head"></span> • <span id="job-type-head"></span></p>
+        </div>
+    </div>
+</header>
+
+<!-- İş İlanı İçerik -->
+<main class="container my-5" id="article-main">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <article class="job-single border-0 shadow-none">
+        <div id="job-content" class="job-content"></div>
+      </article>
+      <div id="job-notfound" class="alert alert-warning mt-4" style="display:none;">İlan bulunamadı.</div>
+    </div>
+  </div>
+</main>
+
+<!-- İş İlanı Yükleyici Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+  console.log("Slug parametresi:", slug);
+
+  if (!slug) {
+    console.warn("Slug parametresi yok.");
+    document.getElementById('job-notfound').style.display = 'block';
+    return;
+  }
+
+  const jsonUrl = '{{ site.baseurl }}/career/tr/jobs.json';
+  console.log("JSON yolu:", jsonUrl);
+
+  fetch(jsonUrl)
+    .then(res => {
+      if (!res.ok) throw new Error("Jobs JSON yüklenemedi: " + res.status);
+      return res.json();
+    })
+    .then(jobs => {
+      console.log("Jobs JSON içeriği:", jobs);
+      const job = jobs.find(j => (j.slug || '').toLowerCase() === slug.toLowerCase());
+      console.log("Bulunan job:", job);
+
+      if (!job) {
+        console.error("Slug JSON içinde bulunamadı:", slug);
+        document.getElementById('job-notfound').style.display = 'block';
+        return;
+      }
+
+      // Başlık ve meta bilgileri doldur
+      document.getElementById('job-title-head').textContent = job.title || '';
+      document.getElementById('job-location-head').textContent = job.location || '';
+      document.getElementById('job-type-head').textContent = job.type || '';
+
+      // Markdown içeriğini çek
+      const mdUrl = '{{ site.baseurl }}' + job.url;
+      console.log("Markdown yolu:", mdUrl);
+
+      fetch(mdUrl)
+        .then(res => {
+          if (!res.ok) throw new Error('Markdown bulunamadı: ' + res.status);
+          return res.text();
+        })
+        .then(md => {
+          console.log("Markdown yüklendi:", md.substring(0, 100) + "...");
+          if (window.marked) {
+            document.getElementById('job-content').innerHTML = marked.parse(md);
+          } else {
+            document.getElementById('job-content').textContent = md;
+          }
+        })
+        .catch(err => {
+          console.error('Markdown yüklenirken hata:', err);
+          document.getElementById('job-notfound').style.display = 'block';
+        });
+    })
+    .catch(err => {
+      console.error('Jobs JSON yüklenirken hata:', err);
+      document.getElementById('job-notfound').style.display = 'block';
+    });
+});
+</script>
+
+<!-- Markdown Parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Navbar ile çakışmayı önlemek için ek stil -->
+<style>
+.job-header {
+  padding-top: 5rem;
+}
+</style>
