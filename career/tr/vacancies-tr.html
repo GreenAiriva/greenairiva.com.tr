@@ -28,33 +28,34 @@ description: GreenAiriva kariyer fırsatları için detaylı iş ilanı açıkla
 </main>
 
 <!-- İş İlanı Yükleyici Script -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
-  console.log("Slug parametresi:", slug);
+  console.log("📌 Slug parametresi:", slug);
 
   if (!slug) {
-    console.warn("Slug parametresi yok.");
+    console.warn("⚠️ Slug parametresi yok.");
     document.getElementById('job-notfound').style.display = 'block';
     return;
   }
 
   const jsonUrl = '{{ site.baseurl }}/career/tr/jobs.json';
-  console.log("JSON yolu:", jsonUrl);
+  console.log("📌 JSON yolu:", jsonUrl);
 
   fetch(jsonUrl)
     .then(res => {
-      if (!res.ok) throw new Error("Jobs JSON yüklenemedi: " + res.status);
+      if (!res.ok) throw new Error("❌ Jobs JSON yüklenemedi: " + res.status);
       return res.json();
     })
     .then(jobs => {
-      console.log("Jobs JSON içeriği:", jobs);
+      console.log("📌 Jobs JSON içeriği:", jobs);
       const job = jobs.find(j => (j.slug || '').toLowerCase() === slug.toLowerCase());
-      console.log("Bulunan job:", job);
+      console.log("📌 Bulunan job:", job);
 
       if (!job) {
-        console.error("Slug JSON içinde bulunamadı:", slug);
+        console.error("❌ Slug JSON içinde bulunamadı:", slug);
         document.getElementById('job-notfound').style.display = 'block';
         return;
       }
@@ -66,35 +67,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Markdown içeriğini çek
       const mdUrl = '{{ site.baseurl }}' + job.url;
-      console.log("Markdown yolu:", mdUrl);
+      console.log("📌 Markdown yolu:", mdUrl);
 
       fetch(mdUrl)
         .then(res => {
-          if (!res.ok) throw new Error('Markdown bulunamadı: ' + res.status);
+          if (!res.ok) throw new Error('❌ Markdown bulunamadı: ' + res.status);
           return res.text();
         })
         .then(md => {
-          console.log("Markdown yüklendi:", md.substring(0, 100) + "...");
+          console.log("📌 Markdown ilk 100 karakter:", md.substring(0, 100) + "...");
           if (window.marked) {
             document.getElementById('job-content').innerHTML = marked.parse(md);
           } else {
+            console.error("⚠️ marked.js yüklü değil!");
             document.getElementById('job-content').textContent = md;
           }
         })
         .catch(err => {
-          console.error('Markdown yüklenirken hata:', err);
+          console.error('❌ Markdown yüklenirken hata:', err);
           document.getElementById('job-notfound').style.display = 'block';
         });
     })
     .catch(err => {
-      console.error('Jobs JSON yüklenirken hata:', err);
+      console.error('❌ Jobs JSON yüklenirken hata:', err);
       document.getElementById('job-notfound').style.display = 'block';
     });
 });
 </script>
-
-<!-- Markdown Parser -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <!-- Navbar ile çakışmayı önlemek için ek stil -->
 <style>
