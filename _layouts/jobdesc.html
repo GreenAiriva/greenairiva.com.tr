@@ -21,18 +21,30 @@
     <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
     <script src="{{ site.baseurl }}/js/scripts.js"></script>
 
+    <!-- Job Loader Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // 1. URL'den slug oku (?slug=chemical-engineer gibi)
       const params = new URLSearchParams(window.location.search);
       const slug = params.get('slug');
       if (!slug) return;
 
-      // 2. jobs.json'dan ilgili işi bul
-      fetch('{{ site.baseurl }}/career/jobs.json')
-        .then(response => response.json())
+      // Dil kontrolü → doğru JSON yolunu seç
+      const jsonPath = '{{ page.lang }}' === 'tr'
+        ? '{{ site.baseurl }}/career/tr/jobs.json'
+        : '{{ site.baseurl }}/career/jobs.json';
+
+      console.log("📌 JSON yolu:", jsonPath);
+
+      fetch(jsonPath)
+        .then(response => {
+          if (!response.ok) throw new Error("❌ JSON yüklenemedi: " + response.status);
+          return response.json();
+        })
         .then(jobs => {
-          const job = jobs.find(j => j.slug === slug);
+          console.log("📌 Jobs JSON:", jobs);
+          const job = jobs.find(j => (j.slug || '').toLowerCase() === slug.toLowerCase());
+          console.log("📌 Bulunan job:", job);
+
           if (!job) {
             const nf = document.getElementById('article-notfound');
             if (nf) nf.style.display = 'block';
@@ -41,7 +53,7 @@
             return;
           }
 
-          // 3. Başlık ve meta bilgilerini doldur
+          // Başlık ve meta bilgilerini doldur
           const titleHead = document.getElementById('article-title-head');
           if (titleHead) titleHead.textContent = job.title || '';
 
@@ -51,24 +63,40 @@
           const typeHead = document.getElementById('article-type-head');
           if (typeHead) typeHead.textContent = job.type || '';
 
-          // 4. Markdown içeriğini çek ve göster
+          // Markdown içeriğini çek ve göster
           if (job.url) {
-            fetch('{{ site.baseurl }}' + job.url)
-              .then(res => res.text())
+            const mdUrl = '{{ site.baseurl }}' + job.url;
+            console.log("📌 Markdown yolu:", mdUrl);
+
+            fetch(mdUrl)
+              .then(res => {
+                if (!res.ok) throw new Error('❌ Markdown bulunamadı: ' + res.status);
+                return res.text();
+              })
               .then(md => {
+                console.log("📌 Markdown ilk 100 karakter:", md.substring(0, 100) + "...");
                 if (window.marked) {
                   document.getElementById('article-content').innerHTML = marked.parse(md);
                 } else {
                   document.getElementById('article-content').textContent = md;
                 }
+              })
+              .catch(err => {
+                console.error("❌ Markdown yükleme hatası:", err);
+                const nf = document.getElementById('article-notfound');
+                if (nf) nf.style.display = 'block';
               });
           }
         })
-        .catch(err => console.error('Job detail load error:', err));
+        .catch(err => {
+          console.error("❌ Job detail load error:", err);
+          const nf = document.getElementById('article-notfound');
+          if (nf) nf.style.display = 'block';
+        });
     });
     </script>
 
-    <!-- Optional: Markdown desteği -->
+    <!-- Markdown Parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>
