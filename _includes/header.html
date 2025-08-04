@@ -31,7 +31,7 @@
         <li class="nav-item">
           <a class="nav-link" id="scrollToContact" href="#contact">Contact</a>
         </li>
-        <!-- Dil geçişi butonları -->
+        <!-- Language Switch -->
         <li class="nav-item d-flex align-items-center">
           <div class="lang-switch tr" style="cursor:pointer">TR</div>
           <div class="lang-switch en" style="cursor:pointer">EN</div>
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let newPath = '';
 
       if (path.startsWith('/tr/')) {
-        newPath = path; // Zaten TR sayfa
+        newPath = path; // Already TR
       } else if (path.startsWith('/career/career.html')) {
         newPath = '/career/tr/kariyer.html';
       } else if (path.startsWith('/career/vacancies.html')) {
@@ -75,22 +75,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const enButton = document.querySelector('.lang-switch.en');
   if (enButton) {
     enButton.addEventListener('click', function () {
+      let cleanPath = path.replace(/^\/tr/, ''); // Remove /tr prefix
       let newPath = '';
 
-      if (!path.startsWith('/tr/')) {
-        newPath = path; // Zaten EN sayfa
-      } else if (path.startsWith('/career/tr/kariyer.html')) {
+      if (cleanPath.startsWith('/career/kariyer.html')) {
         newPath = '/career/career.html';
-      } else if (path.startsWith('/career/tr/vacancies-tr.html')) {
+      } else if (cleanPath.startsWith('/career/vacancies-tr.html')) {
         newPath = '/career/vacancies.html' + window.location.search;
-      } else if (path.startsWith('/about/tr/')) {
-        newPath = '/about/' + path.split('/').pop();
-      } else if (path.startsWith('/solutions/tr/')) {
-        newPath = '/solutions/' + path.split('/').pop();
-      } else if (path === '/tr/' || path.endsWith('/tr/index.html')) {
+      } else if (cleanPath.startsWith('/about/')) {
+        newPath = '/about/' + cleanPath.split('/').pop();
+      } else if (cleanPath.startsWith('/solutions/')) {
+        newPath = '/solutions/' + cleanPath.split('/').pop();
+      } else if (cleanPath === '/' || cleanPath.endsWith('/index.html')) {
         newPath = '/';
       } else {
-        newPath = path.replace(/^\/tr/, '');
+        newPath = cleanPath;
       }
 
       window.location.href = newPath;
