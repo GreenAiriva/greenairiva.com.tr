@@ -1,15 +1,15 @@
 ---
 layout: default
 lang: tr
-title: GreenAiriva – Career Page
-description: Career opportunities to join the team taking action against Climate Change
+title: GreenAiriva – Kariyer Sayfası
+description: İklim değişikliğiyle mücadele için ekibimize katılın
 ---
 
 <!-- Hero Section -->
 <header class="masthead career-hero" style="background-image: url('{{ site.baseurl }}/assets/img/career-bg.jpg');">
   <div class="container position-relative text-center">
-    <h1 class="text-white fw-bold display-4">Temiz Bir Gelecek için Aramıza Katılın</h1>
-    <p class="lead text-white-50 mb-4">Help us fight climate change and create cleaner air for future generations.</p>
+    <h1 class="text-white fw-bold display-4">Temiz Bir Gelecek İçin Aramıza Katılın</h1>
+    <p class="lead text-white-50 mb-4">İklim değişikliğiyle mücadeleye ve gelecek nesiller için daha temiz bir hava yaratmaya katkıda bulunun.</p>
     <a href="#career" class="btn btn-primary btn-lg text-uppercase">Açık Pozisyonlar</a>
   </div>
 </header>
@@ -18,21 +18,21 @@ description: Career opportunities to join the team taking action against Climate
 <section class="page-section bg-light py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="section-heading text-uppercase">Why Work With GreenAiriva?</h2>
-      <h3 class="section-subheading text-muted">Join a purpose-driven team committed to making an impact.</h3>
+      <h2 class="section-heading text-uppercase">Neden GreenAiriva?</h2>
+      <h3 class="section-subheading text-muted">Etki yaratmaya kararlı, amaç odaklı bir ekibe katılın.</h3>
     </div>
     <div class="row text-center">
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">Impactful Mission</h5>
-        <p>Be part of a groundbreaking initiative that tackles climate change and improves global air quality.</p>
+        <h5 class="fw-bold">Anlamlı Bir Misyon</h5>
+        <p>İklim değişikliğiyle mücadele eden ve küresel hava kalitesini iyileştiren öncü bir girişimin parçası olun.</p>
       </div>
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">Innovative Technology</h5>
-        <p>Work with cutting-edge adsorption materials, renewable energy systems, and real-time monitoring tools.</p>
+        <h5 class="fw-bold">Yenilikçi Teknoloji</h5>
+        <p>Kesikli adsorpsiyon malzemeleri, yenilenebilir enerji sistemleri ve gerçek zamanlı izleme araçları ile çalışın.</p>
       </div>
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">Collaborative Vision</h5>
-        <p>Engage with partners, cities, and communities to build sustainable, scalable environmental solutions.</p>
+        <h5 class="fw-bold">Ortak Vizyon</h5>
+        <p>Şehirler ve topluluklarla iş birliği yaparak sürdürülebilir, ölçeklenebilir çevresel çözümler geliştirin.</p>
       </div>
     </div>
   </div>
@@ -42,44 +42,63 @@ description: Career opportunities to join the team taking action against Climate
 <section class="page-section bg-white" id="career">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="section-heading text-uppercase">Open Positions</h2>
-      <h3 class="section-subheading text-muted">We are looking for talented people to join our mission.</h3>
+      <h2 class="section-heading text-uppercase">Açık Pozisyonlar</h2>
+      <h3 class="section-subheading text-muted">Misyonumuza katılacak yetenekli kişiler arıyoruz.</h3>
     </div>
-    <div class="row g-4">
 
-      <!-- Job Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-          <h4 class="fw-bold">Chemical Engineer</h4>
-          <p class="text-muted mb-1">Location: Ankara, Turkey</p>
-          <p class="text-muted">Full-time</p>
-          <p>Develop advanced air purification materials and systems for pollutant capture and sustainable processing.</p>
-          <a href="{{ site.baseurl }}/career/jobs/chemical-engineering.html" class="btn btn-outline-primary mt-auto">View & Apply</a>
-        </div>
-      </div>
+    <!-- Job Cards Container -->
+    <div class="row g-4" id="jobList"></div>
 
-      <!-- Job Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-          <h4 class="fw-bold">Air Quality Analyst</h4>
-          <p class="text-muted mb-1">Location: Ankara, Turkey</p>
-          <p class="text-muted">Full-time</p>
-          <p>Analyze real-time atmospheric data and support decision-making for cleaner and healthier urban environments.</p>
-          <a href="{{ site.baseurl }}/career/jobs/environmental-engineering.html" class="btn btn-outline-primary mt-auto">View & Apply</a>
-        </div>
-      </div>
-
-      <!-- Job Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-          <h4 class="fw-bold">Data Analyst</h4>
-          <p class="text-muted mb-1">Location: Remote</p>
-          <p class="text-muted">Contract</p>
-          <p>Work with climate and pollution datasets to identify trends, forecast outcomes, and guide policy and strategy.</p>
-          <a href="{{ site.baseurl }}/career/jobs/data-analyst.html" class="btn btn-outline-primary mt-auto">View & Apply</a>
-        </div>
-      </div>
-
+    <!-- Load More Button -->
+    <div class="text-center my-4">
+      <button class="btn btn-success btn-lg px-5 py-2" id="loadMoreBtn" style="display:none;">
+        <span class="fw-semibold">Daha Fazla Göster</span>
+        <i class="fas fa-angle-down ms-2"></i>
+      </button>
     </div>
   </div>
 </section>
+
+<!-- Career Jobs Loader -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const jobList = document.getElementById('jobList');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const jobsPerPage = 6;
+  let currentIndex = 0;
+  let jobsData = [];
+
+  function renderJobs() {
+    const nextJobs = jobsData.slice(currentIndex, currentIndex + jobsPerPage);
+    nextJobs.forEach(job => {
+      const col = document.createElement('div');
+      col.className = 'col-12 col-md-6 col-lg-4';
+      col.innerHTML = `
+        <div class="job-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+          <h4 class="fw-bold">${job.title}</h4>
+          <p class="text-muted mb-1">Konum: ${job.location}</p>
+          <p class="text-muted">${job.type}</p>
+          <p>${job.summary}</p>
+          <a href="{{ site.baseurl }}/career/tr/vacancies-tr.html?slug=${job.slug}" 
+             class="btn btn-outline-primary mt-auto">Detay & Başvur</a>
+        </div>
+      `;
+      jobList.appendChild(col);
+    });
+    currentIndex += jobsPerPage;
+    loadMoreBtn.style.display = currentIndex >= jobsData.length ? 'none' : 'inline-block';
+  }
+
+  fetch('{{ site.baseurl }}/career/tr/jobs.json')
+    .then(res => res.json())
+    .then(data => {
+      jobsData = data;
+      renderJobs();
+    })
+    .catch(err => console.error('İlanlar yüklenirken hata:', err));
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', renderJobs);
+  }
+});
+</script>
