@@ -1,9 +1,3 @@
-/*!
-* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // 1. Navbar shrink function (scroll ile navbar'ı koyult/şeffaf yap)
@@ -69,7 +63,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // 5. Genel: Tüm anchor (href="#...") linklerinde smooth scroll desteği
-    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -93,6 +87,7 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
 // Sadece dropdown içindeki item veya gerçek nav-link'e tıklanınca menüyü kapat
 document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function(element) {
   element.addEventListener('click', function(e) {
@@ -109,54 +104,21 @@ document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').f
   });
 });
 
-/**
- * Dil geçişi fonksiyonları (Lang Switch) - GreenAiriva Çok Dilli Statik Site
- * Tüm EN ve TR sayfalarında çalışır. Navbar'daki "TR" ve "EN" butonlarında kullanılır.
- * Yazan: ChatGPT / 2025
- */
+/* --- DİL GEÇİŞİ: ORTAK SLUG MAPPING FONKSİYONU (Header dosyalarında da aynı şekilde kullanılabilir) --- */
+function getSlugMapping(slug, fromLang, toLang, callback) {
+  const fromJson = fromLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
+  const toJson   = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
 
-/**
- * Kullanıcı İngilizce bir sayfadayken TR'ye geçmek isterse,
- * bulunduğu klasörde "tr/index.html" var mıysa oraya yönlendirir.
- */
-function switchToTR() {
-  // Mevcut sayfanın yolunu al (örn: /about/index.html)
-  var path = window.location.pathname;
-
-  // Eğer yol / ile bitiyorsa (örn: /about/), index.html ekle
-  if (path.endsWith('/')) path += 'index.html';
-
-  // Eğer zaten /tr/ içindeyse bir daha yönlendirme!
-  if (!path.includes('/tr/')) {
-    // /index.html'i /tr/index.html'e çevir
-    var newPath = path.replace(/\/index\.html$/, '/tr/index.html');
-    // Kullanıcıyı yeni yola yönlendir
-    window.location.href = newPath;
-  }
+  fetch(fromJson)
+    .then(res => res.json())
+    .then(fromJobs => {
+      const job = fromJobs.find(j => j.slug === slug);
+      if (!job) { callback(null); return; }
+      fetch(toJson)
+        .then(res => res.json())
+        .then(toJobs => {
+          let match = toJobs.find(j => j.title.trim().toLowerCase() === job.title.trim().toLowerCase());
+          callback(match ? match.slug : null);
+        });
+    });
 }
-
-/**
- * Kullanıcı Türkçe bir sayfadayken EN'ye geçmek isterse,
- * bulunduğu klasörde bir üstteki "index.html"e yönlendirir.
- */
-function switchToEN() {
-  var path = window.location.pathname;
-
-  // Eğer /tr/index.html içindeyse, /index.html'e çevir
-  if (path.includes('/tr/index.html')) {
-    var newPath = path.replace('/tr/index.html', '/index.html');
-    window.location.href = newPath;
-  }
-  // Eğer yol /tr/ ile bitiyorsa (örn: /about/tr/), /about/index.html'e çevir
-  else if (path.endsWith('/tr/')) {
-    var newPath = path.replace('/tr/', '/');
-    if (!newPath.endsWith('/')) newPath += '/';
-    newPath += 'index.html';
-    window.location.href = newPath;
-  }
-  // Eğer başka bir TR varyasyonu yoksa, ana EN ana sayfaya git
-  else {
-    window.location.href = '/index.html';
-  }
-}
-
