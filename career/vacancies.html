@@ -32,16 +32,12 @@ description: Detailed job description for GreenAiriva career opportunities.
 document.addEventListener('DOMContentLoaded', function () {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
-  console.log("Slug parametresi:", slug);
-
   if (!slug) {
-    console.warn("Slug parametresi yok.");
     document.getElementById('job-notfound').style.display = 'block';
     return;
   }
 
   const jsonUrl = '{{ site.baseurl }}/career/jobs.json';
-  console.log("JSON yolu:", jsonUrl);
 
   fetch(jsonUrl)
     .then(res => {
@@ -49,32 +45,25 @@ document.addEventListener('DOMContentLoaded', function () {
       return res.json();
     })
     .then(jobs => {
-      console.log("Jobs JSON içeriği:", jobs);
       const job = jobs.find(j => (j.slug || '').toLowerCase() === slug.toLowerCase());
-      console.log("Bulunan job:", job);
-
       if (!job) {
-        console.error("Slug JSON içinde bulunamadı:", slug);
         document.getElementById('job-notfound').style.display = 'block';
         return;
       }
 
-      // Başlık ve meta bilgileri doldur
+      // Fill in the job details
       document.getElementById('job-title-head').textContent = job.title || '';
       document.getElementById('job-location-head').textContent = job.location || '';
       document.getElementById('job-type-head').textContent = job.type || '';
 
-      // Markdown içeriğini çek
+      // Fetch and render markdown job description
       const mdUrl = '{{ site.baseurl }}' + job.url;
-      console.log("Markdown yolu:", mdUrl);
-
       fetch(mdUrl)
         .then(res => {
           if (!res.ok) throw new Error('Markdown bulunamadı: ' + res.status);
           return res.text();
         })
         .then(md => {
-          console.log("Markdown yüklendi:", md.substring(0, 100) + "...");
           if (window.marked) {
             document.getElementById('job-content').innerHTML = marked.parse(md);
           } else {
@@ -82,12 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
         .catch(err => {
-          console.error('Markdown yüklenirken hata:', err);
           document.getElementById('job-notfound').style.display = 'block';
         });
     })
     .catch(err => {
-      console.error('Jobs JSON yüklenirken hata:', err);
       document.getElementById('job-notfound').style.display = 'block';
     });
 });
