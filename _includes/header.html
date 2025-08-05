@@ -42,58 +42,72 @@
 </nav>
 
 <script>
+// Slug eşleştirme fonksiyonu
+function getSlugMapping(slug, fromLang, toLang, callback) {
+  const fromJson = fromLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
+  const toJson   = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
+
+  fetch(fromJson)
+    .then(res => res.json())
+    .then(fromJobs => {
+      const job = fromJobs.find(j => j.slug === slug);
+      if (!job) { callback(null); return; }
+      fetch(toJson)
+        .then(res => res.json())
+        .then(toJobs => {
+          // Title'dan eşle
+          let match = toJobs.find(j => j.title.trim().toLowerCase() === job.title.trim().toLowerCase());
+          callback(match ? match.slug : null);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const path = window.location.pathname;
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
 
-  // TR butonu → TR versiyona git
-  const trButton = document.querySelector('.lang-switch.tr');
-  if (trButton) {
-    trButton.addEventListener('click', function () {
-      let newPath = '';
-
-      if (path.startsWith('/tr/')) {
-        newPath = path; // Already TR
-      } else if (path.startsWith('/career/career.html')) {
-        newPath = '/career/tr/kariyer.html';
-      } else if (path.startsWith('/career/vacancies.html')) {
-        newPath = '/career/tr/vacancies-tr.html' + window.location.search;
-      } else if (path.startsWith('/about/')) {
-        newPath = '/about/tr/' + path.split('/').pop();
-      } else if (path.startsWith('/solutions/')) {
-        newPath = '/solutions/tr/' + path.split('/').pop();
-      } else if (path === '/' || path.endsWith('/index.html')) {
-        newPath = '/tr/';
+  // TR butonu
+  document.querySelectorAll('.lang-switch.tr').forEach(btn => {
+    btn.addEventListener('click', function () {
+      // İş ilanı detayındaysa mapping ile yönlendir
+      if (path.endsWith('vacancies.html') && slug) {
+        getSlugMapping(slug, 'en', 'tr', function(mappedSlug) {
+          if (mappedSlug) {
+            window.location.href = '/career/tr/vacancies-tr.html?slug=' + mappedSlug;
+          } else {
+            window.location.href = '/career/tr/kariyer.html';
+          }
+        });
       } else {
-        newPath = '/tr' + path;
+        // Diğer sayfalarda klasik mantık
+        let newPath = path;
+        if (!newPath.startsWith('/tr/')) {
+          if (newPath === '/' || newPath === '/index.html') newPath = '/tr/';
+          else newPath = '/tr' + newPath;
+        }
+        window.location.href = newPath + window.location.search;
       }
-
-      window.location.href = newPath;
     });
-  }
+  });
 
-  // EN butonu → EN versiyona git
-  const enButton = document.querySelector('.lang-switch.en');
-  if (enButton) {
-    enButton.addEventListener('click', function () {
-      let cleanPath = path.replace(/^\/tr/, ''); // Remove /tr prefix
-      let newPath = '';
-
-      if (cleanPath.startsWith('/career/kariyer.html')) {
-        newPath = '/career/career.html';
-      } else if (cleanPath.startsWith('/career/vacancies-tr.html')) {
-        newPath = '/career/vacancies.html' + window.location.search;
-      } else if (cleanPath.startsWith('/about/')) {
-        newPath = '/about/' + cleanPath.split('/').pop();
-      } else if (cleanPath.startsWith('/solutions/')) {
-        newPath = '/solutions/' + cleanPath.split('/').pop();
-      } else if (cleanPath === '/' || cleanPath.endsWith('/index.html')) {
-        newPath = '/';
+  // EN butonu
+  document.querySelectorAll('.lang-switch.en').forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (path.endsWith('vacancies-tr.html') && slug) {
+        getSlugMapping(slug, 'tr', 'en', function(mappedSlug) {
+          if (mappedSlug) {
+            window.location.href = '/career/vacancies.html?slug=' + mappedSlug;
+          } else {
+            window.location.href = '/career/career.html';
+          }
+        });
       } else {
-        newPath = cleanPath;
+        let newPath = path.replace(/^\/tr/, '');
+        if (newPath === '' || newPath === '/' || newPath === '/index.html') newPath = '/';
+        window.location.href = newPath + window.location.search;
       }
-
-      window.location.href = newPath;
     });
-  }
+  });
 });
 </script>
