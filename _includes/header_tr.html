@@ -16,7 +16,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
           <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#hakkimizda">Hakkımızda</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/">Hakkımızda</a></li>
             <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#vizyon">Vizyon</a></li>
             <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#misyon">Misyon</a></li>
             <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#neden">Neden GreenAiriva?</a></li>
@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/career/tr/kariyer.html">Kariyer</a>
+          <a class="nav-link" href="{{ site.baseurl }}/career/tr/career.html">Kariyer</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="scrollToContact" href="#contact">İletişim</a>
@@ -40,7 +40,6 @@
 </nav>
 
 <script>
-// Slug eşleştirme fonksiyonu
 function getSlugMapping(slug, fromLang, toLang, callback) {
   const fromJson = fromLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
   const toJson   = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
@@ -53,7 +52,6 @@ function getSlugMapping(slug, fromLang, toLang, callback) {
       fetch(toJson)
         .then(res => res.json())
         .then(toJobs => {
-          // Title'dan eşle
           let match = toJobs.find(j => j.title.trim().toLowerCase() === job.title.trim().toLowerCase());
           callback(match ? match.slug : null);
         });
@@ -68,32 +66,58 @@ document.addEventListener('DOMContentLoaded', function () {
   // TR butonu
   document.querySelectorAll('.lang-switch.tr').forEach(btn => {
     btn.addEventListener('click', function () {
-      // İş ilanı detayındaysa mapping ile yönlendir
-      if (path.endsWith('vacancies.html') && slug) {
+      let newPath = '';
+
+      // Hakkımızda
+      if (path === '/about/tr/' || path === '/about/tr/index.html') {
+        newPath = '/about/tr/';
+      }
+      // Kariyer (TR ana sayfa)
+      else if (path === '/career/tr/career.html') {
+        newPath = '/career/tr/career.html';
+      }
+      // İş detayındaysan (mapping ile)
+      else if (path === '/career/vacancies.html' && slug) {
         getSlugMapping(slug, 'en', 'tr', function(mappedSlug) {
           if (mappedSlug) {
-            window.location.href = '/career/tr/vacancies-tr.html?slug=' + mappedSlug;
+            window.location.href = '/career/tr/vacancies.html?slug=' + mappedSlug;
           } else {
-            window.location.href = '/career/tr/kariyer.html';
+            window.location.href = '/career/tr/career.html';
           }
         });
-      } else {
-        // Diğer sayfalarda klasik mantık
-        let newPath = path;
-        if (!newPath.startsWith('/tr/')) {
-          if (newPath === '/' || newPath === '/index.html') newPath = '/tr/';
-          else newPath = '/tr' + newPath;
-        }
-        window.location.href = newPath + window.location.search;
+        return;
       }
+      // Çift /tr hatasını önle
+      else if (path.startsWith('/tr/')) {
+        newPath = path;
+      }
+      // Ana sayfa veya kök
+      else if (path === '/' || path === '/index.html') {
+        newPath = '/tr/';
+      }
+      // Diğer pathler
+      else {
+        newPath = '/tr' + path;
+      }
+
+      window.location.href = newPath + window.location.search;
     });
   });
 
   // EN butonu
   document.querySelectorAll('.lang-switch.en').forEach(btn => {
     btn.addEventListener('click', function () {
-      // İş ilanı detayındaysa mapping ile yönlendir
-      if (path.endsWith('vacancies-tr.html') && slug) {
+      let newPath = path.replace(/^\/tr/, '');
+      // Hakkımızda (TR'den EN'ye geçiş)
+      if (path === '/about/tr/' || path === '/about/tr/index.html') {
+        newPath = '/about/';
+      }
+      // Kariyer (TR'den EN'ye geçiş)
+      else if (path === '/career/tr/career.html') {
+        newPath = '/career/career.html';
+      }
+      // İş detayındaysan (mapping ile)
+      else if (path === '/career/tr/vacancies.html' && slug) {
         getSlugMapping(slug, 'tr', 'en', function(mappedSlug) {
           if (mappedSlug) {
             window.location.href = '/career/vacancies.html?slug=' + mappedSlug;
@@ -101,12 +125,14 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = '/career/career.html';
           }
         });
-      } else {
-        // Diğer sayfalarda klasik mantık
-        let newPath = path.replace(/^\/tr/, '');
-        if (newPath === '' || newPath === '/' || newPath === '/index.html') newPath = '/';
-        window.location.href = newPath + window.location.search;
+        return;
       }
+      // Ana sayfa veya kök
+      else if (newPath === '' || newPath === '/' || newPath === '/index.html') {
+        newPath = '/';
+      }
+
+      window.location.href = newPath + window.location.search;
     });
   });
 });
