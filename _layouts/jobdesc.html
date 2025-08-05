@@ -21,14 +21,14 @@
     <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
     <script src="{{ site.baseurl }}/js/scripts.js"></script>
 
-    <!-- İş Detayı Dinamik Yükleyici Script -->
+    <!-- Job Loader Script (Birebir job- prefixli) -->
     <script>
     document.addEventListener('DOMContentLoaded', function () {
       const params = new URLSearchParams(window.location.search);
       const slug = params.get('slug');
       if (!slug) return;
 
-      // Doğru JSON dosyası seçimi (dil kontrolü)
+      // Dil kontrolü → doğru JSON yolunu seç
       const jsonPath = '{{ page.lang }}' === 'tr'
         ? '{{ site.baseurl }}/career/tr/jobs.json'
         : '{{ site.baseurl }}/career/jobs.json';
@@ -41,24 +41,24 @@
         .then(jobs => {
           const job = jobs.find(j => (j.slug || '').toLowerCase() === slug.toLowerCase());
           if (!job) {
-            const nf = document.getElementById('article-notfound');
+            const nf = document.getElementById('job-notfound');
             if (nf) nf.style.display = 'block';
             const single = document.querySelector('.job-single');
             if (single) single.style.display = 'none';
             return;
           }
 
-          // Başlık ve meta alanlarını doldur
-          const titleHead = document.getElementById('article-title-head');
+          // Başlık ve meta bilgilerini doldur
+          const titleHead = document.getElementById('job-title-head');
           if (titleHead) titleHead.textContent = job.title || '';
 
-          const locationHead = document.getElementById('article-location-head');
+          const locationHead = document.getElementById('job-location-head');
           if (locationHead) locationHead.textContent = job.location || '';
 
-          const typeHead = document.getElementById('article-type-head');
+          const typeHead = document.getElementById('job-type-head');
           if (typeHead) typeHead.textContent = job.type || '';
 
-          // Markdown içeriğini yükle ve göster
+          // Markdown içeriğini çek ve göster
           if (job.url) {
             const mdUrl = '{{ site.baseurl }}' + job.url;
             fetch(mdUrl)
@@ -68,19 +68,19 @@
               })
               .then(md => {
                 if (window.marked) {
-                  document.getElementById('article-content').innerHTML = marked.parse(md);
+                  document.getElementById('job-content').innerHTML = marked.parse(md);
                 } else {
-                  document.getElementById('article-content').textContent = md;
+                  document.getElementById('job-content').textContent = md;
                 }
               })
               .catch(err => {
-                const nf = document.getElementById('article-notfound');
+                const nf = document.getElementById('job-notfound');
                 if (nf) nf.style.display = 'block';
               });
           }
         })
         .catch(err => {
-          const nf = document.getElementById('article-notfound');
+          const nf = document.getElementById('job-notfound');
           if (nf) nf.style.display = 'block';
         });
     });
