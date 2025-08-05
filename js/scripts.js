@@ -106,6 +106,7 @@ document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').f
 
 /* --- DİL GEÇİŞİ: ORTAK SLUG MAPPING FONKSİYONU (Header dosyalarında da aynı şekilde kullanılabilir) --- */
 function getSlugMapping(slug, fromLang, toLang, callback) {
+  // Dosya isimleri ve pathleri artık yeni düzende!
   const fromJson = fromLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
   const toJson   = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
 
@@ -122,3 +123,4 @@ function getSlugMapping(slug, fromLang, toLang, callback) {
         });
     });
 }
+
