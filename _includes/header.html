@@ -1,33 +1,35 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="{{ site.baseurl }}/tr/">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
       <img src="{{ site.baseurl }}/assets/img/navbar-logo.svg" alt="GreenAiriva logo" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
       aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menü
+      Menu
       <i class="fas fa-bars ms-1"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="https://blog.greenairiva.com.tr/tr/">Blog</a>
+          <a class="nav-link" href="https://blog.greenairiva.com.tr/">Blog</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
           <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#hakkimizda">Hakkımızda</a></li>
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#vizyon">Vizyon</a></li>
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#misyon">Misyon</a></li>
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#neden">Neden GreenAiriva?</a></li>
-            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/tr/#katki">Sosyal ve Çevresel Katkı</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/">About Us</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/#vision">Vision</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/#mission">Mission</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/#whyus">Why GreenAiriva?</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/#contribution">Social and Environmental</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/#team">Our Team</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/about/#join">Join Us</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/career/tr/kariyer.html">Kariyer</a>
+          <a class="nav-link" href="{{ site.baseurl }}/career/career.html">Career</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="scrollToContact" href="#contact">İletişim</a>
+          <a class="nav-link" id="scrollToContact" href="#contact">Contact</a>
         </li>
         <!-- Language Switch -->
         <li class="nav-item d-flex align-items-center">
@@ -40,7 +42,6 @@
 </nav>
 
 <script>
-// Slug eşleştirme fonksiyonu
 function getSlugMapping(slug, fromLang, toLang, callback) {
   const fromJson = fromLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
   const toJson   = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
@@ -53,7 +54,6 @@ function getSlugMapping(slug, fromLang, toLang, callback) {
       fetch(toJson)
         .then(res => res.json())
         .then(toJobs => {
-          // Title'dan eşle
           let match = toJobs.find(j => j.title.trim().toLowerCase() === job.title.trim().toLowerCase());
           callback(match ? match.slug : null);
         });
@@ -65,35 +65,61 @@ document.addEventListener('DOMContentLoaded', function () {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
 
-  // TR butonu
+  // TR Butonu
   document.querySelectorAll('.lang-switch.tr').forEach(btn => {
     btn.addEventListener('click', function () {
-      // İş ilanı detayındaysa mapping ile yönlendir
-      if (path.endsWith('vacancies.html') && slug) {
+      let newPath = '';
+
+      // About sayfasında
+      if (path === '/about/' || path === '/about/index.html') {
+        newPath = '/about/tr/';
+      }
+      // Career ana sayfasında
+      else if (path === '/career/career.html') {
+        newPath = '/career/tr/career.html';
+      }
+      // Job detayındaysan (EN → TR mapping)
+      else if (path === '/career/vacancies.html' && slug) {
         getSlugMapping(slug, 'en', 'tr', function(mappedSlug) {
           if (mappedSlug) {
-            window.location.href = '/career/tr/vacancies-tr.html?slug=' + mappedSlug;
+            window.location.href = '/career/tr/vacancies.html?slug=' + mappedSlug;
           } else {
-            window.location.href = '/career/tr/kariyer.html';
+            window.location.href = '/career/tr/career.html';
           }
         });
-      } else {
-        // Diğer sayfalarda klasik mantık
-        let newPath = path;
-        if (!newPath.startsWith('/tr/')) {
-          if (newPath === '/' || newPath === '/index.html') newPath = '/tr/';
-          else newPath = '/tr' + newPath;
-        }
-        window.location.href = newPath + window.location.search;
+        return;
       }
+      // Çift /tr hatalarını önle
+      else if (path.startsWith('/tr/')) {
+        newPath = path;
+      }
+      // Kök ya da anasayfa ise
+      else if (path === '/' || path === '/index.html') {
+        newPath = '/tr/';
+      }
+      // Diğer pathlerde
+      else {
+        newPath = '/tr' + path;
+      }
+
+      window.location.href = newPath + window.location.search;
     });
   });
 
-  // EN butonu
+  // EN Butonu
   document.querySelectorAll('.lang-switch.en').forEach(btn => {
     btn.addEventListener('click', function () {
-      // İş ilanı detayındaysa mapping ile yönlendir
-      if (path.endsWith('vacancies-tr.html') && slug) {
+      let newPath = path.replace(/^\/tr/, '');
+      // About TR'deyken EN'ye geçiş
+      if (path === '/about/tr/' || path === '/about/tr/index.html') {
+        newPath = '/about/';
+      }
+      // Career TR'deyken EN'ye geçiş
+      else if (path === '/career/tr/career.html') {
+        newPath = '/career/career.html';
+      }
+      // Job detayındaysan (TR → EN mapping)
+      else if (path === '/career/tr/vacancies.html' && slug) {
         getSlugMapping(slug, 'tr', 'en', function(mappedSlug) {
           if (mappedSlug) {
             window.location.href = '/career/vacancies.html?slug=' + mappedSlug;
@@ -101,12 +127,14 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = '/career/career.html';
           }
         });
-      } else {
-        // Diğer sayfalarda klasik mantık
-        let newPath = path.replace(/^\/tr/, '');
-        if (newPath === '' || newPath === '/' || newPath === '/index.html') newPath = '/';
-        window.location.href = newPath + window.location.search;
+        return;
       }
+      // Kökte veya indexteysen
+      else if (newPath === '' || newPath === '/' || newPath === '/index.html') {
+        newPath = '/';
+      }
+
+      window.location.href = newPath + window.location.search;
     });
   });
 });
