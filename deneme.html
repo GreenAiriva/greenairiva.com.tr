@@ -5,8 +5,9 @@ title: GreenAiriva – Urban Air Purification Technology in Development
 description: GreenAiriva is a developing urban air purification project that aims to capture harmful pollutants and greenhouse gases, improving air quality and supporting climate action goals.
 ---
 
+<!-- Page-specific override CSS -->
 <style>
-/* Custom Home Styles */
+/* GreenAiriva Custom Home + Timeline Styles */
 
 .masthead-tagline {
   font-size: 1.2rem;
@@ -26,24 +27,71 @@ description: GreenAiriva is a developing urban air purification project that aim
 .roadmap-timeline {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-.roadmap-step {
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
   position: relative;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  background: #f7f7f7;
-  border-radius: 8px;
-  font-weight: bold;
-}
-.roadmap-step span {
-  display: block;
-  font-weight: normal;
-  color: #666;
-  margin-top: 5px;
 }
 
+.roadmap-timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #348e80;
+  z-index: 0;
+}
+
+.roadmap-step {
+  flex: 1 1 22%;
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #348e80;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  background-color: #f9f9f9;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.roadmap-step::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 2px;
+  background-color: #df8625;
+}
+
+.roadmap-step span {
+  display: block;
+  margin-top: 10px;
+  font-weight: normal;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .roadmap-timeline {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .roadmap-timeline::before {
+    display: none;
+  }
+
+  .roadmap-step::after {
+    display: none;
+  }
+}
 </style>
 
 <!-- Masthead (Hero) -->
@@ -59,7 +107,6 @@ description: GreenAiriva is a developing urban air purification project that aim
       <a class="btn btn-primary btn-xl text-uppercase" href="#about">Learn More</a>
       <a class="btn btn-outline-light btn-xl text-uppercase" href="#contact">Get Involved</a>
     </div>
-    <!-- Suggested visual: A clean city skyline with animated pollution particles dispersing -->
   </div>
 </header>
 
@@ -75,7 +122,6 @@ description: GreenAiriva is a developing urban air purification project that aim
     </div>
     <div class="row align-items-center">
       <div class="col-md-6 text-center">
-        <!-- Suggested visual: Minimalist vector illustration of an air filtration device in a city environment -->
         <img src="{{ site.baseurl }}/assets/img/about/device-placeholder.jpg" alt="Air Purification Concept" class="img-fluid shadow" />
       </div>
       <div class="col-md-6">
@@ -101,17 +147,14 @@ description: GreenAiriva is a developing urban air purification project that aim
     </div>
     <div class="row text-center">
       <div class="col-md-4">
-        <!-- Suggested icon: Health-related symbol or flat illustration -->
         <h4 class="my-3">Healthier Cities</h4>
         <p class="text-muted">Reduce exposure to harmful air pollutants, protecting public health and enhancing quality of life.</p>
       </div>
       <div class="col-md-4">
-        <!-- Suggested icon: Smart city skyline -->
         <h4 class="my-3">Sustainable Communities</h4>
         <p class="text-muted">Integrate with smart city data systems for real-time monitoring and proactive environmental management.</p>
       </div>
       <div class="col-md-4">
-        <!-- Suggested icon: Climate action / CO₂ reduction symbol -->
         <h4 class="my-3">Climate Action</h4>
         <p class="text-muted">Support global climate targets by removing greenhouse gases from urban atmospheres.</p>
       </div>
@@ -158,7 +201,6 @@ description: GreenAiriva is a developing urban air purification project that aim
         Insights on air quality, climate science, and urban sustainability.
       </h3>
     </div>
-    <!-- Suggested: 3 most recent blog cards (same as current structure, but replace fixed with latest posts if possible) -->
     {% comment %} Blog cards remain as per current structure {% endcomment %}
   </div>
 </section>
