@@ -5,9 +5,9 @@ title: GreenAiriva – Urban Air Purification Technology in Development
 description: GreenAiriva is a developing urban air purification project that aims to capture harmful pollutants and greenhouse gases, improving air quality and supporting climate action goals.
 ---
 
-<!-- Page-specific override CSS -->
+<link rel="stylesheet" href="/css/main.css">
 <style>
-/* GreenAiriva Custom Home + Timeline Styles */
+/* Custom Home Styles */
 
 .masthead-tagline {
   font-size: 1.2rem;
@@ -24,75 +24,8 @@ description: GreenAiriva is a developing urban air purification project that aim
   margin-bottom: 10px;
 }
 
-.roadmap-timeline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 40px;
-  position: relative;
-}
-
-.roadmap-timeline::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #348e80;
-  z-index: 0;
-}
-
-.roadmap-step {
-  flex: 1 1 22%;
-  background: #fff;
-  padding: 20px;
-  border: 2px solid #348e80;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-  position: relative;
-  background-color: #f9f9f9;
-  z-index: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.roadmap-step::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 20px;
-  width: 2px;
-  background-color: #df8625;
-}
-
-.roadmap-step span {
-  display: block;
-  margin-top: 10px;
-  font-weight: normal;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .roadmap-timeline {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .roadmap-timeline::before {
-    display: none;
-  }
-
-  .roadmap-step::after {
-    display: none;
-  }
-}
 </style>
+
 
 <!-- Masthead (Hero) -->
 <header class="masthead">
@@ -107,6 +40,7 @@ description: GreenAiriva is a developing urban air purification project that aim
       <a class="btn btn-primary btn-xl text-uppercase" href="#about">Learn More</a>
       <a class="btn btn-outline-light btn-xl text-uppercase" href="#contact">Get Involved</a>
     </div>
+    <!-- Suggested visual: A clean city skyline with animated pollution particles dispersing -->
   </div>
 </header>
 
@@ -122,6 +56,7 @@ description: GreenAiriva is a developing urban air purification project that aim
     </div>
     <div class="row align-items-center">
       <div class="col-md-6 text-center">
+        <!-- Suggested visual: Minimalist vector illustration of an air filtration device in a city environment -->
         <img src="{{ site.baseurl }}/assets/img/about/device-placeholder.jpg" alt="Air Purification Concept" class="img-fluid shadow" />
       </div>
       <div class="col-md-6">
@@ -147,14 +82,17 @@ description: GreenAiriva is a developing urban air purification project that aim
     </div>
     <div class="row text-center">
       <div class="col-md-4">
+        <!-- Suggested icon: Health-related symbol or flat illustration -->
         <h4 class="my-3">Healthier Cities</h4>
         <p class="text-muted">Reduce exposure to harmful air pollutants, protecting public health and enhancing quality of life.</p>
       </div>
       <div class="col-md-4">
+        <!-- Suggested icon: Smart city skyline -->
         <h4 class="my-3">Sustainable Communities</h4>
         <p class="text-muted">Integrate with smart city data systems for real-time monitoring and proactive environmental management.</p>
       </div>
       <div class="col-md-4">
+        <!-- Suggested icon: Climate action / CO₂ reduction symbol -->
         <h4 class="my-3">Climate Action</h4>
         <p class="text-muted">Support global climate targets by removing greenhouse gases from urban atmospheres.</p>
       </div>
@@ -163,19 +101,48 @@ description: GreenAiriva is a developing urban air purification project that aim
 </section>
 
 <!-- Roadmap -->
-<section class="page-section bg-white" id="roadmap">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Development Roadmap</h2>
-    </div>
-    <div class="roadmap-timeline">
-      <div class="roadmap-step">Research Phase <span>(Completed)</span></div>
-      <div class="roadmap-step">Design & Feasibility <span>(Completed)</span></div>
-      <div class="roadmap-step">Prototype Manufacturing <span>(Next)</span></div>
-      <div class="roadmap-step">Pilot Installations <span>(Planned)</span></div>
-    </div>
-  </div>
-</section>
+    <section class="ps-timeline-sec">
+        <div class="container">
+            <ol class="ps-timeline">
+                <li>
+                    <div class="img-handler-top">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_03.png" alt=""/>
+                    </div>
+                    <div class="ps-bot">
+                        <p>Do you have a recent injury or long term pain?</p>
+                    </div>
+                    <span class="ps-sp-top">01</span>
+                </li>
+                <li>
+                    <div class="img-handler-bot">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_13.png" alt=""/>
+                    </div>
+                    <div class="ps-top">
+                        <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
+                    </div>
+                    <span class="ps-sp-bot">02</span>
+                </li>
+                <li>
+                    <div class="img-handler-top">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_05.png" alt=""/>
+                    </div>
+                    <div class="ps-bot">
+                        <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
+                    </div>
+                    <span class="ps-sp-top">03</span>
+                </li>
+                <li>
+                    <div class="img-handler-bot">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_10.png" alt=""/>
+                    </div>
+                    <div class="ps-top">
+                        <p>Join our happy family of pain free clients.</p>
+                    </div>
+                    <span class="ps-sp-bot">04</span>
+                </li>
+            </ol>
+        </div>
+    </section>
 
 <!-- Partnership Opportunities -->
 <section class="page-section bg-light" id="partnership">
@@ -190,18 +157,73 @@ description: GreenAiriva is a developing urban air purification project that aim
   </div>
 </section>
 
-<!-- Blog Highlight -->
-<section class="page-section" id="blog">
+<!-- Blog Grid -->
+<section class="page-section bg-light" id="blog">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-heading text-uppercase">
-        <a href="https://blog.greenairiva.com.tr/" target="_blank" style="color:inherit;text-decoration:none;">From Our Blog</a>
+        <a href="https://blog.greenairiva.com.tr/" target="_blank" style="color:inherit;text-decoration:none;">Blog</a>
       </h2>
       <h3 class="section-subheading text-muted">
-        Insights on air quality, climate science, and urban sustainability.
+        Follow our blog to explore the scientific foundations, environmental policies, technological advancements, and original analyses behind GreenAiriva. The future of clean air is being written here!
       </h3>
     </div>
-    {% comment %} Blog cards remain as per current structure {% endcomment %}
+    <div class="row g-4">
+      <!-- Blog Kart 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex">
+        <div class="blog-card w-100">
+          <div class="blog-card-img">
+            <img src="{{ site.baseurl }}/assets/img/blog/1.jpg" alt="Social Cost" />
+          </div>
+          <div class="blog-card-body">
+            <h3>What is Social Cost?</h3>
+            <p>
+              The social cost of greenhouse gases measures the long-term economic and environmental damages caused by emissions. Understanding this cost is crucial for designing effective climate policies and ensuring a healthier, more sustainable future for everyone.
+            </p>
+            <a href="https://blog.greenairiva.com.tr/social-cost" target="_blank" rel="noopener" class="read-blog-btn">
+              Read Blog
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Blog Kart 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex">
+        <div class="blog-card w-100">
+          <div class="blog-card-img">
+            <img src="{{ site.baseurl }}/assets/img/blog/2.jpg.png" alt="Urban Air Crisis" />
+          </div>
+          <div class="blog-card-body">
+            <h3>The Urban Air Crisis</h3>
+            <p>
+              Urban air pollution requires innovative solutions. GreenAiriva’s advanced technology leverages real-time analytics, multi-pollutant capture, and renewable energy integration to help cities create a cleaner and healthier environment for all citizens.
+            </p>
+            <a href="https://blog.greenairiva.com.tr/urban-air-crisis" target="_blank" rel="noopener" class="read-blog-btn">
+              Read Blog
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Blog Kart 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex">
+        <div class="blog-card w-100">
+          <div class="blog-card-img">
+            <img src="{{ site.baseurl }}/assets/img/blog/3.jpg" alt="Atmosphere" />
+          </div>
+          <div class="blog-card-body">
+            <h3>What Happened to Our Atmosphere!</h3>
+            <p>
+              Atmospheric concentrations of pollutants like CO₂, CH₄, and N₂O have reached alarming levels. GreenAiriva addresses this challenge with smart adsorption materials and real-time monitoring to deliver actionable climate solutions.
+            </p>
+            <a href="https://blog.greenairiva.com.tr/atmosphere" target="_blank" rel="noopener" class="read-blog-btn">
+              Read Blog
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
