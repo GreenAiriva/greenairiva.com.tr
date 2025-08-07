@@ -8,6 +8,8 @@
 
 .ps-timeline-sec .container {
   position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Optional starting and ending dots (disabled with display: none) */
