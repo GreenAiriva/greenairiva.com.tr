@@ -9,7 +9,7 @@
 .ps-timeline-sec .container {
   position: relative;
 }
-
+/*
 .ps-timeline-sec .container ol:before,
 .ps-timeline-sec .container ol:after {
   background: #348e80;
@@ -28,7 +28,7 @@
 .ps-timeline-sec .container ol:after {
   right: 8px;
 }
-
+*/
 .ps-timeline-sec .container ol.ps-timeline {
   margin: 390px 0;
   padding: 0;
