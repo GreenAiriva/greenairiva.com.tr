@@ -165,7 +165,7 @@ $brand-color: #df8625;
           }
         }
       }
-
+/* xs bitti*/
       &:before,
       &:after {
         background: $brand-color-g;
@@ -264,6 +264,7 @@ $brand-color: #df8625;
           .img-handler-bot {
             position: absolute;
             width: 100%;
+            height: 100px;
 
             img {
               display: table;
