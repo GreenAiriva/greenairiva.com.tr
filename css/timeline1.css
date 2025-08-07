@@ -9,26 +9,13 @@
 .ps-timeline-sec .container {
   position: relative;
 }
-/*
+
+/* Optional starting and ending dots (disabled with display: none) */
 .ps-timeline-sec .container ol:before,
 .ps-timeline-sec .container ol:after {
-  background: #348e80;
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  position: absolute;
-  top: 49.5%;
+  display: none !important;
 }
 
-.ps-timeline-sec .container ol:before {
-  left: 8px;
-}
-
-.ps-timeline-sec .container ol:after {
-  right: 8px;
-}
-*/
 .ps-timeline-sec .container ol.ps-timeline {
   margin: 390px 0;
   padding: 0;
@@ -189,10 +176,4 @@
   .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:after {
     display: none !important;
   }
-}
-
-
-.ps-timeline-sec .container ol.ps-timeline li .ps-bot {
-  position: absolute;
-  margin-top: 35px;
 }
