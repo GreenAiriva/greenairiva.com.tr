@@ -1,0 +1,39 @@
+---
+layout: none
+---
+
+## Pozisyon: Donanım & Prototip Geliştirme Mühendisi
+
+### İş Tanımı
+GreenAiriva, şehir içi hava kalitesini iyileştirmek ve sera gazı emisyonlarını azaltmak amacıyla geliştirilmiş yenilikçi, güneş enerjisiyle çalışan hava arıtma sistemleri üzerinde çalışan bir çevre teknolojileri girişimidir.  
+Projemiz, TÜBİTAK ve uluslararası fon destekleri hedefleyen, yüksek teknoloji odaklı bir Ar-Ge süreci içermektedir.  
+Donanım & Prototip Geliştirme Mühendisi olarak, cihaz gövdesi, filtre entegrasyonu, güneş paneli montajı ve şehir içi kurulum süreçlerinden sorumlu olacaksınız.
+
+### Görev ve Sorumluluklar
+- Mekanik tasarım ve prototip geliştirme (CAD modelleme, teknik çizimler)
+- Filtre ve adsorban entegrasyonu (HEPA, COF, Zeolit vb.)
+- Güneş paneli ve batarya montajına yönelik mekanik destek
+- Şehir içi kurulum, bakım ve test planlarının hazırlanması
+- Vandalizm dayanımı ve hava koşullarına uygun gövde tasarımı
+- Elektronik/IoT mühendisi ile donanım-enerji sistemleri entegrasyonu
+
+### Aranan Nitelikler
+- Makine mühendisliği, mekatronik mühendisliği veya ilgili alanlarda lisans derecesi
+- CAD tasarım programlarında (SolidWorks, AutoCAD, AutoDesk Inventor vb.) deneyim
+- Prototip üretim süreçleri ve saha testi konusunda bilgi sahibi
+- Tercihen filtreleme sistemleri veya çevresel cihaz tasarımı deneyimi
+- Temel seviyede elektrik-elektronik bileşen bilgisi
+- Ankara merkezli projelere gerektiğinde fiziksel olarak katılım sağlayabilme
+
+### Fırsatlar ve Yan Haklar
+- Yenilikçi bir çevre teknolojisi girişiminin kurucu ekibinde yer alma
+- TÜBİTAK, AB ve teknopark destekli Ar-Ge projelerinde aktif rol
+- Teknopark başvurusu onaylandığında sigorta ve vergi avantajlarından yararlanma
+- Proje bazlı maaş (hibe desteği sağlandığında ödeme)
+- Uzun vadede hisse opsiyonu (equity / sweet equity modeli) ile ortaklık imkânı
+- Esnek çalışma (remote/hybrid) ve proje bazlı ekipman desteği
+
+### Başvuru Süreci
+Başvurular, GreenAiriva’nın başvuru sayfasındaki form üzerinden yapılacaktır.  
+Form doldurulurken CV ve varsa proje/portföy linkleri eklenecektir.  
+Başvurular için son tarih bulunmamaktadır, değerlendirmeler başvuru sırasına göre yapılacaktır.
