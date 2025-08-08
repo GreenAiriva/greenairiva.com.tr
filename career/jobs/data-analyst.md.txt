@@ -2,24 +2,39 @@
 layout: none
 ---
 
-## About the Role
-We are seeking a **Data Analyst** to work with climate and pollution datasets. You will help us identify trends, forecast outcomes, and develop strategies to combat air pollution and climate change.
+## Position: Software & Data Engineer
 
-## Responsibilities
-- Collect, clean, and analyze large datasets from environmental monitoring systems
-- Develop predictive models for pollutant trends
-- Visualize and communicate findings to both technical and non-technical audiences
-- Support decision-making for sustainable urban planning
+### Job Description
+GreenAiriva is an environmental technology startup developing innovative, solar-powered urban air purification systems to improve city air quality and reduce greenhouse gas emissions.  
+Our project is a high-tech R&D initiative aiming to secure support from TÜBİTAK and international funding programs.  
+As a Software & Data Engineer, you will handle sensor data processing, storage, visualization, and integration with smart city platforms.
 
-## Qualifications
-- Degree in **Data Science**, Statistics, or related field
-- Proficiency in Python, R, or SQL
-- Strong data visualization skills (Tableau, Power BI, or similar)
-- Passion for climate action and environmental sustainability
+### Key Responsibilities
+- Collecting, processing, and storing IoT device data
+- Developing real-time data analysis and visualization dashboards
+- Creating APIs and integrating data into smart city systems
+- Implementing breakthrough curve analysis and predictive maintenance algorithms
+- Ensuring data security and optimizing system performance
+- Collaborating with hardware and electronics teams for integration
 
-## Benefits
-- Flexible contract-based work
-- Collaborate with an international, mission-driven team
-- Make a measurable impact on environmental health
+### Requirements
+- Bachelor’s degree in Computer Science, Software Engineering, Data Science, or related fields
+- Experience in Python, JavaScript, or similar languages
+- Knowledge of IoT data protocols and database management (SQL/NoSQL)
+- API development experience (REST/GraphQL)
+- Familiarity with data analytics libraries (Pandas, NumPy, etc.) and visualization tools (Grafana, Plotly, etc.)
+- Preferably, knowledge of machine learning and predictive modeling
+- Ability to attend project activities in Ankara when required
 
-[Apply Now](mailto:hr@greenairiva.com.tr)
+### Opportunities & Benefits
+- Be part of the founding team of an innovative environmental technology startup
+- Active role in TÜBİTAK, EU, and technopark-supported R&D projects
+- Social security and tax benefits if technopark application is approved
+- Project-based compensation (payment upon grant/funding approval)
+- Long-term equity opportunities (equity/sweet equity model)
+- Flexible work arrangements (remote/hybrid) and project-based equipment support
+
+### Application Process
+Applications should be submitted via GreenAiriva’s application form.  
+Candidates must attach their CV and, if available, links to projects/portfolios.  
+No application deadline — evaluations will be conducted on a rolling basis.
