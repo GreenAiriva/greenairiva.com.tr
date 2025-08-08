@@ -1,26 +1,42 @@
 [
   {
-    "slug": "chemical-engineer",
-    "title": "Kimya Mühendisi",
+    "slug": "hardware-prototype-development-engineer",
+    "title": "Donanım & Prototip Geliştirme Mühendisi",
     "location": "Ankara, Türkiye",
-    "type": "Tam-zamanlı",
-    "summary": "Develop advanced air purification materials and systems for pollutant capture and sustainable processing.",
-    "url": "/career/tr/jobs/kimya-muhendisi.md.txt"
+    "type": "Tam Zamanlı-Hibrit",
+    "summary": "Şehir içi hava arıtma cihazının gövde tasarımı, filtre entegrasyonu ve güneş paneli montajında görev alacak mühendis aranmaktadır. Mekanik tasarım, CAD modelleme ve saha testlerinde deneyimli, filtreleme sistemleri konusunda bilgili adaylar tercih edilir.",
+    "url": "/career/tr/jobs/donanım-prototip-geliştirme-muhendisi.md.txt"
   },
   {
-    "slug": "air-quality-analyst",
-    "title": "Hava Kalitesi Analisti",
+    "slug": "electronics-iot-engineer",
+    "title": "Elektrik-Elektronik & IoT Mühendisi",
     "location": "Ankara, Türkiye",
-    "type": "Tam Zamanlı",
-    "summary": "Analyze real-time atmospheric data and support decision-making for cleaner and healthier urban environments.",
-    "url": "/career/tr/jobs/hava-kalitesi-analisti.md.txt"
+    "type": "Tam Zamanlı-Hibrit",
+    "summary": "Hava kalitesi sensör entegrasyonu, IoT veri iletimi, güneş enerjili enerji sistemleri ve düşük enerji tüketimli devre tasarımı konularında çalışacak mühendis aranmaktadır. PCB tasarımı, LoRa/MQTT protokolleri ve batarya yönetimi bilgisi önemlidir.",
+    "url": "/career/tr/jobs/elektrik-elektronik-iot-muhendisi.md.txt"
   },
   {
     "slug": "data-analyst",
-    "title": "Veri Analisti",
-    "location": "Uzaktan",
-    "type": "Sözleşmeli",
-    "summary": "Work with climate and pollution datasets to identify trends, forecast outcomes, and guide policy and strategy.",
+    "title": "Yazılım & Veri Mühendisi",
+    "location": "Ankara, Türkiye",
+    "type": "Yarı Zaman-Uzaktan",
+    "summary": "IoT verilerinin işlenmesi, görselleştirilmesi ve akıllı şehir sistemlerine entegrasyonundan sorumlu yazılım mühendisi aranmaktadır. Python, JavaScript, API geliştirme, veri analitiği ve görselleştirme araçlarında deneyimli adaylar tercih edilmektedir.",
     "url": "/career/tr/jobs/veri-analisti.md.txt"
+  },
+  {
+    "slug": "chemist-material-specialist",
+    "title": "Kimyager / Malzeme Bilim Uzmanı",
+    "location": "Ankara, Türkiye",
+    "type": "Yarı Zaman-Proje Bazlı Danışmanlık",
+    "summary": "Hava kirletici gazlara yönelik adsorban geliştirme, karakterizasyon ve rejenerasyon testlerinde görev alacak uzman aranmaktadır. COF, MOF ve zeolit gibi malzemelerle deneyimi olan, analiz tekniklerine hâkim adaylar aranıyor.",
+    "url": "career/tr/jobs/kimyager-malzeme-uzmanı.md.txt"
+  }
+  {
+    "slug": "business-developer",
+    "title": "İş Geliştirme & Fon Bulma Sorumlusu",
+    "location": "Ankara, Türkiye",
+    "type": "Sözleşmeli",
+    "summary": "Yerel yönetimler ve yatırımcılarla iş birlikleri kuracak, fon başvuruları hazırlayacak ve proje tanıtımlarını yönetecek bir iş geliştirme uzmanı aranmaktadır. Hibe programları bilgisi, sunum yeteneği ve Ar-Ge ekosistemine aşinalık tercih sebebidir.",
+    "url": "career/tr/jobs/iş-geliştirme-sorumlusu.md.txt"
   }
 ]
