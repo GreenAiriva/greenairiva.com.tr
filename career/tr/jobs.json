@@ -5,7 +5,8 @@
     "location": "Ankara, Türkiye",
     "type": "Tam Zamanlı-Hibrit",
     "summary": "Şehir içi hava arıtma cihazının gövde tasarımı, filtre entegrasyonu ve güneş paneli montajında görev alacak mühendis aranmaktadır. Mekanik tasarım, CAD modelleme ve saha testlerinde deneyimli, filtreleme sistemleri konusunda bilgili adaylar tercih edilir.",
-    "url": "/career/tr/jobs/donanim-prototip-gelistirme-muhendisi.md.txt"
+    "url": "/career/tr/jobs/donanim-prototip-gelistirme-muhendisi.md.txt",
+    "jobimg": "/career/img/hardware-prototype-development-engineer.jpg"
   },
   {
     "slug": "electronics-iot-engineer",
@@ -13,7 +14,8 @@
     "location": "Ankara, Türkiye",
     "type": "Tam Zamanlı-Hibrit",
     "summary": "Hava kalitesi sensör entegrasyonu, IoT veri iletimi, güneş enerjili enerji sistemleri ve düşük enerji tüketimli devre tasarımı konularında çalışacak mühendis aranmaktadır. PCB tasarımı, LoRa/MQTT protokolleri ve batarya yönetimi bilgisi önemlidir.",
-    "url": "/career/tr/jobs/elektrik-elektronik-iot-muhendisi.md.txt"
+    "url": "/career/tr/jobs/elektrik-elektronik-iot-muhendisi.md.txt",
+    "jobimg": "/career/img/electronics-iot-engineer.jpg"
   },
   {
     "slug": "data-analyst",
@@ -21,7 +23,8 @@
     "location": "Ankara, Türkiye",
     "type": "Yarı Zaman-Uzaktan",
     "summary": "IoT verilerinin işlenmesi, görselleştirilmesi ve akıllı şehir sistemlerine entegrasyonundan sorumlu yazılım mühendisi aranmaktadır. Python, JavaScript, API geliştirme, veri analitiği ve görselleştirme araçlarında deneyimli adaylar tercih edilmektedir.",
-    "url": "/career/tr/jobs/veri-analisti.md.txt"
+    "url": "/career/tr/jobs/veri-analisti.md.txt",
+    "jobimg": "/career/img/data-analyst.jpg"
   },
   {
     "slug": "chemist-material-specialist",
@@ -29,7 +32,8 @@
     "location": "Ankara, Türkiye",
     "type": "Yarı Zaman-Proje Bazlı Danışmanlık",
     "summary": "Hava kirletici gazlara yönelik adsorban geliştirme, karakterizasyon ve rejenerasyon testlerinde görev alacak uzman aranmaktadır. COF, MOF ve zeolit gibi malzemelerle deneyimi olan, analiz tekniklerine hâkim adaylar aranıyor.",
-    "url": "/career/tr/jobs/kimyager-malzeme-uzmani.md.txt"
+    "url": "/career/tr/jobs/kimyager-malzeme-uzmani.md.txt",
+    "jobimg": "/career/img/chemist-material-specialist.jpg"
   },
   {
     "slug": "business-developer",
@@ -37,6 +41,7 @@
     "location": "Ankara, Türkiye",
     "type": "Sözleşmeli",
     "summary": "Yerel yönetimler ve yatırımcılarla iş birlikleri kuracak, fon başvuruları hazırlayacak ve proje tanıtımlarını yönetecek bir iş geliştirme uzmanı aranmaktadır. Hibe programları bilgisi, sunum yeteneği ve Ar-Ge ekosistemine aşinalık tercih sebebidir.",
-    "url": "/career/tr/jobs/is-gelistirme-sorumlusu.md.txt"
+    "url": "/career/tr/jobs/is-gelistirme-sorumlusu.md.txt",
+    "jobimg": "/career/img/business-developer.jpg"
   }
 ]
