@@ -5,7 +5,7 @@
     "location": "Ankara, Turkey",
     "type": "Full Time-Hybrid",
     "summary": "Responsible for mechanical design, filter integration, and solar panel assembly of solar-powered air purification units. Ideal candidates have CAD and prototyping experience, with basic electronics knowledge and familiarity with environmental device design.",
-    "url": "career/jobs/hardware-prototype-development-engineer.md.txt"
+    "url": "/career/jobs/hardware-prototype-development-engineer.md.txt"
   },
   {
     "slug": "electronics-iot-engineer",
@@ -13,7 +13,7 @@
     "location": "Ankara, Turkey",
     "type": "Full Time-Hybrid",
     "summary": "Will design sensor systems, IoT data transmission, and solar-powered low-energy electronics for urban air quality monitoring. Experience with PCB, LoRa/NB-IoT/MQTT, and battery systems is essential.",
-    "url": "career/jobs/electronics-iot-engineer.md.txt"
+    "url": "/career/jobs/electronics-iot-engineer.md.txt"
   },
   {
     "slug": "data-analyst",
@@ -21,7 +21,7 @@
     "location": "Ankara, Turkey",
     "type": "Part Time-Remote",
     "summary": "Develops real-time data pipelines, visualization dashboards, and API integrations for smart city platforms. Strong background in Python/JavaScript, databases, and IoT data management is required. ML experience is a plus.",
-    "url": "career/jobs/data-analyst.md.txt"
+    "url": "/career/jobs/data-analyst.md.txt"
   },
   {
     "slug": "chemist-material-specialist",
@@ -29,15 +29,15 @@
     "location": "Ankara, Turkey",
     "type": "Part Time -Project Base Consultancy",
     "summary": "Leads adsorbent development and testing (e.g., COF, MOF, zeolites) for greenhouse gas capture. Hands-on experience in synthesis, regeneration, and material characterization (XRD, BET, SEM) is expected.",
-    "url": "career/jobs/chemist-material-specialist.md.txt"
-  }
+    "url": "/career/jobs/chemist-material-specialist.md.txt"
+  },
   {
     "slug": "business-developer",
     "title": "Business Development & Funding Manager",
     "location": "Ankara, Turkey",
     "type": "Contract",
     "summary": "Builds partnerships with municipalities and investors, and leads grant/investment applications. Ideal for candidates with experience in funding programs, pitch preparation, and startup business development.",
-    "url": "career/tr/jobs/business-developer.md.txt"
+    "url": "/career/tr/jobs/business-developer.md.txt"
   }
 ]
 
