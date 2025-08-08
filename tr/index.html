@@ -1,121 +1,196 @@
 ---
 layout: default
 lang: tr
-title: GreenAiriva – Ana Sayfa (TR)
-description: GreenAiriva – Yenilikçi hava temizleme çözümü, şehir havasını ve iklimi iyileştirir.
+title: GreenAiriva – Geliştirilmekte Olan Kentsel Hava Temizleme Teknolojisi
+description: GreenAiriva, zararlı kirleticileri ve sera gazlarını yakalamayı hedefleyen, hava kalitesini iyileştiren ve iklim eylemi hedeflerini destekleyen bir kentsel hava temizleme projesidir.
 ---
 
-<!-- Masthead -->
+<link rel="stylesheet" href="css/timeline1.css">
+<style>
+/* Özel Ana Sayfa Stilleri */
+.masthead-tagline {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 15px;
+}
+.project-facts {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+.project-facts li {
+  margin-bottom: 10px;
+}
+.device-floating {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none;
+}
+</style>
+
+<!-- Masthead (Hero) -->
 <header class="masthead">
-    <div class="container">
+  <div class="container text-center">
         <div class="masthead-heading">Daha</div>
         <div class="masthead-subheading-script">Temiz</div>
         <div class="masthead-heading">Bir<br>Dünya</div>
-        <div class="masthead-btn-row">
-            <a class="btn btn-primary btn-xl text-uppercase" href="#solutions">Bize Katılın</a>
-        </div>
+    <p class="masthead-tagline">
+      Güneş enerjisiyle çalışan, <br>metan ve diazot monoksiti hedef alan,<br>emisyonun başladığı yerde iklim değişikliğiyle mücadele eden hava temizleme projesi.
+    </p>
+    <div class="masthead-btn-row">
+      <a class="btn btn-primary btn-xl text-uppercase" href="#about">Daha Fazla Bilgi</a>
+      <a class="btn btn-outline-light btn-xl text-uppercase" href="#contact">Dahil Ol</a>
     </div>
+    <!-- Önerilen görsel: Kentsel bir manzara, havada süzülen kirletici parçacıklar, şık bir GreenAiriva ünitesi tarafından emiliyor (AI render veya şematik illüstrasyon) -->
+  </div>
 </header>
 
-<!-- Solutions -->
+<!-- Proje Hakkında -->
+<section class="page-section bg-white" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">GreenAiriva Hakkında</h2>
+      <h3 class="section-subheading text-muted">
+        GreenAiriva, yoğun kentsel alanlar için tasarlanmış, güneş enerjili, sıfır işletme maliyetli bir hava temizleme girişimidir. Geleneksel çözümlerden farklı olarak, sistemimiz yüksek etkili sera gazlarını (N₂O ve CH₄ gibi) yenilenebilir adsorbanlarla seçici olarak yakalar—yer altı depolaması ya da büyük ölçekli altyapıya ihtiyaç duymaz.
+      </h3>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <!-- Önerilen görsel: Şehir bulvarında, güneş paneli ve havalandırma elemanları olan bağımsız bir GreenAiriva ünitesi vektör çizimi -->
+        <img src="{{ site.baseurl }}/assets/img/about/device-placeholder.png" alt="Hava Temizleme Konsepti" class="device-floating" />
+      </div>
+      <div class="col-md-6">
+        <ul class="project-facts">
+          <li><b>Aşama:</b> TRL 3’ün Son Fazı (Tasarım & Doğrulama)</li>
+          <li><b>Sonraki Adım:</b> 2025 sonu / 2026 başında prototip üretimi</li>
+          <li><b>Enerji Kaynağı:</b> Tamamen güneş enerjili</li>
+          <li><b>Hedef Gazlar:</b> Metan (CH₄), Diazot Monoksit (N₂O), Halojenli sera gazları</li>
+          <li><b>Partikül Yakalama:</b> Entegre HEPA sınıfı filtre (PM 2.5 ve üzeri)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Çözümler -->
 <section class="page-section" id="solutions">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Çözümlerimiz</h2>
-            <h3 class="section-subheading text-muted">
-                GreenAiriva olarak, daha sağlıklı şehirler ve daha temiz bir atmosfer için yenilikçi çözümler sunuyoruz. Sistemimiz, zararlı kirleticileri ve sera gazlarını aktif olarak yakalayarak sürdürülebilir kentsel yaşama ve küresel iklim hedeflerine katkı sağlar.
-            </h3>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-                    <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.jpg" alt="Sağlık ve Refah" style="max-width:100%; max-height:100%;">
-                </span>
-                <h4 class="my-3">Sağlık ve Refah</h4>
-                <p class="text-muted">Hava kirliliğini azaltıyor ve kentsel hava kalitesini iyileştiriyoruz; insanların sağlığını koruyup şehirlerde yaşam kalitesini artırıyoruz.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-                    <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.jpg" alt="Sürdürülebilir Şehirler ve Topluluklar" style="max-width:100%; max-height:100%;">
-                </span>
-                <h4 class="my-3">Sürdürülebilir Şehirler & Topluluklar</h4>
-                <p class="text-muted">Şehirlere temiz hava ve veri odaklı içgörüler sunarak, sürdürülebilir kentsel gelişimi ve yaşanabilir toplulukları destekliyoruz.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-                    <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.jpg" alt="İklim Eylemi" style="max-width:100%; max-height:100%;">
-                </span>
-                <h4 class="my-3">İklim Eylemi</h4>
-                <p class="text-muted">Sistemimiz zararlı sera gazlarını yakalayarak iklim değişikliğiyle mücadeleye ve karbon emisyonlarının azaltılmasına katkı sağlar.</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Çözümlerimiz</h2>
+      <h3 class="section-subheading text-muted">
+        Kentsel hava temizlemeyi, metan ve diazot monoksit gibi genellikle göz ardı edilen fakat etkili sera gazlarını da hedef alarak yeniden tanımlıyoruz. GreenAiriva üniteleri kalabalık şehir bölgelerinde bağımsız çalışır—merkeziyetsiz, veriye dayalı hava kalitesi iyileştirmesiyle ölçülebilir çevresel etki sağlar.
+      </h3>
     </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.png" alt="Sağlıklı Yaşam" style="max-width:100%; max-height:100%;">
+        </span>
+        <h4 class="my-3">Daha Sağlıklı Hava, Daha Sağlıklı Hayatlar</h4>
+        <p class="text-muted">Kamusal alanlarda ince partikülleri ve sera gazlarını azaltarak, özellikle hassas gruplar için solunum riskini düşürmeye yardımcı oluyoruz.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.png" alt="Sürdürülebilir Şehirler ve Topluluklar" style="max-width:100%; max-height:100%;">
+        </span>
+        <h4 class="my-3">Şehir İçin Tasarlandı</h4>
+        <p class="text-muted">GreenAiriva tamamen güneş enerjisiyle bağımsız çalışır ve çatı, meydan, otopark veya trafiğin yoğun olduğu bulvarlara—emisyonun zirve yaptığı her yere—kurulabilir.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.png" alt="İklim Eylemi" style="max-width:100%; max-height:100%;">
+        </span>
+        <h4 class="my-3">Karbon Değeri, İklim Etkisi</h4>
+        <p class="text-muted">Her bir ünitemiz ile yılda 5–10 ton CO₂e’ye kadar sera gazı yakalama kapasitesiyle küresel Net Sıfır hedeflerine katkı sağlıyor, potansiyel karbon kredisi ve sosyal maliyet tasarrufu sunuyoruz.</p>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary btn-xl text-uppercase d-inline-block" href="/about/">Hakkımızda’yı Ziyaret Et</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Neden GreenAiriva -->
-<section class="page-section bg-light" id="whyus">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-2 order-md-1 mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Neden GreenAiriva?</h2>
-                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; text-align: justify;">
-                    <li><b>Yenilikçi Teknoloji:</b> Geleneksel Direkt Hava Yakalama (DAC) yöntemlerinin ötesine geçerek, düşük enerjiyle çalışan fiziksel adsorpsiyon bazlı bir çözüm sunuyoruz.</li>
-                    <li><b>Gerçek Zamanlı İzleme:</b> Anlık hava kalitesi analitiğiyle akıllı şehir entegrasyonunu mümkün kılıyoruz.</li>
-                    <li><b>Ekonomik ve Çevreci:</b> Karbon kredisi üretimi, sürdürülebilirlik raporlaması ve yakalanan kirleticilerin ticarileştirilmesiyle müşterilerimize ekonomik değer sağlıyoruz.</li>
-                    <li><b>Küresel Vizyon:</b> AB Yeşil Mutabakatı ve 2050 Net Sıfır Emisyon hedefiyle tam uyumlu; GreenAiriva, Türkiye’den dünyaya ölçeklenebilir.</li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (4).png" alt="Neden Biz" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
+<!-- Yol Haritası -->
+<section class="ps-timeline-sec">
+  <div class="container">
+    <ol class="ps-timeline">
+      <li>
+        <div class="img-handler-top">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.png" alt=""/>
         </div>
-    </div>
+        <div class="ps-bot">
+          <p>Bilimsel Araştırma & Fizibilite Çalışması (Tamamlandı – TRL 3 neredeyse bitti)</p>
+        </div>
+        <span class="ps-sp-top">01</span>
+      </li>
+      <li>
+        <div class="img-handler-bot">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.png" alt=""/>
+        </div>
+        <div class="ps-top">
+          <p>Malzeme Testleri & Sistem Tasarımı (Son İterasyonlar Devam Ediyor)</p>
+        </div>
+        <span class="ps-sp-bot">02</span>
+      </li>
+      <li>
+        <div class="img-handler-top">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.png" alt=""/>
+        </div>
+        <div class="ps-bot">
+          <p>Prototip Üretimi & Montajı (Hedef: 2025 4. Çeyrek – 2026 1. Çeyrek)</p>
+        </div>
+        <span class="ps-sp-top">03</span>
+      </li>
+      <li>
+        <div class="img-handler-bot">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.png" alt=""/>
+        </div>
+        <div class="ps-top">
+          <p>Pilot Uygulama & Saha Doğrulaması (Planlandı – Konum belediye ile netleşecek)</p>
+        </div>
+        <span class="ps-sp-bot">04</span>
+      </li>
+    </ol>
+  </div>
 </section>
 
-<!-- Ne Yapıyoruz -->
-<section class="page-section bg-white" id="whatdo">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Sera Gazı Yakalama</h2>
-            <h3 class="section-subheading text-muted">
-                GreenAiriva olarak, daha sağlıklı şehirler ve daha temiz bir atmosfer için yenilikçi çözümler sunuyoruz. Sistemimiz, zararlı kirleticileri ve sera gazlarını aktif olarak yakalayarak sürdürülebilir kentsel yaşama ve küresel iklim hedeflerine katkı sağlar.
-            </h3>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-1 order-md-1 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (3).png" alt="Katkı" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
-            <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Sosyal ve Çevresel Katkı</h2>
-                <p style="text-align:justify;">
-                    GreenAiriva, enerjisinin neredeyse tamamını güneşten sağlayarak yıl boyunca sıfıra yakın karbon ayak iziyle çalışır. Filtrasyon teknolojisi ek çevresel zarar oluşturmaz, tüm parçalar yüksek dayanıklılıktadır. Maliyet/etki oranında ve iklim faydasında, güncel sera gazı azaltım alternatiflerinden 2-4 kat daha fazla etki sağlar. Böylece sürdürülebilir, ekonomik ve çevreci bir çözüm sunar.
-                </p>
-            </div>
-        </div>
+<!-- İş Birliği Fırsatları -->
+<section class="page-section bg-light" id="partnership">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">İş Birliği Fırsatları</h2>
+      <p class="section-subheading text-muted">
+        Sürdürülebilir kentsel teknolojilere tutkuyla bağlı belediyeler, akademik kurumlar, çevre STK’ları ve yatırımcılarla aktif olarak iş birliği arıyoruz. Gelin, birlikte daha sağlıklı ve yeşil şehirler yaratalım.
+      </p>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Bize Ulaşın</a>
     </div>
+  </div>
 </section>
 
 <!-- Blog Grid -->
-<section class="page-section bg-light" id="blog">
+<section class="page-section bg-white" id="blog">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-heading text-uppercase">
         <a href="https://blog.greenairiva.com.tr/" target="_blank" style="color:inherit;text-decoration:none;">Blog</a>
       </h2>
       <h3 class="section-subheading text-muted">
-        GreenAiriva’nın arkasındaki bilimsel temelleri, çevre politikalarını, teknolojik yenilikleri ve orijinal analizleri keşfetmek için blogumuzu takip edin. Temiz havanın geleceği burada yazılıyor!
+        GreenAiriva’nın arkasındaki bilimsel temelleri, çevre politikalarını, teknolojik gelişmeleri ve özgün analizleri keşfetmek için blogumuzu takip edin. Temiz havanın geleceği burada yazılıyor!
       </h3>
     </div>
     <div class="row g-4">
+      <!-- Blog Kart 1 -->
       <div class="col-12 col-sm-6 col-lg-4 d-flex">
         <div class="blog-card w-100">
           <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/1.jpg" alt="Majör Sera Gazları" />
+            <img src="{{ site.baseurl }}/assets/img/blog/1.jpg" alt="Sosyal Maliyet" />
           </div>
           <div class="blog-card-body">
-            <h3>Majör Sera Gazları: Şehir Havasının Görünmez Tehlikesi</h3>
+            <h3>Sosyal Maliyet Nedir?</h3>
             <p>
-              Şehir havasında gizli tehlike oluşturan majör sera gazlarının etkilerini ve GreenAiriva'nın çözüm modellerini okuyun.
+              Sera gazlarının sosyal maliyeti, emisyonların neden olduğu uzun vadeli ekonomik ve çevresel zararları ölçer. Bu maliyeti anlamak, etkili iklim politikaları tasarlamak ve herkes için daha sağlıklı, sürdürülebilir bir gelecek sağlamak açısından kritik öneme sahiptir.
             </p>
             <a href="https://blog.greenairiva.com.tr/social-cost" target="_blank" rel="noopener" class="read-blog-btn">
               Blogu Oku
@@ -124,15 +199,16 @@ description: GreenAiriva – Yenilikçi hava temizleme çözümü, şehir havas�
           </div>
         </div>
       </div>
+      <!-- Blog Kart 2 -->
       <div class="col-12 col-sm-6 col-lg-4 d-flex">
         <div class="blog-card w-100">
           <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/2.jpg.png" alt="Şehir Hava Krizi" />
+            <img src="{{ site.baseurl }}/assets/img/blog/2.png" alt="Kent Havası Krizi" />
           </div>
           <div class="blog-card-body">
-            <h3>Şehir Hava Krizi</h3>
+            <h3>Kent Havası Krizi</h3>
             <p>
-              Şehirlerdeki hava kirliliği inovatif çözümler gerektirir. GreenAiriva’nın teknolojisi, anlık analiz, çoklu kirletici yakalama ve yenilenebilir enerji entegrasyonu ile şehirler için temiz ve sağlıklı ortamlar sağlar.
+              Kentsel hava kirliliğiyle mücadele, yenilikçi çözümler gerektirir. GreenAiriva’nın gelişmiş teknolojisi, gerçek zamanlı analiz, çoklu kirletici yakalama ve yenilenebilir enerji entegrasyonu ile şehirlerin herkes için daha temiz ve sağlıklı bir ortam yaratmasına yardımcı olur.
             </p>
             <a href="https://blog.greenairiva.com.tr/urban-air-crisis" target="_blank" rel="noopener" class="read-blog-btn">
               Blogu Oku
@@ -141,15 +217,16 @@ description: GreenAiriva – Yenilikçi hava temizleme çözümü, şehir havas�
           </div>
         </div>
       </div>
+      <!-- Blog Kart 3 -->
       <div class="col-12 col-sm-6 col-lg-4 d-flex">
         <div class="blog-card w-100">
           <div class="blog-card-img">
             <img src="{{ site.baseurl }}/assets/img/blog/3.jpg" alt="Atmosfer" />
           </div>
           <div class="blog-card-body">
-            <h3>Atmosferimize Ne Oldu?</h3>
+            <h3>Atmosferimize Ne Oldu!</h3>
             <p>
-              CO₂, CH₄ ve N₂O gibi kirleticiler rekor seviyelere ulaştı. GreenAiriva bu soruna akıllı adsorpsiyon malzemeleri ve anlık ölçüm teknolojileriyle çözüm getiriyor.
+              CO₂, CH₄ ve N₂O gibi kirleticiler rekor seviyelere ulaştı. GreenAiriva bu soruna akılcı, sürdürülebilir ve tamamen çevre dostu bir çözüm getiriyor.
             </p>
             <a href="https://blog.greenairiva.com.tr/atmosphere" target="_blank" rel="noopener" class="read-blog-btn">
               Blogu Oku
@@ -166,8 +243,10 @@ description: GreenAiriva – Yenilikçi hava temizleme çözümü, şehir havas�
 <section class="page-section" id="contact">
   <div class="container">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">İletişim</h2>
-      <h3 class="section-subheading text-muted">Görüş, işbirliği veya sorularınız için bize ulaşmaktan çekinmeyin. GreenAiriva her türlü ortaklığa ve topluluk katılımına açıktır.</h3>
+      <h2 class="section-heading text-uppercase">İletişime Geçin</h2>
+      <h3 class="section-subheading text-muted">
+        Görüş, işbirliği veya sorularınız için bize ulaşmaktan çekinmeyin. GreenAiriva her türlü ortaklığa ve topluluk katılımına açıktır.
+      </h3>
     </div>
     <form action="https://formspree.io/f/mblyjkpa" method="POST">
       <div class="row align-items-stretch mb-5">
@@ -176,10 +255,10 @@ description: GreenAiriva – Yenilikçi hava temizleme çözümü, şehir havas�
             <input class="form-control" type="text" name="name" placeholder="Adınız *" required />
           </div>
           <div class="form-group mb-3">
-            <input class="form-control" type="email" name="email" placeholder="E-posta *" required />
+            <input class="form-control" type="email" name="email" placeholder="E-posta Adresiniz *" required />
           </div>
           <div class="form-group mb-3">
-            <input class="form-control" type="tel" name="phone" placeholder="Telefon *" required />
+            <input class="form-control" type="tel" name="phone" placeholder="Telefon Numaranız *" required />
           </div>
         </div>
         <div class="col-md-6">
@@ -189,7 +268,7 @@ description: GreenAiriva – Yenilikçi hava temizleme çözümü, şehir havas�
         </div>
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Mesaj Gönder</button>
+        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Mesajı Gönder</button>
       </div>
     </form>
   </div>
