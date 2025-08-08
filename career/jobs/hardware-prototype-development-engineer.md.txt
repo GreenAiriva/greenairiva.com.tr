@@ -1,0 +1,77 @@
+---
+layout: none
+---
+
+## Position: Hardware & Prototype Development Engineer
+
+### Job Description
+GreenAiriva is an environmental technology startup developing innovative, solar-powered urban air purification systems to improve city air quality and reduce greenhouse gas emissions.  
+Our project is a high-tech R&D initiative aiming to secure support from TÜBİTAK and international funding programs.  
+As a Hardware & Prototype Development Engineer, you will be responsible for mechanical design, prototype assembly, filter integration, solar panel mounting, and urban deployment processes.
+
+### Key Responsibilities
+- Mechanical design and prototype development (CAD modeling, technical drawings)
+- Integration of filters and adsorbents (HEPA, COF, Zeolite, etc.)
+- Mechanical support for solar panel and battery installation
+- Preparation of installation, maintenance, and testing plans for urban deployment
+- Designing robust enclosures resistant to vandalism and environmental conditions
+- Collaboration with the Electronics/IoT Engineer for hardware–energy system integration
+
+### Requirements
+- Bachelor’s degree in Mechanical Engineering, Mechatronics Engineering, or a related field
+- Proficiency in CAD software (SolidWorks, AutoCAD, etc.)
+- Knowledge of prototype manufacturing processes and field testing
+- Preferably, experience in filtration systems or environmental device design
+- Basic knowledge of electrical and electronic components
+- Ability to attend project activities in Ankara when required
+
+### Opportunities & Benefits
+- Be part of the founding team of an innovative environmental technology startup
+- Active role in TÜBİTAK, EU, and technopark-supported R&D projects
+- Social security and tax benefits if technopark application is approved
+- Project-based compensation (payment upon grant/funding approval)
+- Long-term equity opportunities (equity/sweet equity model)
+- Flexible work arrangements (remote/hybrid) and project-based equipment support
+
+### Application Process
+Applications should be submitted via GreenAiriva’s application form.  
+Candidates must attach their CV and, if available, links to projects/portfolios.  
+No application deadline — evaluations will be conducted on a rolling basis.
+
+---
+
+## Position: Electronics & IoT Engineer
+
+### Job Description
+GreenAiriva is an environmental technology startup developing innovative, solar-powered urban air purification systems to improve city air quality and reduce greenhouse gas emissions.  
+Our project is a high-tech R&D initiative aiming to secure support from TÜBİTAK and international funding programs.  
+As an Electronics & IoT Engineer, you will work on sensor integration, data transmission, energy management, and low-power electronic design.
+
+### Key Responsibilities
+- Integration and calibration of air quality sensors (PM2.5, PM10, N₂O, CH₄, etc.)
+- Design of IoT-based data collection and wireless transmission systems
+- Design and optimization of solar panel and battery management systems (BMS)
+- Development and testing of low-power circuit boards
+- Participation in prototype hardware–software integration
+- Providing hardware support for urban installation and field tests
+
+### Requirements
+- Bachelor’s degree in Electrical/Electronics Engineering, Control Engineering, or related fields
+- Knowledge of sensor technologies and IoT protocols (LoRa, NB-IoT, MQTT, etc.)
+- Experience in circuit design and PCB manufacturing processes
+- Knowledge of solar energy systems and battery management
+- Basic embedded programming skills (C, Python, Arduino, ESP32, etc.)
+- Ability to attend project activities in Ankara when required
+
+### Opportunities & Benefits
+- Be part of the founding team of an innovative environmental technology startup
+- Active role in TÜBİTAK, EU, and technopark-supported R&D projects
+- Social security and tax benefits if technopark application is approved
+- Project-based compensation (payment upon grant/funding approval)
+- Long-term equity opportunities (equity/sweet equity model)
+- Flexible work arrangements (remote/hybrid) and project-based equipment support
+
+### Application Process
+Applications should be submitted via GreenAiriva’s application form.  
+Candidates must attach their CV and, if available, links to projects/portfolios.  
+No application deadline — evaluations will be conducted on a rolling basis.
