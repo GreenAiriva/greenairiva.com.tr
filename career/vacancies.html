@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('job-location-head').textContent = job.location || '';
       document.getElementById('job-type-head').textContent = job.type || '';
 
+      const header = document.getElementById('article-masthead');
+      if (job.jobimg) {
+        const imgUrl = job.jobimg.startsWith('/') ? '{{ site.baseurl }}' + job.jobimg : job.jobimg;
+        header.style.backgroundImage = `url('${imgUrl}')`;
+      }
+
       // Fetch and render markdown job description
       const mdUrl = '{{ site.baseurl }}' + job.url;
       fetch(mdUrl)
