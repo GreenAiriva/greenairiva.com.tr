@@ -3,14 +3,14 @@ layout: none
 ---
 
 
-## Pozisyon: Elektrik-Elektronik & IoT Mühendisi
+### Pozisyon: Elektrik-Elektronik & IoT Mühendisi
 
-### İş Tanımı
+#### İş Tanımı
 GreenAiriva, şehir içi hava kalitesini iyileştirmek ve sera gazı emisyonlarını azaltmak amacıyla geliştirilmiş yenilikçi, güneş enerjisiyle çalışan hava arıtma sistemleri geliştiren bir çevre teknolojileri girişimidir.  
 Projemiz, TÜBİTAK ve uluslararası fon destekleri hedefleyen, yüksek teknoloji odaklı bir Ar-Ge süreci içermektedir.  
 Elektrik-Elektronik & IoT Mühendisi olarak, cihazın sensör entegrasyonu, veri iletimi, enerji yönetimi ve düşük enerji tüketimli elektronik tasarımı konularında çalışacaksınız.
 
-### Görev ve Sorumluluklar
+#### Görev ve Sorumluluklar
 - Hava kalitesi sensörlerinin (PM2.5, PM10, N₂O, CH₄ vb.) entegrasyonu ve kalibrasyonu
 - IoT tabanlı veri toplama ve kablosuz veri iletim sistemlerinin tasarımı
 - Güneş paneli ve batarya yönetim sistemi (BMS) tasarımı ve optimizasyonu
@@ -18,7 +18,7 @@ Elektrik-Elektronik & IoT Mühendisi olarak, cihazın sensör entegrasyonu, veri
 - Prototip donanım ve yazılım entegrasyon süreçlerinde görev alma
 - Şehir içi kurulum ve saha testlerinde donanım desteği sağlama
 
-### Aranan Nitelikler
+#### Aranan Nitelikler
 - Elektrik-elektronik mühendisliği, kontrol mühendisliği veya ilgili alanlarda lisans derecesi
 - Sensör teknolojileri ve IoT protokolleri (LoRa, NB-IoT, MQTT vb.) konusunda bilgi sahibi
 - Devre tasarım ve PCB üretim süreçlerinde deneyim
@@ -26,7 +26,7 @@ Elektrik-Elektronik & IoT Mühendisi olarak, cihazın sensör entegrasyonu, veri
 - Temel düzeyde yazılım/gömülü sistem bilgisi (C, Python, Arduino, ESP32 vb.)
 - Ankara merkezli projelere gerektiğinde fiziksel olarak katılım sağlayabilme
 
-### Fırsatlar ve Yan Haklar
+#### Fırsatlar ve Yan Haklar
 - Yenilikçi bir çevre teknolojisi girişiminin kurucu ekibinde yer alma
 - TÜBİTAK, AB ve teknopark destekli Ar-Ge projelerinde aktif rol
 - Teknopark başvurusu onaylandığında sigorta ve vergi avantajlarından yararlanma
@@ -34,7 +34,7 @@ Elektrik-Elektronik & IoT Mühendisi olarak, cihazın sensör entegrasyonu, veri
 - Uzun vadede hisse opsiyonu (equity / sweet equity modeli) ile ortaklık imkânı
 - Esnek çalışma (remote/hybrid) ve proje bazlı ekipman desteği
 
-### Başvuru Süreci
+#### Başvuru Süreci
 Başvurular, GreenAiriva’nın başvuru sayfasındaki form üzerinden yapılacaktır.  
 Form doldurulurken CV ve varsa proje/portföy linkleri eklenecektir.  
 Başvurular için son tarih bulunmamaktadır, değerlendirmeler başvuru sırasına göre yapılacaktır.
