@@ -2,14 +2,14 @@
 layout: none
 ---
 
-## Pozisyon: Kimyager / Malzeme Bilim Uzmanı
+### Pozisyon: Kimyager / Malzeme Bilim Uzmanı
 
-### İş Tanımı
+#### İş Tanımı
 GreenAiriva, şehir içi hava kalitesini iyileştirmek ve sera gazı emisyonlarını azaltmak amacıyla geliştirilmiş yenilikçi, güneş enerjisiyle çalışan hava arıtma sistemleri geliştiren bir çevre teknolojileri girişimidir.  
 Projemiz, TÜBİTAK ve uluslararası fon destekleri hedefleyen, yüksek teknoloji odaklı bir Ar-Ge süreci içermektedir.  
 Kimyager / Malzeme Bilim Uzmanı olarak, adsorban seçimi ve geliştirme, malzeme karakterizasyonu ve performans testleri alanlarında proje bazlı çalışacaksınız.
 
-### Görev ve Sorumluluklar
+#### Görev ve Sorumluluklar
 - N₂O, CH₄, CO₂ ve F-gazlar için uygun adsorban materyallerin seçimi ve/veya sentezi
 - Hidrofobik modifikasyon ve adsorban optimizasyon çalışmaları
 - Adsorban rejenerasyon süreçlerinin test edilmesi
@@ -17,14 +17,14 @@ Kimyager / Malzeme Bilim Uzmanı olarak, adsorban seçimi ve geliştirme, malzem
 - Laboratuvar deneyleri ile adsorban performansını doğrulamak
 - Donanım ekibi ile filtre entegrasyon süreçlerinde teknik destek sağlamak
 
-### Aranan Nitelikler
+#### Aranan Nitelikler
 - Kimya, kimya mühendisliği, malzeme bilimi veya ilgili alanlarda lisans/yüksek lisans derecesi
 - Adsorban teknolojileri (COF, MOF, zeolit vb.) konusunda bilgi veya deneyim
 - Malzeme analiz tekniklerinde deneyim (XRD, BET, SEM, TGA vb.)
 - Çevresel uygulamalara yönelik malzeme geliştirme tecrübesi tercih sebebidir
 - Ankara merkezli projelere gerektiğinde fiziksel olarak katılım sağlayabilme
 
-### Fırsatlar ve Yan Haklar
+#### Fırsatlar ve Yan Haklar
 - Yenilikçi bir çevre teknolojisi girişiminin Ar-Ge sürecinde aktif rol
 - TÜBİTAK, AB ve teknopark destekli projelerde yer alma fırsatı
 - Teknopark başvurusu onaylandığında sigorta ve vergi avantajlarından yararlanma (uzun vadeli iş birliklerinde)
@@ -32,7 +32,7 @@ Kimyager / Malzeme Bilim Uzmanı olarak, adsorban seçimi ve geliştirme, malzem
 - Uzun vadede hisse opsiyonu (equity / sweet equity modeli) ile ortaklık imkânı
 - Esnek çalışma (remote/hybrid) ve laboratuvar iş birlikleriyle sağlanan ekipman desteği
 
-### Başvuru Süreci
+#### Başvuru Süreci
 Başvurular, GreenAiriva’nın başvuru sayfasındaki form üzerinden yapılacaktır.  
 Form doldurulurken CV ve varsa proje/portföy linkleri eklenecektir.  
 Başvurular için son tarih bulunmamaktadır, değerlendirmeler başvuru sırasına göre yapılacaktır.
