@@ -10998,6 +10998,7 @@ header.masthead .container {
   justify-content: flex-end;
   margin-top: -100px;
   margin-right: 40px;
+  gap: 10px;
 }
 .masthead .btn-xl {
   width: auto;
