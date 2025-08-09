@@ -106,6 +106,7 @@
   margin: 0 auto;
   height: 200px;
   object-fit: contain;
+  border-radius: 4rem;
 }
 
 .ps-timeline-sec .container ol.ps-timeline li p {
