@@ -2,14 +2,14 @@
 layout: none
 ---
 
-## Pozisyon: Yazılım & Veri Mühendisi
+### Pozisyon: Yazılım & Veri Mühendisi
 
-### İş Tanımı
+#### İş Tanımı
 GreenAiriva, şehir içi hava kalitesini iyileştirmek ve sera gazı emisyonlarını azaltmak amacıyla geliştirilmiş yenilikçi, güneş enerjisiyle çalışan hava arıtma sistemleri geliştiren bir çevre teknolojileri girişimidir.  
 Projemiz, TÜBİTAK ve uluslararası fon destekleri hedefleyen, yüksek teknoloji odaklı bir Ar-Ge süreci içermektedir.  
 Yazılım & Veri Mühendisi olarak, cihazdan toplanan sensör verilerinin işlenmesi, saklanması, görselleştirilmesi ve akıllı şehir platformlarına entegrasyonu konularında görev alacaksınız.
 
-### Görev ve Sorumluluklar
+#### Görev ve Sorumluluklar
 - IoT cihazlarından gelen verilerin toplanması, işlenmesi ve depolanması
 - Gerçek zamanlı veri analizi ve görselleştirme panellerinin geliştirilmesi
 - API geliştirme ve akıllı şehir sistemlerine veri entegrasyonu
@@ -17,7 +17,7 @@ Yazılım & Veri Mühendisi olarak, cihazdan toplanan sensör verilerinin işlen
 - Veri güvenliği ve sistem performans optimizasyonu
 - Donanım ve elektronik ekibi ile yazılım-donanım entegrasyon süreçlerini yürütme
 
-### Aranan Nitelikler
+#### Aranan Nitelikler
 - Bilgisayar mühendisliği, yazılım mühendisliği, veri bilimi veya ilgili alanlarda lisans derecesi
 - Python, JavaScript veya benzeri dillerde uygulama geliştirme tecrübesi
 - IoT veri protokolleri ve veri tabanı yönetimi (SQL/NoSQL) bilgisi
@@ -26,7 +26,7 @@ Yazılım & Veri Mühendisi olarak, cihazdan toplanan sensör verilerinin işlen
 - Tercihen makine öğrenmesi ve tahminleme algoritmaları konusunda bilgi
 - Ankara merkezli projelere gerektiğinde fiziksel olarak katılım sağlayabilme
 
-### Fırsatlar ve Yan Haklar
+#### Fırsatlar ve Yan Haklar
 - Yenilikçi bir çevre teknolojisi girişiminin kurucu ekibinde yer alma
 - TÜBİTAK, AB ve teknopark destekli Ar-Ge projelerinde aktif rol
 - Teknopark başvurusu onaylandığında sigorta ve vergi avantajlarından yararlanma
@@ -34,7 +34,7 @@ Yazılım & Veri Mühendisi olarak, cihazdan toplanan sensör verilerinin işlen
 - Uzun vadede hisse opsiyonu (equity / sweet equity modeli) ile ortaklık imkânı
 - Esnek çalışma (remote/hybrid) ve proje bazlı ekipman desteği
 
-### Başvuru Süreci
+#### Başvuru Süreci
 Başvurular, GreenAiriva’nın başvuru sayfasındaki form üzerinden yapılacaktır.  
 Form doldurulurken CV ve varsa proje/portföy linkleri eklenecektir.  
 Başvurular için son tarih bulunmamaktadır, değerlendirmeler başvuru sırasına göre yapılacaktır.
