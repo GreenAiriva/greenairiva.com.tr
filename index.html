@@ -1,21 +1,79 @@
 ---
 layout: default
 lang: en
-title: GreenAiriva – Innovative Air Purification Solutions
-description: GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.
+title: GreenAiriva – Urban Air Purification Technology in Development
+description: GreenAiriva is a developing urban air purification project that aims to capture harmful pollutants and greenhouse gases, improving air quality and supporting climate action goals.
 ---
+
+<link rel="stylesheet" href="css/timeline1.css">
+<style>
+/* Custom Home Styles */
+.masthead-tagline {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 15px;
+}
+.project-facts {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+.project-facts li {
+  margin-bottom: 10px;
+}
+.device-floating {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+</style>
 
 <!-- Masthead (Hero) -->
 <header class="masthead">
-  <div class="container">
+  <div class="container text-center">
     <div class="masthead-heading">Rise<br>for a</div>
     <div class="masthead-subheading-script">Cleaner</div>
     <div class="masthead-heading">Planet</div>
+    <p class="masthead-tagline">
+      A solar-powered air purification project targeting <br>methane and nitrous oxide to fight climate change<br>right where emissions start.
+    </p>
     <div class="masthead-btn-row">
-      <a class="btn btn-primary btn-xl text-uppercase" href="#solutions">Join to Us</a>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#about">Learn More</a>
+      <a class="btn btn-outline-light btn-xl text-uppercase" href="#contact">Get Involved</a>
     </div>
+    <!-- Suggested visual: Animated city view with floating pollutant particles being absorbed by an elegant GreenAiriva unit (AI render or schematic illustration) -->
   </div>
 </header>
+
+<!-- About the Project Stage -->
+<section class="page-section bg-white" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">About GreenAiriva</h2>
+      <h3 class="section-subheading text-muted">
+        GreenAiriva is a solar-powered, zero-operating-cost air purification initiative designed for dense urban areas. Unlike conventional solutions, our system selectively captures high-impact greenhouse gases such as N₂O and CH₄ using regenerable adsorbents — all without relying on underground storage or large-scale infrastructure.
+      </h3>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <!-- Suggested visual: Vector sketch of a standalone GreenAiriva unit with solar panel and venting elements placed on an urban boulevard -->
+        <img src="{{ site.baseurl }}/assets/img/about/device-placeholder.png" alt="Air Purification Concept" class="device-floating" />
+      </div>
+      <div class="col-md-6">
+        <ul class="project-facts">
+          <li><b>Stage:</b> Final phase of TRL 3 (Design & Validation)</li>
+          <li><b>Next Step:</b> Prototype build by late 2025 / early 2026</li>
+          <li><b>Energy Source:</b> Fully solar-powered</li>
+          <li><b>Target Gases:</b> Methane (CH₄), Nitrous Oxide (N₂O), Halogenated GHGs</li>
+          <li><b>Particulate Capture:</b> Integrated HEPA-grade filtration (PM 2.5 and above)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Solutions -->
 <section class="page-section" id="solutions">
@@ -23,78 +81,96 @@ description: GreenAiriva is an innovative air purification solution that capture
     <div class="text-center">
       <h2 class="section-heading text-uppercase">Our Solutions</h2>
       <h3 class="section-subheading text-muted">
-        At GreenAiriva, we deliver innovative solutions for healthier cities and a cleaner atmosphere. Our system actively captures harmful pollutants and greenhouse gases, contributing to sustainable urban living and global climate goals.
+        We’re redefining urban air purification by addressing neglected yet potent greenhouse gases like methane and nitrous oxide. GreenAiriva units function independently in crowded urban zones—providing decentralized, data-driven air quality improvement with measurable environmental impact.
       </h3>
     </div>
     <div class="row text-center">
       <div class="col-md-4">
         <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.jpg" alt="Good Health and Well-Being image" style="max-width:100%; max-height:100%;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.png" alt="Good Health and Well-Being image" style="max-width:100%; max-height:100%;">
         </span>
-        <h4 class="my-3">Good Health & Well-Being</h4>
-        <p class="text-muted">We reduce air pollution and improve urban air quality, protecting people’s health and enhancing quality of life in cities.</p>
+        <h4 class="my-3">Healthier Air, Healthier Lives</h4>
+        <p class="text-muted">By reducing fine particulate matter and greenhouse gases in public spaces, we help lower respiratory risk, especially for vulnerable populations.</p>
       </div>
       <div class="col-md-4">
         <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.jpg" alt="Sustainable Cities and Communities image" style="max-width:100%; max-height:100%;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.png" alt="Sustainable Cities and Communities image" style="max-width:100%; max-height:100%;">
         </span>
-        <h4 class="my-3">Sustainable Cities & Communities</h4>
-        <p class="text-muted">We empower cities with clean air and data-driven insights, supporting sustainable urban development and livable communities.</p>
+        <h4 class="my-3">Designed for the City</h4>
+        <p class="text-muted">GreenAiriva operates independently on solar power and can be deployed on rooftops, plazas, garages, or high-traffic boulevards—wherever emissions peak.</p>
       </div>
       <div class="col-md-4">
         <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.jpg" alt="Climate Action image" style="max-width:100%; max-height:100%;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.png" alt="Climate Action image" style="max-width:100%; max-height:100%;">
         </span>
-        <h4 class="my-3">Climate Action</h4>
-        <p class="text-muted">Our system captures harmful greenhouse gases, contributing to global efforts to combat climate change and reduce carbon emissions.</p>
+        <h4 class="my-3">Carbon Value, Climate Impact</h4>
+        <p class="text-muted">With up to 5–10 tons CO₂e/year per unit, our technology supports global Net Zero efforts while enabling potential carbon credits and social cost savings.</p>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary btn-xl text-uppercase d-inline-block" href="/about/">Visit About Us</a>
       </div>
     </div>
   </div>
 </section>
-<!-- Why GreenAiriva? -->
-<section class="page-section bg-light" id="whyus">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-2 order-md-1 mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Why GreenAiriva?</h2>
-                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; text-align: justify;">
-                    <li><b>Innovative Technology:</b> We go beyond traditional Direct Air Capture (DAC) methods, offering a low-energy, physical adsorption-based solution.</li>
-                    <li><b>Real-Time Monitoring:</b> We enable smart city integration with instant air quality analytics.</li>
-                    <li><b>Economic & Eco-Friendly:</b> We create economic value for our clients through carbon credit generation, sustainability reporting, and commercialization of captured pollutants.</li>
-                    <li><b>Global Vision:</b> Fully aligned with the EU Green Deal and the 2050 Net Zero Emissions goal, GreenAiriva is scalable from Turkey to the world.</li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (4).png" alt="Why Us" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
+
+<!-- Roadmap -->
+<section class="ps-timeline-sec">
+  <div class="container">
+    <ol class="ps-timeline">
+      <li>
+        <div class="img-handler-top">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-research.png" alt=""/>
         </div>
-    </div>
+        <div class="ps-bot">
+          <p>Scientific Research & Feasibility Study (Completed – TRL 3 near completion)</p>
+        </div>
+        <span class="ps-sp-top">01</span>
+      </li>
+      <li>
+        <div class="img-handler-bot">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-design.png" alt=""/>
+        </div>
+        <div class="ps-top">
+          <p>Material Testing & System Design (Final Iterations Underway)</p>
+        </div>
+        <span class="ps-sp-bot">02</span>
+      </li>
+      <li>
+        <div class="img-handler-top">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-prototip.png" alt=""/>
+        </div>
+        <div class="ps-bot">
+          <p>Prototype Manufacturing & Assembly (Target: Q4 2025 – Q1 2026)</p>
+        </div>
+        <span class="ps-sp-top">03</span>
+      </li>
+      <li>
+        <div class="img-handler-bot">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-pilot.png" alt=""/>
+        </div>
+        <div class="ps-top">
+          <p>Pilot Deployment & Field Validation (Planned – Location to be confirmed with municipality)</p>
+        </div>
+        <span class="ps-sp-bot">04</span>
+      </li>
+    </ol>
+  </div>
 </section>
 
-<!-- What Are We Doing -->
-<section class="page-section bg-white" id="whatdo">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="section-heading text-uppercase">Greenhouse Gas Harvesting</h2>
-        <h3 class="section-subheading text-muted">
-        At GreenAiriva, we deliver innovative solutions for healthier cities and a cleaner atmosphere. Our system actively captures harmful pollutants and greenhouse gases, contributing to sustainable urban living and global climate goals.
-        </h3>
-      </div>
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-1 order-md-1 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (3).png" alt="Contribution" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
-            <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Social and Environmental Contribution</h2>
-                <p style="text-align:justify;">
-                    GreenAiriva operates year-round with nearly all its energy supplied by solar power, achieving an almost zero carbon footprint. Its filtration technology causes no additional environmental harm, and all components are highly durable. In terms of cost-effectiveness and climate benefit, GreenAiriva outperforms current greenhouse gas reduction alternatives, delivering 2–4 times greater impact than converting a CNG bus to electric. This makes it a sustainable, economical, and eco-friendly solution.
-                </p>
-            </div>
-        </div>
+<!-- Partnership Opportunities -->
+<section class="page-section bg-light" id="partnership">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Partnership Opportunities</h2>
+      <p class="section-subheading text-muted">
+        We’re actively seeking partnerships with municipalities, academic institutions, environmental NGOs, and investors passionate about sustainable urban technologies. Let’s co-create healthier, greener cities.
+      </p>
+      <a class="btn btn-success btn-xl text-uppercase" href="#contact">Contact Us</a>
     </div>
+  </div>
 </section>
 <!-- Blog Grid -->
-<section class="page-section bg-light" id="blog">
+<section class="page-section bg-white" id="blog">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-heading text-uppercase">
@@ -127,7 +203,7 @@ description: GreenAiriva is an innovative air purification solution that capture
       <div class="col-12 col-sm-6 col-lg-4 d-flex">
         <div class="blog-card w-100">
           <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/2.jpg.png" alt="Urban Air Crisis" />
+            <img src="{{ site.baseurl }}/assets/img/blog/2.png" alt="Urban Air Crisis" />
           </div>
           <div class="blog-card-body">
             <h3>The Urban Air Crisis</h3>
@@ -162,12 +238,15 @@ description: GreenAiriva is an innovative air purification solution that capture
     </div>
   </div>
 </section>
+
 <!-- Contact -->
 <section class="page-section" id="contact">
   <div class="container">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">Contact Us</h2>
-      <h3 class="section-subheading text-muted">Do not hesitate to give us your feedback, partnership ideas, or questions. GreenAiriva is open to collaborations and community input.</h3>
+      <h2 class="section-heading text-uppercase">Get in Touch</h2>
+      <h3 class="section-subheading text-muted">
+        Share your ideas, potential collaborations, or simply say hello.
+      </h3>
     </div>
     <form action="https://formspree.io/f/mblyjkpa" method="POST">
       <div class="row align-items-stretch mb-5">
