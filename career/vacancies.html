@@ -27,68 +27,6 @@ description: Detailed job description for GreenAiriva career opportunities.
   </div>
 </main>
 
-<!-- Job Loader Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get('slug');
-  if (!slug) {
-    document.getElementById('job-notfound').style.display = 'block';
-    return;
-  }
-
-  const jsonUrl = '{{ site.baseurl }}/career/jobs.json';
-
-  fetch(jsonUrl)
-    .then(res => {
-      if (!res.ok) throw new Error("Jobs JSON yüklenemedi: " + res.status);
-      return res.json();
-    })
-    .then(jobs => {
-      const job = jobs.find(j => (j.slug || '').toLowerCase() === slug.toLowerCase());
-      if (!job) {
-        document.getElementById('job-notfound').style.display = 'block';
-        return;
-      }
-
-      // Fill in the job details
-      document.getElementById('job-title-head').textContent = job.title || '';
-      document.getElementById('job-location-head').textContent = job.location || '';
-      document.getElementById('job-type-head').textContent = job.type || '';
-
-      const header = document.getElementById('article-masthead');
-      if (job.jobimg) {
-        const imgUrl = job.jobimg.startsWith('/') ? '{{ site.baseurl }}' + job.jobimg : job.jobimg;
-        header.style.backgroundImage = `url('${imgUrl}')`;
-      }
-
-      // Fetch and render markdown job description
-      const mdUrl = '{{ site.baseurl }}' + job.url;
-      fetch(mdUrl)
-        .then(res => {
-          if (!res.ok) throw new Error('Markdown bulunamadı: ' + res.status);
-          return res.text();
-        })
-        .then(md => {
-          if (window.marked) {
-            document.getElementById('job-content').innerHTML = marked.parse(md);
-          } else {
-            document.getElementById('job-content').textContent = md;
-          }
-        })
-        .catch(err => {
-          document.getElementById('job-notfound').style.display = 'block';
-        });
-    })
-    .catch(err => {
-      document.getElementById('job-notfound').style.display = 'block';
-    });
-});
-</script>
-
-<!-- Markdown Parser -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
 <!-- Extra CSS to prevent navbar overlap -->
 <style>
 .job-header {
