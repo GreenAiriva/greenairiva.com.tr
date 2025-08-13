@@ -1632,7 +1632,7 @@ header.masthead {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("../assets/img/header-bg.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1797,7 +1797,7 @@ header.masthead .container {
 /* 06.4 Contact */
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/img/map-image.webp");
   background-repeat: no-repeat;
   background-position: center;
 }
