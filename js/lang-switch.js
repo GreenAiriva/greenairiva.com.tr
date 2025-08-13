@@ -2,22 +2,30 @@
 // NOT: Bu dosya, header.html ve header_tr.html içindeki dil geçişi kurallarını 1:1 korur.
 
 // --- Ortak slug eşleştirme ---
-// EN<->TR job slug mapping (title-eşleştirme ile)
+// EN<->TR job slug mapping (slug-eşleştirme + opsiyonel tablo)
 function getSlugMapping(slug, fromLang, toLang, callback) {
-  const fromJson = fromLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
-  const toJson   = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
+  const toJson = toLang === 'tr' ? '/career/tr/jobs.json' : '/career/jobs.json';
 
-  fetch(fromJson)
+  fetch(toJson)
     .then(res => res.json())
-    .then(fromJobs => {
-      const job = fromJobs.find(j => j.slug === slug);
-      if (!job) { callback(null); return; }
-      fetch(toJson)
-        .then(res => res.json())
-        .then(toJobs => {
-          const match = toJobs.find(j => j.title.trim().toLowerCase() === job.title.trim().toLowerCase());
-          callback(match ? match.slug : null);
-        });
+    .then(toJobs => {
+      // Önce hedef JSON'da bire bir slug var mı bak (case-insensitive)
+      const direct = toJobs.find(j => j.slug && j.slug.toLowerCase() === slug.toLowerCase());
+      if (direct) { callback(direct.slug); return; }
+
+      // Özelleştirilmiş eşleştirme tablosu (gerekirse doldurulabilir)
+      const customMap = {
+        en: {
+          // 'en-slug': 'tr-slug'
+        },
+        tr: {
+          // 'tr-slug': 'en-slug'
+        }
+      };
+      const directionMap = fromLang === 'en' ? customMap.en : customMap.tr;
+      const mapped = directionMap[slug];
+      // Bulunamazsa mevcut slug ile devam et
+      callback(mapped || slug);
     });
 }
 
