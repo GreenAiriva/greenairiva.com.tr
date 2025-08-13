@@ -25,9 +25,15 @@
     <!-- Job Loader Script (job- prefixli id’lerle tamamen uyumlu) -->
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const params = new URLSearchParams(window.location.search);
-      const slug = params.get('slug');
-      if (!slug) return;
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('slug');
+        if (!slug) {
+          const nf = document.getElementById('job-notfound');
+          if (nf) nf.style.display = 'block';
+          const single = document.querySelector('.job-single');
+          if (single) single.style.display = 'none';
+          return;
+        }
 
       // Dil kontrolü → doğru JSON yolunu seç
       const jsonPath = '{{ page.lang }}' === 'tr'
@@ -56,10 +62,16 @@
           const locationHead = document.getElementById('job-location-head');
           if (locationHead) locationHead.textContent = job.location || '';
 
-          const typeHead = document.getElementById('job-type-head');
-          if (typeHead) typeHead.textContent = job.type || '';
+            const typeHead = document.getElementById('job-type-head');
+            if (typeHead) typeHead.textContent = job.type || '';
 
-          // Markdown içeriğini çek ve göster
+            const header = document.getElementById('article-masthead');
+            if (header && job.jobimg) {
+              const imgUrl = job.jobimg.startsWith('/') ? '{{ site.baseurl }}' + job.jobimg : job.jobimg;
+              header.style.backgroundImage = `url('${imgUrl}')`;
+            }
+
+            // Markdown içeriğini çek ve göster
           if (job.url) {
             const mdUrl = '{{ site.baseurl }}' + job.url;
             fetch(mdUrl)
