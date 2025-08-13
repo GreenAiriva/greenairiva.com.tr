@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         return;
       }
-      // Çift /tr hatalarını önle (zaten /tr ile başlıyorsa olduğu gibi)
-      else if (path.startsWith('/tr/')) {
+      // Çift /tr hatalarını önle (yol segmentlerinde zaten 'tr' varsa ekleme)
+      else if (path.split('/').includes('tr')) {
         newPath = path;
       }
       // Kök ya da anasayfa ise
