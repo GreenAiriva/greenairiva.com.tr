@@ -1,270 +1,97 @@
 ---
 layout: default
-lang: en
-title: GreenAiriva – Urban Air Purification Technology in Development
-description: GreenAiriva is a developing urban air purification project that aims to capture harmful pollutants and greenhouse gases, improving air quality and supporting climate action goals.
+title: GreenAiriva – Clean Air, Smarter Cities
 ---
 
-<link rel="stylesheet" href="/css/timeline.css">
-<style>
-/* Custom Home Styles */
-
-.masthead-tagline {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.85);
-  margin-top: 15px;
-}
-
-.project-facts {
-  list-style: none;
-  padding: 0;
-  font-size: 1rem;
-}
-.project-facts li {
-  margin-bottom: 10px;
-}
-
-</style>
-
-
-<!-- Masthead (Hero) -->
-<header class="masthead">
-  <div class="container text-center">
-    <div class="masthead-heading">Rise for a</div>
-    <div class="masthead-subheading-script">Cleaner</div>
-    <div class="masthead-heading">Planet</div>
-    <p class="masthead-tagline">
-      A developing technology to make urban air cleaner, healthier, and more sustainable.
-    </p>
-    <div class="masthead-btn-row">
-      <a class="btn btn-primary btn-xl text-uppercase" href="#about">Learn More</a>
-      <a class="btn btn-outline-light btn-xl text-uppercase" href="#contact">Get Involved</a>
+<!-- HERO -->
+<section class="hero container">
+  <div class="hero__content">
+    <h1 class="hero__title">Solar‑powered urban air purification for real streets, not labs.</h1>
+    <p class="hero__subtitle">Selective adsorbents, city‑scale impact: we trap N₂O/CH₄ at street level—quietly, sustainably.</p>
+    <div class="hero__cta">
+      <a href="/about/" class="btn btn--primary">How it works</a>
+      <a href="/career/" class="btn btn--ghost">Join the team</a>
     </div>
-    <!-- Suggested visual: A clean city skyline with animated pollution particles dispersing -->
   </div>
-</header>
+  <div class="hero__media" aria-hidden="true"></div>
+</section>
 
-<!-- About the Project Stage -->
-<section class="page-section bg-white" id="about">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">About GreenAiriva</h2>
-      <h3 class="section-subheading text-muted">
-        GreenAiriva is an R&D-driven project aiming to revolutionize urban air purification.
-        Currently in the research and design stage, we are preparing for prototype manufacturing and pilot installations.
-      </h3>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center">
-        <!-- Suggested visual: Minimalist vector illustration of an air filtration device in a city environment -->
-        <img src="{{ site.baseurl }}/assets/img/about/device-placeholder.jpg" alt="Air Purification Concept" class="img-fluid shadow" />
-      </div>
-      <div class="col-md-6">
-        <ul class="project-facts">
-          <li><b>Stage:</b> Research & Design Completed</li>
-          <li><b>Next Step:</b> Prototype manufacturing</li>
-          <li><b>Energy Source:</b> Primarily solar-powered</li>
-          <li><b>Goal:</b> Improve urban air quality & reduce CO₂, NO₂</li>
-        </ul>
-      </div>
-    </div>
+<!-- VALUE PROPS (3 CARDS) -->
+<section class="section section--light">
+  <div class="container grid grid--3">
+    <article class="card">
+      <h3 class="card__title">Measurable climate impact</h3>
+      <p class="card__body">Per‑device estimate <strong>5–10 t CO₂e/year</strong> via targeted capture of high‑impact gases.</p>
+    </article>
+    <article class="card">
+      <h3 class="card__title">Quiet in dense corridors</h3>
+      <p class="card__body">Optimized for traffic‑heavy urban areas; ultra‑quiet operation at <strong>≤37 dB</strong> enables curbside use.</p>
+    </article>
+    <article class="card">
+      <h3 class="card__title">IoT maps & MRV‑ready</h3>
+      <p class="card__body">Device‑level IoT collects air‑quality & environmental data for <strong>granular hotspot maps</strong> and tracking.</p>
+    </article>
   </div>
 </section>
 
-<!-- Solutions -->
-<section class="page-section " id="solutions">
+<!-- HOW IT WORKS -->
+<section class="section">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Our Solutions</h2>
-      <h3 class="section-subheading text-muted">
-        At GreenAiriva, we deliver innovative solutions for healthier cities and a cleaner atmosphere. Our system actively captures harmful pollutants and greenhouse gases, contributing to sustainable urban living and global climate goals.
-      </h3>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.jpg" alt="Good Health and Well-Being image" style="max-width:100%; max-height:100%;">
-        </span>
-        <h4 class="my-3">Good Health & Well-Being</h4>
-        <p class="text-muted">We reduce air pollution and improve urban air quality, protecting people’s health and enhancing quality of life in cities.</p>
-      </div>
-      <div class="col-md-4">
-        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.jpg" alt="Sustainable Cities and Communities image" style="max-width:100%; max-height:100%;">
-        </span>
-        <h4 class="my-3">Sustainable Cities & Communities</h4>
-        <p class="text-muted">We empower cities with clean air and data-driven insights, supporting sustainable urban development and livable communities.</p>
-      </div>
-      <div class="col-md-4">
-        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.jpg" alt="Climate Action image" style="max-width:100%; max-height:100%;">
-        </span>
-        <h4 class="my-3">Climate Action</h4>
-        <p class="text-muted">Our system captures harmful greenhouse gases, contributing to global efforts to combat climate change and reduce carbon emissions.</p>
-      </div>
-      <a class="btn btn-primary btn-xl text-uppercase" href="/about/">Visit About Us</a>
-    </div>
+    <h2 class="section__title">How GreenAiriva works</h2>
+    <p>Each unit draws approximately <strong>600 m³/hour</strong> of air from traffic‑dense corridors. Inside, <strong>selective, differential media</strong> separate target gases—<strong>N₂O, CH₄</strong>, halogenated/ozone‑depleting species—while a pre‑filter captures particulates down to <strong>~0.2 nm</strong>. Filters are <strong>easy to regenerate</strong> and designed for <strong>30+ years</strong> of service life. Outlet gas concentrations are measured and logged to a secure database; data is processed and <strong>mapped</strong> to support environmental status tracking and MRV. The entire system operates <strong>off‑grid</strong> using its own solar power.</p>
+    <ol class="steps steps--wide">
+      <li class="steps__item"><strong>Intake</strong> – High‑throughput fan pulls ~600 m³/h from roadside air columns.</li>
+      <li class="steps__item"><strong>Selective capture</strong> – Adsorbents separate N₂O/CH₄ and other target gases; particulates are pre‑filtered.</li>
+      <li class="steps__item"><strong>Regeneration</strong> – Media is regenerated on a smart schedule for longevity & efficiency.</li>
+      <li class="steps__item"><strong>Sensing & MRV</strong> – Outlet concentrations measured; data logged, processed, and mapped.</li>
+      <li class="steps__item"><strong>Power</strong> – Fully solar‑powered; no grid connection required.</li>
+    </ol>
   </div>
 </section>
 
-<!-- Roadmap -->
-    <section class="ps-timeline-sec">
-        <div class="container">
-            <ol class="ps-timeline">
-                <li>
-                    <div class="img-handler-top">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_03.png" alt=""/>
-                    </div>
-                    <div class="ps-bot">
-                        <p>Research Phase <span>(Completed)</span></p>
-                    </div>
-                    <span class="ps-sp-top">01</span>
-                </li>
-                <li>
-                    <div class="img-handler-bot">
-                        <img src="assets/img/blog/2.png" alt=""/>
-                    </div>
-                    <div class="ps-top">
-                        <p>Design & Feasibility <span>(Completed)</span></p>
-                    </div>
-                    <span class="ps-sp-bot">02</span>
-                </li>
-                <li>
-                    <div class="img-handler-top">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_05.png" alt=""/>
-                    </div>
-                    <div class="ps-bot">
-                        <p>Prototype Manufacturing <span>(Next)</span></p>
-                    </div>
-                    <span class="ps-sp-top">03</span>
-                </li>
-                <li>
-                    <div class="img-handler-bot">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_10.png" alt=""/>
-                    </div>
-                    <div class="ps-top">
-                        <p>Pilot Installations <span>(Planned)</span></p>
-                    </div>
-                    <span class="ps-sp-bot">04</span>
-                </li>
-            </ol>
-        </div>
-    </section>
-
-<!-- Partnership Opportunities -->
-<section class="page-section bg-light" id="partnership">
+<!-- ROADMAP TEASER (UNCHANGED) -->
+<section class="section section--accent">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Partnership Opportunities</h2>
-      <p class="section-subheading text-muted">
-        We are seeking collaboration with municipalities, research institutes, environmental organizations, and clean technology investors.
-      </p>
-      <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Contact Us</a>
-    </div>
+    <h2 class="section__title">From TRL 3 to city pilots</h2>
+    <p class="muted">We’re finalizing TRL 3 now, targeting a functional prototype by late 2025 / early 2026 and pilot deployments with local partners.</p>
+    <a class="btn btn--inverse" href="/solutions/">See the roadmap</a>
   </div>
 </section>
 
-<!-- Blog Grid -->
-<section class="page-section bg-light" id="blog">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-heading text-uppercase">
-        <a href="https://blog.greenairiva.com.tr/" target="_blank" style="color:inherit;text-decoration:none;">Blog</a>
-      </h2>
-      <h3 class="section-subheading text-muted">
-        Follow our blog to explore the scientific foundations, environmental policies, technological advancements, and original analyses behind GreenAiriva. The future of clean air is being written here!
-      </h3>
-    </div>
-    <div class="row g-4">
-      <!-- Blog Kart 1 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/1.jpg" alt="Social Cost" />
-          </div>
-          <div class="blog-card-body">
-            <h3>What is Social Cost?</h3>
-            <p>
-              The social cost of greenhouse gases measures the long-term economic and environmental damages caused by emissions. Understanding this cost is crucial for designing effective climate policies and ensuring a healthier, more sustainable future for everyone.
-            </p>
-            <a href="https://blog.greenairiva.com.tr/social-cost" target="_blank" rel="noopener" class="read-blog-btn">
-              Read Blog
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Kart 2 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/2.png" alt="Urban Air Crisis" />
-          </div>
-          <div class="blog-card-body">
-            <h3>The Urban Air Crisis</h3>
-            <p>
-              Urban air pollution requires innovative solutions. GreenAiriva’s advanced technology leverages real-time analytics, multi-pollutant capture, and renewable energy integration to help cities create a cleaner and healthier environment for all citizens.
-            </p>
-            <a href="https://blog.greenairiva.com.tr/urban-air-crisis" target="_blank" rel="noopener" class="read-blog-btn">
-              Read Blog
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Kart 3 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/3.jpg" alt="Atmosphere" />
-          </div>
-          <div class="blog-card-body">
-            <h3>What Happened to Our Atmosphere!</h3>
-            <p>
-              Atmospheric concentrations of pollutants like CO₂, CH₄, and N₂O have reached alarming levels. GreenAiriva addresses this challenge with smart adsorption materials and real-time monitoring to deliver actionable climate solutions.
-            </p>
-            <a href="https://blog.greenairiva.com.tr/atmosphere" target="_blank" rel="noopener" class="read-blog-btn">
-              Read Blog
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- LETTER CARDS (PLACEHOLDERS) -->
+<section class="section section--light">
+  <div class="container grid grid--2">
+    <article class="card card--tight">
+      <h3>A Note to Municipal Partners</h3>
+      <p>On pilots, siting, and aligning outcomes with air‑quality and Net‑Zero plans. <em>(Content to be added.)</em></p>
+      <a href="#" class="btn btn--ghost">Read the letter</a>
+    </article>
+    <article class="card card--tight">
+      <h3>A Note to Investors & Collaborators</h3>
+      <p>Why selective urban capture, why now, and how we de‑risk toward pilots and scale. <em>(Content to be added.)</em></p>
+      <a href="#" class="btn btn--ghost">Read the letter</a>
+    </article>
   </div>
 </section>
 
-<!-- Contact -->
-<section class="page-section" id="contact">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Get in Touch</h2>
-      <h3 class="section-subheading text-muted">
-        Share your ideas, potential collaborations, or simply say hello.
-      </h3>
+<!-- SOCIAL PROOF / PARTNERS STRIP (PLACEHOLDER) -->
+<section class="section section--light">
+  <div class="container logos">
+    <span class="logos__label">Letters of intent / supporters:</span>
+    <img src="/assets/img/logos/icons8-linkedin-500.svg" alt="Partner placeholder" class="logos__item" />
+    <img src="/assets/img/logos/icons8-instagram-500.svg" alt="Partner placeholder" class="logos__item" />
+    <img src="/assets/img/logos/icons8-x-500.svg" alt="Partner placeholder" class="logos__item" />
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="container cta">
+    <h2>Bring clean‑air innovation to your district</h2>
+    <p>Municipalities, campuses, and investors: let’s design a pilot tailored to your site.</p>
+    <div class="hero__cta">
+      <a href="/about/" class="btn btn--primary">Learn more</a>
+      <a href="mailto:hello@greenairiva.com.tr" class="btn btn--ghost">Contact us</a>
     </div>
-    <form action="https://formspree.io/f/mblyjkpa" method="POST">
-      <div class="row align-items-stretch mb-5">
-        <div class="col-md-6">
-          <div class="form-group mb-3">
-            <input class="form-control" type="text" name="name" placeholder="Your Name *" required />
-          </div>
-          <div class="form-group mb-3">
-            <input class="form-control" type="email" name="email" placeholder="Your Email *" required />
-          </div>
-          <div class="form-group mb-3">
-            <input class="form-control" type="tel" name="phone" placeholder="Your Phone *" required />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group mb-3">
-            <textarea class="form-control" name="message" placeholder="Your Message *" rows="8" required></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="text-center">
-        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
-      </div>
-    </form>
   </div>
 </section>
