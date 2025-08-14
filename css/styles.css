@@ -4,7 +4,27 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
@@ -1875,9 +1895,11 @@ section#contact .section-heading {
 /* Modern blog post style */
 
 :root {
-  --font-heading: 'Inter', 'Rubik', Arial, sans-serif;
-  --font-body: 'Open Sans', Arial, sans-serif;
+  --font-heading: 'Lato', 'Inter', 'Rubik', Arial, sans-serif; /* body başlıkları */
+  --font-subheading: 'Poppins', 'Montserrat', Arial, sans-serif; /* alt başlıklar */
+  --font-body: 'Quicksand', 'Open Sans', Arial, sans-serif; /* gövde metinleri */
 }
+
 
 /* GENEL */
 body {
