@@ -1,22 +1,79 @@
 ---
 layout: default
 lang: en
-title: GreenAiriva – About
-description: GreenAiriva About Page - Learn about our journey and mission.
+title: GreenAiriva – Urban Air Purification Technology in Development
+description: GreenAiriva is a developing urban air purification project that aims to capture harmful pollutants and greenhouse gases, improving air quality and supporting climate action goals.
 ---
 
-<!-- Masthead -->
-<header class="masthead career-hero" style="background-image: url('{{ site.baseurl }}/assets/img/solutions-bg.webp');">
-    <div class="container">
-        <div class="masthead-heading">Rise<br>for a</div>
-        <div class="masthead-subheading-script">Cleaner</div>
-        <div class="masthead-heading">Planet</div>
-        <div class="masthead-btn-row">
-            <a class="btn btn-primary btn-xl text-uppercase" href="#about">Who We Are?</a>
-        </div>
-    </div>
-</header>
+<link rel="stylesheet" href="{{ site.baseurl }}css/timeline1.css">
+<style>
+/* Custom Home Styles */
+.masthead-tagline {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 15px;
+}
+.project-facts {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+.project-facts li {
+  margin-bottom: 10px;
+}
+.device-floating {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none;
+}
 
+</style>
+
+<!-- Masthead (Hero) -->
+<header class="masthead career-hero" style="background-image: url('{{ site.baseurl }}/assets/img/solutions-bg.webp');">
+  <div class="container text-center">
+    <div class="masthead-heading">Rise<br>for a</div>
+    <div class="masthead-subheading-script">Cleaner</div>
+    <div class="masthead-heading">Planet</div>
+    <p class="masthead-tagline">
+      Selective adsorbents, city‑scale impact: we trap N₂O/CH₄ at street level—quietly, sustainably.</p>
+    <div class="masthead-btn-row">
+      <a class="btn btn-primary btn-xl text-uppercase" href="#about">Learn More</a>
+      <a class="btn btn-outline-light btn-xl text-uppercase" href="#contact">Get Involved</a>
+    </div>
+    <!-- Suggested visual: Animated city view with floating pollutant particles being absorbed by an elegant GreenAiriva unit (AI render or schematic illustration) -->
+  </div>
+</header>
+<!-- About the Project Stage -->
+<section class="page-section bg-white" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">About GreenAiriva</h2>
+      <h3 class="section-subheading text-muted">
+        GreenAiriva is a solar-powered, zero-operating-cost air purification initiative designed for dense urban areas. Unlike conventional solutions, our system selectively captures high-impact greenhouse gases such as N₂O and CH₄ using regenerable adsorbents — all without relying on underground storage or large-scale infrastructure.
+      </h3>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <!-- Suggested visual: Vector sketch of a standalone GreenAiriva unit with solar panel and venting elements placed on an urban boulevard -->
+        <img src="{{ site.baseurl }}/assets/img/about/device-placeholder.webp" alt="Air Purification Concept" class="device-floating" />
+      </div>
+      <div class="col-md-6">
+        <ul class="project-facts">
+          <li><b>Measurable climate impact</b> Per‑device estimate <strong>5–10 t CO₂e/year</strong> via targeted capture of high‑impact gases.</li>
+          <li><b>Quiet in dense corridors</b> Optimized for traffic‑heavy urban areas; ultra‑quiet operation at <strong>≤37 dB</strong> enables curbside use.</li>
+          <li><b>IoT maps & MRV‑ready</b> Device‑level IoT collects air‑quality & environmental data for <strong>granular hotspot maps</strong> and tracking.</li>
+          <li><b>Energy Source:</b> Fully solar-powered</li>
+          <li><b>Stage:</b> Final phase of TRL 3 (Design & Validation)</li>
+          <li><b>Target Gases:</b> Methane (CH₄), Nitrous Oxide (N₂O), Halogenated GHGs</li>
+          <li><b>Particulate Capture:</b> Integrated HEPA-grade filtration (PM 2.5 and above)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- About Us -->
 <section class="page-section" id="about">
     <div class="container">
