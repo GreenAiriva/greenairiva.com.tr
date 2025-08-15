@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'The Youngest Script';
   src: url('../assets/fonts/the-youngest-script.ttf') format('truetype');
@@ -13,7 +14,7 @@
 @font-face {
   font-family: 'Poppins';
   src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
-  font-weight: 100 900;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -21,11 +22,11 @@
 @font-face {
   font-family: 'Lato';
   src: url('../assets/fonts/Lato-Bold.ttf') format('truetype');
-  font-weight: 100 900;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-@charset "UTF-8";
+
 /*!
 * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2023 Start Bootstrap
