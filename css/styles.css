@@ -2010,7 +2010,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
   border-radius: 1.8rem;
   letter-spacing: .04em;
-  background: linear-gent(90deg, #27ae60 0%, #2980ef 100%);
+  background: linear-gradient(90deg, #27ae60 0%, #2980ef 100%);
   color: #fff;
   border: none;
   box-shadow: 0 1px 8px rgba(41,128,239,0.13);
