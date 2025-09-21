@@ -3,6 +3,7 @@ layout: default
 lang: en
 title: GreenAiriva – Urban Air Purification Technology in Development
 description: GreenAiriva is a developing urban air purification project that aims to capture harmful pollutants and greenhouse gases, improving air quality and supporting climate action goals.
+alternate_url: /tr/
 ---
 
 <link rel="stylesheet" href="{{ site.baseurl }}css/timeline1.css">
@@ -182,60 +183,9 @@ description: GreenAiriva is a developing urban air purification project that aim
         Follow our blog to explore the scientific foundations, environmental policies, technological advancements, and original analyses behind GreenAiriva. The future of clean air is being written here!
       </h3>
     </div>
-    <div class="row g-4">
-      <!-- Blog Kart 1 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/1.webp" alt="Social Cost" />
-          </div>
-          <div class="blog-card-body">
-            <h3>What is Social Cost?</h3>
-            <p>
-              The social cost of greenhouse gases measures the long-term economic and environmental damages caused by emissions. Understanding this cost is crucial for designing effective climate policies and ensuring a healthier, more sustainable future for everyone.
-            </p>
-            <a href="https://blog.greenairiva.com.tr/social-cost" target="_blank" rel="noopener" class="read-blog-btn">
-              Read Blog
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Kart 2 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/2.webp" alt="Urban Air Crisis" />
-          </div>
-          <div class="blog-card-body">
-            <h3>The Urban Air Crisis</h3>
-            <p>
-              Urban air pollution requires innovative solutions. GreenAiriva’s advanced technology leverages real-time analytics, multi-pollutant capture, and renewable energy integration to help cities create a cleaner and healthier environment for all citizens.
-            </p>
-            <a href="https://blog.greenairiva.com.tr/urban-air-crisis" target="_blank" rel="noopener" class="read-blog-btn">
-              Read Blog
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Kart 3 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex">
-        <div class="blog-card w-100">
-          <div class="blog-card-img">
-            <img src="{{ site.baseurl }}/assets/img/blog/3.webp" alt="Atmosphere" />
-          </div>
-          <div class="blog-card-body">
-            <h3>What Happened to Our Atmosphere!</h3>
-            <p>
-              Atmospheric concentrations of pollutants like CO₂, CH₄, and N₂O have reached alarming levels. GreenAiriva addresses this challenge with smart adsorption materials and real-time monitoring to deliver actionable climate solutions.
-            </p>
-            <a href="https://blog.greenairiva.com.tr/atmosphere" target="_blank" rel="noopener" class="read-blog-btn">
-              Read Blog
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 20 20" fill="none"><path d="M5 10H15M15 10L11.5 6.5M15 10L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
+    <div class="row g-4 blog-feed" id="blog-feed-en" data-blog-feed="{{ site.baseurl }}/posts.json" data-blog-limit="3" data-blog-cta="Read Blog" data-blog-empty-text="New stories are on the way." data-blog-error-text="We couldn't load the stories right now. Visit our blog for more insights." data-blog-error-link-label="our blog" data-blog-fallback-img="{{ site.baseurl }}/assets/img/blog/placeholder.svg" data-blog-fallback-link="https://blog.greenairiva.com.tr/" data-blog-base="{{ site.baseurl }}">
+      <div class="col-12">
+        <p class="text-muted mb-0">Loading stories…</p>
       </div>
     </div>
   </div>

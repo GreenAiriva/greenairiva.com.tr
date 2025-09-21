@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "social-cost",
+    "lang": "en",
+    "title": "Understanding the Social Cost of Greenhouse Gases",
+    "summary": "Translate climate damages into economic terms to budget smarter mitigation projects and prioritize high-impact greenhouse gases.",
+    "tags": ["Climate Policy", "Economics", "MRV"],
+    "image": "/assets/img/blog/1.webp",
+    "image_alt": "Climate economics illustration",
+    "content": "/blog/social-cost/",
+    "draft": false
+  },
+  {
+    "slug": "urban-air-crisis",
+    "lang": "en",
+    "title": "The Urban Air Crisis Needs Smarter Infrastructure",
+    "summary": "Fine particles, methane, and nitrous oxide converge in dense corridors—integrated solutions can deliver health and climate wins together.",
+    "tags": ["Air Quality", "Public Health", "Infrastructure"],
+    "image": "/assets/img/blog/2.webp",
+    "image_alt": "City street with air-quality overlay",
+    "content": "/blog/urban-air-crisis/",
+    "draft": false
+  },
+  {
+    "slug": "greenhouse-gases-urban-hotspots",
+    "lang": "en",
+    "title": "Tracking Greenhouse Gases in Urban Hotspots",
+    "summary": "High-resolution sensing reveals methane and nitrous oxide peaks that targeted purification can rapidly reduce.",
+    "tags": ["Methane", "Nitrous Oxide", "Urban Analytics"],
+    "image": "/assets/img/blog/3.webp",
+    "image_alt": "Greenhouse gas plumes over a city",
+    "content": "/blog/greenhouse-gases-urban-hotspots/",
+    "draft": false
+  }
+]

@@ -5,28 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Quicksand';
-  src: url('../assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../assets/fonts/Lato-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /*!
 * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2023 Start Bootstrap
@@ -87,8 +65,8 @@
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gent: linear-gent(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-gent: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -1896,9 +1874,9 @@ section#contact .section-heading {
 /* Modern blog post style */
 
 :root {
-  --font-heading: 'Lato', 'Inter', 'Rubik', Arial, sans-serif; /* body başlıkları */
-  --font-subheading: 'Poppins', 'Montserrat', Arial, sans-serif; /* alt başlıklar */
-  --font-body: 'Quicksand', 'Open Sans', Arial, sans-serif; /* gövde metinleri */
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* body başlıkları */
+  --font-subheading: "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* alt başlıklar */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* gövde metinleri */
 }
 
 
@@ -1989,6 +1967,25 @@ h1, h2, h3, h4, h5 {
   letter-spacing: -0.01em;
 }
 
+.blog-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+}
+
+.blog-card-tags li {
+  background: rgba(41, 128, 239, 0.12);
+  color: #1f4d8c;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .blog-card-body p {
   font-size: 1.07rem;
   color: #4b5563;
@@ -2023,7 +2020,7 @@ h1, h2, h3, h4, h5 {
   white-space: nowrap;
 }
 .read-blog-btn:hover, .read-blog-btn:focus {
-  background: linear-gent(90deg, #2980ef 0%, #27ae60 100%);
+  background: linear-gradient(90deg, #2980ef 0%, #27ae60 100%);
   color: #fff;
   box-shadow: 0 3px 20px rgba(41,128,239,0.20);
   transform: scale(1.04);
@@ -2052,6 +2049,117 @@ h1, h2, h3, h4, h5 {
     min-width: unset;
     max-width: unset;
     justify-content: center;
+  }
+}
+
+/* Blog post page */
+.blog-post-page {
+  background: #f7f8fa;
+}
+
+.blog-article {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.75rem;
+  box-shadow: 0 28px 60px rgba(35, 52, 86, 0.12);
+}
+
+.blog-article-header {
+  text-align: left;
+}
+
+.blog-article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.blog-article-tags li {
+  background: rgba(41, 128, 239, 0.15);
+  color: #1f4d8c;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.blog-article-title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.blog-article-meta {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.blog-article-figure {
+  margin: 1.5rem 0 2rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(35, 52, 86, 0.18);
+}
+
+.blog-article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.blog-article-figure figcaption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.blog-article-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+.blog-article-content h2,
+.blog-article-content h3,
+.blog-article-content h4 {
+  margin-top: 2rem;
+  font-family: var(--font-heading);
+  color: #0f172a;
+}
+
+.blog-article-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.blog-article-content blockquote {
+  border-left: 4px solid #2563eb;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #374151;
+  font-style: italic;
+}
+
+.blog-article-content ul,
+.blog-article-content ol {
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .blog-article {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .blog-article-title {
+    font-size: 1.75rem;
   }
 }
 /* ---- ROADMAP (TIMELINE) TASARIMI ---- */
