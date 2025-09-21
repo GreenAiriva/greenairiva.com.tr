@@ -26,15 +26,15 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/career/career.html">Career</a>
+          <a class="nav-link" href="{{ site.baseurl }}/career/">Career</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="scrollToContact" href="#contact">Contact</a>
         </li>
         <!-- Language Switch -->
-        <li class="nav-item d-flex align-items-center">
-          <div class="lang-switch tr" style="cursor:pointer">TR</div>
-          <div class="lang-switch en" style="cursor:pointer">EN</div>
+        <li class="nav-item d-flex align-items-center lang-switcher" aria-label="Language switcher">
+          <span class="lang-switch lang-active" aria-current="true">EN</span>
+          <a class="lang-switch" data-lang="tr" href="{{ site.baseurl }}{{ page.alternate_url | default: '/tr/' }}" rel="alternate" hreflang="tr">TR</a>
         </li>
       </ul>
     </div>

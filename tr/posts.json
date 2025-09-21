@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "sosyal-maliyet",
+    "lang": "tr",
+    "title": "Sera Gazlarının Sosyal Maliyeti Neden Önemli?",
+    "summary": "Sosyal maliyet hesapları, yatırımları doğru önceliklendirmek ve metan ile diazot monoksit gibi yüksek etkili gazlara odaklanmak için kritik veriler sunar.",
+    "tags": ["İklim Politikası", "Ekonomi", "MRV"],
+    "image": "/assets/img/blog/1.webp",
+    "image_alt": "İklim ekonomisi görseli",
+    "content": "/tr/blog/sosyal-maliyet/",
+    "draft": false
+  },
+  {
+    "slug": "kentsel-hava-krizi",
+    "lang": "tr",
+    "title": "Kentsel Hava Krizi Akıllı Altyapı Gerektiriyor",
+    "summary": "Partikül madde ve sera gazları aynı bölgelerde yoğunlaşıyor; entegre altyapı çözümleri sağlık ve iklim faydalarını birlikte sağlayabilir.",
+    "tags": ["Hava Kalitesi", "Halk Sağlığı", "Altyapı"],
+    "image": "/assets/img/blog/2.webp",
+    "image_alt": "Hava kalitesi göstergeli şehir caddesi",
+    "content": "/tr/blog/kentsel-hava-krizi/",
+    "draft": false
+  },
+  {
+    "slug": "kentsel-sera-gazlari",
+    "lang": "tr",
+    "title": "Kentsel Sıcak Noktalarda Sera Gazlarını İzlemek",
+    "summary": "Metan ve diazot monoksit yoğunluklarını yüksek çözünürlüklü sensörlerle tespit etmek, hedefli arıtma ünitelerinin değerini katlıyor.",
+    "tags": ["Metan", "Diazot Monoksit", "Kentsel Analitik"],
+    "image": "/assets/img/blog/3.webp",
+    "image_alt": "Sera gazı bulutlarıyla şehir silüeti",
+    "content": "/tr/blog/kentsel-sera-gazlari/",
+    "draft": false
+  }
+]
