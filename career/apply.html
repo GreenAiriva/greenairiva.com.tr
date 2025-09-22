@@ -1,0 +1,138 @@
+---
+layout: default
+lang: en
+title: Application – GreenAiriva Careers
+description: Apply to GreenAiriva and help build solar-powered urban air purification technology.
+---
+
+<main class="container my-5">
+  <header class="mb-4 text-center">
+    <h1 class="fw-bold">GreenAiriva Application</h1>
+    <p class="text-muted">Apply for your desired role. Upload your CV and any relevant project documents.</p>
+  </header>
+
+  <form id="career-apply-form" class="ga-form"
+        action="__TODO_FORMSPREE_ENDPOINT__" method="POST" enctype="multipart/form-data" novalidate>
+    <!-- Anti-spam (honeypot) -->
+    <input type="text" name="company" id="hp-company" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <!-- Position info (filled from slug, readonly) -->
+    <div class="ga-form__group">
+      <label for="position" class="form-label">Position</label>
+      <input type="text" id="position" name="position" class="form-control" placeholder="Loading position..." readonly>
+      <input type="hidden" id="position_slug" name="position_slug">
+      <small class="text-muted">This field auto-fills based on the job slug in the URL.</small>
+      <small class="ga-form__error" id="err-position"></small>
+    </div>
+
+    <!-- Applicant basics -->
+    <div class="ga-form__grid">
+      <div class="ga-form__group">
+        <label for="full_name" class="form-label">Full Name<span class="text-danger">*</span></label>
+        <input id="full_name" name="full_name" type="text" class="form-control" required>
+        <small class="ga-form__error" id="err-full_name"></small>
+      </div>
+
+      <div class="ga-form__group">
+        <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+        <input id="email" name="email" type="email" class="form-control" required>
+        <small class="ga-form__error" id="err-email"></small>
+      </div>
+
+      <div class="ga-form__group">
+        <label for="phone" class="form-label">Phone</label>
+        <input id="phone" name="phone" type="tel" class="form-control" placeholder="+90 5xx xxx xx xx">
+        <small class="ga-form__error" id="err-phone"></small>
+      </div>
+
+      <div class="ga-form__group">
+        <label for="location" class="form-label">Location (City/Country)</label>
+        <input id="location" name="location" type="text" class="form-control" placeholder="Ankara, Turkey">
+      </div>
+    </div>
+
+    <div class="ga-form__grid">
+      <div class="ga-form__group">
+        <label for="linkedin" class="form-label">LinkedIn (optional)</label>
+        <input id="linkedin" name="linkedin" type="url" class="form-control" placeholder="https://www.linkedin.com/in/...">
+        <small class="ga-form__error" id="err-linkedin"></small>
+      </div>
+
+      <div class="ga-form__group">
+        <label for="portfolio" class="form-label">GitHub/Portfolio (optional)</label>
+        <input id="portfolio" name="portfolio" type="url" class="form-control" placeholder="https://github.com/...">
+        <small class="ga-form__error" id="err-portfolio"></small>
+      </div>
+    </div>
+
+    <div class="ga-form__grid">
+      <div class="ga-form__group">
+        <label for="availability" class="form-label">Availability (When can you start?)</label>
+        <input id="availability" name="availability" type="text" class="form-control" placeholder="Within 2 weeks / specific date">
+      </div>
+
+      <div class="ga-form__group">
+        <label for="salary" class="form-label">Expected Salary (gross)</label>
+        <input id="salary" name="salary" type="text" class="form-control" placeholder="e.g., 45,000 TRY/month">
+      </div>
+    </div>
+
+    <div class="ga-form__group">
+      <label for="cover_letter" class="form-label">Cover Letter</label>
+      <textarea id="cover_letter" name="cover_letter" class="form-control" maxlength="2000" placeholder="Briefly share your motivation (≤ 2000 characters)"></textarea>
+      <small class="ga-form__error" id="err-cover_letter"></small>
+    </div>
+
+    <!-- Role-specific blocks (injected via JS) -->
+    <section id="role-specific" class="ga-form__role mt-4">
+      <!-- JS will inject content (see js/apply.js) -->
+    </section>
+
+    <!-- File upload -->
+    <fieldset class="ga-form__fieldset mt-4">
+      <legend class="fw-semibold">Documents</legend>
+
+      <div class="ga-form__group">
+        <label for="cv" class="form-label">CV / Résumé (PDF/DOC/DOCX)<span class="text-danger">*</span></label>
+        <input id="cv" name="cv" type="file" class="form-control" accept=".pdf,.doc,.docx" required>
+        <small class="text-muted">Single file, max 5 MB.</small>
+        <small class="ga-form__error" id="err-cv"></small>
+      </div>
+
+      <div class="ga-form__group">
+        <label for="attachments" class="form-label">Additional Files / Projects (optional)</label>
+        <input id="attachments" name="attachments" type="file" class="form-control" multiple
+               accept=".pdf,.zip,.png,.jpg,.jpeg,.ppt,.pptx,.xlsx,.csv,.txt,.md">
+        <small class="text-muted">Total max 20 MB. Accepted formats: PDF, ZIP, images, presentation/sample files.</small>
+        <div class="ga-upload-list" id="upload-list"></div>
+        <div class="progress mt-2 d-none" id="upload-progress"><div class="progress-bar" style="width:0%"></div></div>
+        <small class="ga-form__error" id="err-attachments"></small>
+      </div>
+    </fieldset>
+
+    <!-- Consent -->
+    <div class="ga-form__group mt-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" id="consent" name="consent" required>
+        <label class="form-check-label" for="consent">
+          I consent to the processing of my personal data for recruitment in line with privacy regulations.
+        </label>
+      </div>
+      <small class="ga-form__error" id="err-consent"></small>
+      <p class="mt-2"><a href="{{ site.baseurl }}/privacy/" class="link-primary">Privacy Notice</a></p>
+    </div>
+
+    <!-- Suggested hidden fields for Formspree -->
+    <input type="hidden" name="_subject" value="GreenAiriva Application">
+    <input type="hidden" name="_language" value="en">
+    <input type="hidden" name="_page_url" id="page_url">
+
+    <!-- Submit -->
+    <div class="mt-4">
+      <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+      <div class="form-alert mt-3" id="form-alert" role="status" aria-live="polite"></div>
+    </div>
+  </form>
+</main>
+
+<script src="{{ site.baseurl }}/js/apply.js" defer></script>

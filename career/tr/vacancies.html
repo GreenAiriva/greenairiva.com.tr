@@ -28,6 +28,23 @@ alternate_url: /career/vacancies.html
   </div>
 </main>
 
+<div class="text-center my-4">
+  <a id="applyButton" class="btn btn-primary btn-lg">Bu ilana başvur</a>
+</div>
+<script>
+  (function(){
+    const p = new URLSearchParams(location.search);
+    const slug = p.get('slug') || '';
+    var applyUrl = '{{ site.baseurl }}/career/tr/apply.html';
+    if (document.documentElement.lang === 'en') applyUrl = '{{ site.baseurl }}/career/apply.html';
+    var btn = document.getElementById('applyButton');
+    if (btn) {
+      btn.href = applyUrl + (slug ? ('?slug=' + encodeURIComponent(slug)) : '');
+    }
+  })();
+</script>
+
+
 <!-- Navbar ile çakışmayı önlemek için ek stil -->
 <style>
 .job-header {
