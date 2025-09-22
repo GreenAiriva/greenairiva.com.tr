@@ -2185,3 +2185,19 @@ h1, h2, h3, h4, h5 {
 /* =========================================================
    07. Print
    ========================================================= */
+
+/* === Careers Apply Form (GreenAiriva) === */
+.ga-form { max-width: 980px; margin: 0 auto; }
+.ga-form__grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.ga-form__group { margin-bottom: 16px; }
+.ga-form__error { color: #dc3545; font-size: .9rem; display: block; min-height: 1.2em; }
+
+@media (min-width: 641px) {
+  .ga-form__grid { grid-template-columns: 1fr 1fr; }
+}
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.ga-upload-list { font-size: .95rem; margin-top: .25rem; }
+.progress .progress-bar { background-color: var(--bs-warning, #ffc800); }
