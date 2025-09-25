@@ -6,7 +6,8 @@
     "type": "Full Time-Hybrid",
     "summary": "Responsible for mechanical design, filter integration, and solar panel assembly of solar-powered air purification units. Ideal candidates have CAD and prototyping experience, with basic electronics knowledge and familiarity with environmental device design.",
     "url": "/career/jobs/hardware-prototype-development-engineer.md.txt",
-    "jobimg": "/career/img/career-hardware.webp"
+    "jobimg": "/career/img/career-hardware.webp",
+    "filloutEmbed": "<div style=\"width:100%;height:500px;\" data-fillout-id=\"aqSG51E7jgus\" data-fillout-embed-type=\"standard\" data-fillout-inherit-parameters data-fillout-dynamic-resize></div><script src=\"https://server.fillout.com/embed/v1/\"></script>"
   },
   {
     "slug": "electronics-iot-engineer",
@@ -15,7 +16,8 @@
     "type": "Full Time-Hybrid",
     "summary": "Will design sensor systems, IoT data transmission, and solar-powered low-energy electronics for urban air quality monitoring. Experience with PCB, LoRa/NB-IoT/MQTT, and battery systems is essential.",
     "url": "/career/jobs/electronics-iot-engineer.md.txt",
-    "jobimg": "/career/img/career-ee.webp"
+    "jobimg": "/career/img/career-ee.webp",
+    "filloutEmbed": null
   },
   {
     "slug": "data-analyst",
@@ -24,7 +26,8 @@
     "type": "Part Time-Remote",
     "summary": "Develops real-time data pipelines, visualization dashboards, and API integrations for smart city platforms. Strong background in Python/JavaScript, databases, and IoT data management is required. ML experience is a plus.",
     "url": "/career/jobs/data-analyst.md.txt",
-    "jobimg": "/career/img/data-analyst.jpg"
+    "jobimg": "/career/img/data-analyst.jpg",
+    "filloutEmbed": null
   },
   {
     "slug": "chemist-material-specialist",
@@ -33,7 +36,8 @@
     "type": "Part Time -Project Base Consultancy",
     "summary": "Leads adsorbent development and testing (e.g., COF, MOF, zeolites) for greenhouse gas capture. Hands-on experience in synthesis, regeneration, and material characterization (XRD, BET, SEM) is expected.",
     "url": "/career/jobs/chemist-material-specialist.md.txt",
-    "jobimg": "/career/img/chemist-material-specialist.jpg"
+    "jobimg": "/career/img/chemist-material-specialist.jpg",
+    "filloutEmbed": null
   },
   {
     "slug": "business-developer",
@@ -42,7 +46,7 @@
     "type": "Contract",
     "summary": "Builds partnerships with municipalities and investors, and leads grant/investment applications. Ideal for candidates with experience in funding programs, pitch preparation, and startup business development.",
     "url": "/career/tr/jobs/business-developer.md.txt",
-    "jobimg": "/career/img/business-developer.jpg"
+    "jobimg": "/career/img/business-developer.jpg",
+    "filloutEmbed": null
   }
 ]
-
