@@ -4,59 +4,28 @@ lang: en
 title: GreenAiriva – Career Page
 description: Career opportunities to join the team taking action against Climate Change
 ---
-<style>
-header.masthead .container {
-    display: block;
-    text-align: right !important;
-    padding: 0 1.5rem;
-}
-</style>
 
-<div id="form-container" class="container my-5"></div>
+<main class="container my-5">
+  <header class="mb-4 text-center">
+    <h1 class="fw-bold">GreenAiriva Başvuru</h1>
+    <p class="text-muted">Pozisyona özel başvuru formu aşağıdadır.</p>
+  </header>
+  <div id="form-container"></div>
+</main>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("slug");
-  const container = document.getElementById("form-container");
-
-  const notFoundMessage = "<p>Form bulunamadı.</p>";
-
-  if (!slug) {
-    container.innerHTML = notFoundMessage;
+  const slug = new URLSearchParams(window.location.search).get("slug");
+  if (slug === "hardware-prototype-development-engineer") {
+    document.getElementById("form-container").innerHTML = `
+      <div style="width:100%;height:500px;"
+           data-fillout-id="aqSG51E7jgus"
+           data-fillout-embed-type="standard"
+           data-fillout-inherit-parameters
+           data-fillout-dynamic-resize>
+      </div>
+      <script src="https://server.fillout.com/embed/v1/"><\/script>
+    `;
   } else {
-    fetch("/career/jobs.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Jobs list could not be loaded");
-        }
-        return response.json();
-      })
-      .then((jobs) => {
-        const job = Array.isArray(jobs)
-          ? jobs.find((item) => item.slug === slug)
-          : null;
-
-        if (!job || !job.filloutEmbed) {
-          container.innerHTML = notFoundMessage;
-          return;
-        }
-
-        container.innerHTML = job.filloutEmbed;
-
-        const scripts = container.querySelectorAll("script");
-        scripts.forEach((script) => {
-          const replacement = document.createElement("script");
-
-          Array.from(script.attributes).forEach((attr) => {
-            replacement.setAttribute(attr.name, attr.value);
-          });
-
-          replacement.textContent = script.textContent;
-          script.replaceWith(replacement);
-        });
-      })
-      .catch(() => {
-        container.innerHTML = notFoundMessage;
-      });
+    document.getElementById("form-container").innerHTML = "<p>Form bulunamadı.</p>";
   }
 </script>
