@@ -1675,24 +1675,24 @@ p {
 /*Masthead*/
 /* 06.2 Masthead */
 header.masthead {
-  min-height: 100vh;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   color: #fff;
   background-image: url("../assets/img/header-bg.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  text-align: center;
-  padding: 90px 0 48px 0;
+  padding: 90px 0 5rem 0;
   box-sizing: border-box;
 }
 header.masthead .container {
   display: block;
   text-align: left;
   padding: 0 1.5rem;
+  width: 100%;
 }
 .masthead-heading {
   font-size: 3.25rem;
@@ -1730,9 +1730,10 @@ header.masthead .container {
 /* ----------- Responsive ------------ */
 @media (max-width: 991.98px) {
   header.masthead {
-    min-height: 48vh;
+    min-height: 70vh;
     padding-top: 64px;
-    padding-bottom: 24px;
+    padding-bottom: 3rem;
+    justify-content: flex-end;
   }
   .masthead-btn-row {
     margin-top: 2rem;
@@ -1749,10 +1750,10 @@ header.masthead .container {
 }
 @media (max-width: 575.98px) {
   header.masthead {
-    min-height: 100vh;
-    padding-top: 18vw;
-    padding-bottom: 16px;
-    text-align: left;
+    min-height: 85vh;
+    padding-top: 90px;
+    padding-bottom: 2.5rem;
+    justify-content: flex-end;
     align-items: flex-start;
   }
   header.masthead .container {
@@ -2330,7 +2331,12 @@ h1, h2, h3, h4, h5 {
    Impact Band · Proof Strip · CTA Banner
    ========================================================= */
 
-/* --- Hero v2 (two-column layout) --- */
+/* --- Hero — single-column, full-width, text-led --- */
+.masthead-hero-content {
+  max-width: 780px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
 .masthead-inner {
   min-height: calc(100vh - 90px);
   padding-top: 1rem;
@@ -2341,6 +2347,9 @@ h1, h2, h3, h4, h5 {
   flex-direction: column;
   justify-content: center;
   padding-top: 1.5rem;
+}
+.masthead-tagline--hero {
+  max-width: 580px;
 }
 .masthead-eyebrow {
   font-family: 'Poppins', sans-serif;
@@ -2796,6 +2805,28 @@ h1, h2, h3, h4, h5 {
   font-size: 0.9rem;
   line-height: 1.78;
   padding: 1rem 1.5rem 1.25rem;
+}
+
+/* --- Product Showcase Section (video between Problem Band and Differentiators) --- */
+.ga-product-showcase {
+  background: #0a2218;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .ga-product-showcase { padding: 7rem 0; }
+}
+.ga-showcase-video-wrap {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 12px 32px rgba(0,0,0,0.35);
+  line-height: 0;
+}
+.ga-showcase-video {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* --- Solutions Page --- */
@@ -3547,7 +3578,6 @@ body.ga-scroll-animated .ga-reveal-heading.revealed {
 @media (max-width: 991.98px) {
   .masthead-heading-v2 { font-size: 2.6rem; }
   .masthead-accent-script { font-size: 3.4rem; }
-  .masthead-visual { margin-top: 2.5rem; }
   .ga-band-heading { font-size: 1.3rem; }
   .ga-cta-heading { font-size: 1.65rem; }
   .ga-seg-heading { font-size: 1.9rem; }
