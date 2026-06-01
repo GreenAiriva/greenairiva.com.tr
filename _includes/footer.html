@@ -1,23 +1,75 @@
-<footer class="footer py-4">
+<footer class="ga-footer">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-4 text-lg-start mb-3 mb-lg-0">
-        Copyright &copy; GreenAiriva 2025
+    <div class="row g-4 ga-footer-top">
+
+      <!-- Brand -->
+      <div class="col-lg-3 col-md-6">
+        <a href="{{ site.baseurl }}/" class="ga-footer-brand">
+          <img src="{{ site.baseurl }}/assets/img/navbar-logo.svg" alt="GreenAiriva" style="height:36px; filter:brightness(0) invert(1);" />
+        </a>
+        <p class="ga-footer-tagline">Modular, energy-positive urban GHG capture — verified by mass-based MRV.</p>
+        <div class="ga-footer-social">
+          <a href="https://www.instagram.com/greenairiva/" aria-label="Instagram" class="ga-social-btn">
+            <img src="{{ site.baseurl }}/assets/img/logos/icons8-instagram-500.svg" alt="Instagram" style="width:18px;height:18px;filter:invert(1);"/>
+          </a>
+          <a href="https://www.linkedin.com/company/greenairiva/" aria-label="LinkedIn" class="ga-social-btn">
+            <img src="{{ site.baseurl }}/assets/img/logos/icons8-linkedin-500.svg" alt="LinkedIn" style="width:18px;height:18px;filter:invert(1);"/>
+          </a>
+          <a href="https://x.com/greenairiva/" aria-label="X" class="ga-social-btn">
+            <img src="{{ site.baseurl }}/assets/img/logos/icons8-x-500.svg" alt="X" style="width:18px;height:18px;filter:invert(1);"/>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-4 my-3 my-lg-0 text-center">
-        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/greenairiva/" aria-label="Instagram">
-          <img src="{{ site.baseurl }}/assets/img/logos/icons8-instagram-500.svg" alt="Instagram" style="width:24px; height:24px; object-fit:contain; filter:invert(1);" />
-        </a>
-        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/company/greenairiva/" aria-label="LinkedIn">
-          <img src="{{ site.baseurl }}/assets/img/logos/icons8-linkedin-500.svg" alt="LinkedIn" style="width:24px; height:24px; object-fit:contain; filter:invert(1);" />
-        </a>
-        <a class="btn btn-dark btn-social mx-2" href="https://x.com/greenairiva/" aria-label="X">
-          <img src="{{ site.baseurl }}/assets/img/logos/icons8-x-500.svg" alt="X" style="width:24px; height:24px; object-fit:contain; filter:invert(1);" />
-        </a>
+
+      <!-- Solutions -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="ga-footer-heading">Solutions</p>
+        <ul class="ga-footer-list">
+          <li><a href="{{ site.baseurl }}/solutions/">Overview</a></li>
+          <li><a href="{{ site.baseurl }}/solutions/municipality/">Municipalities</a></li>
+          <li><a href="{{ site.baseurl }}/solutions/industry/">Industrial Zones</a></li>
+          <li><a href="{{ site.baseurl }}/solutions/telecom/">Telecom &amp; OOH</a></li>
+        </ul>
       </div>
-      <div class="col-lg-4 text-lg-end text-center">
-        <a class="link-dark text-decoration-none me-3" href="{{ site.baseurl }}/privacy/">Privacy Policy</a>
-        <a class="link-dark text-decoration-none" href="{{ site.baseurl }}/terms/">Terms of Use</a>
+
+      <!-- Company -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="ga-footer-heading">Company</p>
+        <ul class="ga-footer-list">
+          <li><a href="{{ site.baseurl }}/about/">About Us</a></li>
+          <li><a href="{{ site.baseurl }}/impact/">Impact &amp; MRV</a></li>
+          <li><a href="{{ site.baseurl }}/trust/">Trust &amp; Compliance</a></li>
+          <li><a href="{{ site.baseurl }}/career/">Career</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="ga-footer-heading">Resources</p>
+        <ul class="ga-footer-list">
+          <li><a href="https://blog.greenairiva.com.tr/" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="{{ site.baseurl }}/impact/">MRV Methodology</a></li>
+          <li><a href="{{ site.baseurl }}/trust/">Due Diligence</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="col-lg-3 col-md-6">
+        <p class="ga-footer-heading">Start Here</p>
+        <p class="ga-footer-cta-text">Ready to initiate a PoC or technical briefing?</p>
+        <a class="btn btn-primary btn-sm px-4 py-2" href="{{ site.baseurl }}/demo/" style="font-family:'Poppins',sans-serif;font-size:0.82rem;">Request Demo / PoC &rarr;</a>
+        <p class="ga-footer-email mt-3">
+          <a href="mailto:info@greenairiva.com.tr">info@greenairiva.com.tr</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="ga-footer-bottom">
+      <p class="ga-footer-copy">Copyright &copy; GreenAiriva 2025</p>
+      <div class="ga-footer-legal">
+        <a href="{{ site.baseurl }}/privacy/">Privacy Policy</a>
+        <a href="{{ site.baseurl }}/terms/">Terms of Use</a>
       </div>
     </div>
   </div>

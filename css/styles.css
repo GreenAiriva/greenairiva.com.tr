@@ -2247,6 +2247,84 @@ h1, h2, h3, h4, h5 {
 .progress .progress-bar { background-color: var(--bs-warning, #ffc800); }
 
 /* =========================================================
+   09. Footer — New Design
+   ========================================================= */
+.ga-footer {
+  background: #0d2a1e;
+  color: rgba(255,255,255,0.65);
+  padding-top: 4rem;
+  font-size: 0.88rem;
+}
+.ga-footer-top { padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.ga-footer-brand { display: inline-block; margin-bottom: 1rem; }
+.ga-footer-tagline {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  max-width: 220px;
+}
+.ga-footer-social { display: flex; gap: 0.5rem; }
+.ga-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.2s;
+}
+.ga-social-btn:hover { background: rgba(255,255,255,0.15); }
+.ga-footer-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1rem;
+}
+.ga-footer-list { list-style: none; padding: 0; margin: 0; }
+.ga-footer-list li { margin-bottom: 0.5rem; }
+.ga-footer-list a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.86rem;
+  transition: color 0.2s;
+}
+.ga-footer-list a:hover { color: var(--ga-orange); }
+.ga-footer-cta-text { font-size: 0.83rem; color: rgba(255,255,255,0.55); margin-bottom: 1rem; line-height: 1.5; }
+.ga-footer-email { margin: 0; }
+.ga-footer-email a {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+.ga-footer-email a:hover { color: var(--ga-orange); }
+.ga-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.ga-footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin: 0; }
+.ga-footer-legal { display: flex; gap: 1.25rem; }
+.ga-footer-legal a {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.ga-footer-legal a:hover { color: rgba(255,255,255,0.65); }
+@media (max-width: 575.98px) {
+  .ga-footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* =========================================================
    08. Homepage — New Sections
    Hero v2 · Problem Band · Differentiators · Segments ·
    Impact Band · Proof Strip · CTA Banner
@@ -2720,6 +2798,168 @@ h1, h2, h3, h4, h5 {
   padding: 1rem 1.5rem 1.25rem;
 }
 
+/* --- Solutions Page --- */
+.ga-solutions-hero { background: var(--ga-green); }
+.ga-solutions-visual {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+}
+.ga-solutions-video { display: block; width: 100%; height: auto; }
+
+.ga-outcome-grid { border: 1px solid rgba(30,77,59,0.1); border-radius: 1rem; overflow: hidden; }
+.ga-outcome-cell {
+  border-right: 1px solid rgba(30,77,59,0.1);
+  border-bottom: 1px solid rgba(30,77,59,0.1);
+}
+.ga-outcome-cell:nth-child(2n) { border-right: none; }
+.ga-outcome-cell:nth-last-child(-n+2) { border-bottom: none; }
+.ga-outcome-cell--alt { background: #f8faf9; }
+.ga-outcome-card { padding: 2.5rem 2rem; height: 100%; }
+.ga-outcome-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--ga-orange);
+  margin-bottom: 1rem;
+}
+.ga-outcome-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ga-green);
+  margin-bottom: 0.75rem;
+}
+.ga-outcome-body { font-size: 0.93rem; color: #5a6270; line-height: 1.78; margin-bottom: 1rem; }
+.ga-outcome-result {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ga-green);
+  border-left: 3px solid var(--ga-orange);
+  padding-left: 0.75rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ga-compare-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ga-compare-category {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
+}
+.ga-compare-list { list-style: none; padding: 0; margin: 0 0 1.5rem; flex: 1; }
+.ga-compare-list--gap li {
+  padding: 0.4rem 0 0.4rem 1.25rem;
+  position: relative;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+.ga-compare-list--gap li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: rgba(244,154,39,0.5);
+  font-size: 0.72rem;
+  top: 0.5rem;
+}
+.ga-compare-vs {
+  background: rgba(244,154,39,0.12);
+  border: 1px solid rgba(244,154,39,0.25);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ga-orange);
+  line-height: 1.55;
+}
+
+.ga-verify-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background: #f8faf9;
+  border: 1px solid rgba(30,77,59,0.1);
+  border-radius: 1.25rem;
+}
+.ga-verify-badge { line-height: 1; }
+.ga-verify-stat { font-size: 0.88rem; color: #6c757d; line-height: 1.4; }
+.ga-verify-stat span {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ga-green);
+}
+.ga-verify-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+
+.ga-model-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.22s, border-color 0.22s;
+}
+.ga-model-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(244,154,39,0.3); }
+.ga-model-card--featured { border-color: rgba(244,154,39,0.4); background: rgba(244,154,39,0.06); }
+.ga-model-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ga-orange);
+  margin-bottom: 0.5rem;
+}
+.ga-model-name { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; }
+.ga-model-fit {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 0.75rem;
+}
+.ga-model-list { list-style: none; padding: 0; margin: 0 0 1.5rem; flex: 1; }
+.ga-model-list li {
+  padding: 0.35rem 0 0.35rem 1.2rem;
+  position: relative;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+.ga-model-list li::before { content: '→'; position: absolute; left: 0; color: var(--ga-orange); font-size: 0.78rem; }
+.ga-model-note { text-align: center; font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-top: 2.5rem; font-style: italic; }
+
+@media (max-width: 767.98px) {
+  .ga-outcome-cell:nth-child(odd) { border-right: none; }
+  .ga-outcome-cell { border-bottom: 1px solid rgba(30,77,59,0.1); }
+  .ga-outcome-cell:last-child { border-bottom: none; }
+}
+
 /* --- Segment Pages --- */
 .ga-seg-hero {
   background: var(--ga-green);
@@ -2839,6 +3079,300 @@ h1, h2, h3, h4, h5 {
   line-height: 1.78;
   padding: 1rem 1.5rem 1.25rem;
 }
+
+/* --- Impact & MRV Page --- */
+.ga-impact-hero-visual {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ga-mrv-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(244,154,39,0.3);
+  animation: mrvPulse 3s ease-in-out infinite;
+}
+.ga-mrv-ring--outer { width: 240px; height: 240px; animation-delay: 0s; }
+.ga-mrv-ring--inner { width: 180px; height: 180px; border-color: rgba(244,154,39,0.5); animation-delay: 0.6s; }
+@keyframes mrvPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+.ga-mrv-core {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(244,154,39,0.12);
+  border: 1px solid rgba(244,154,39,0.4);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+}
+.ga-mrv-core span:first-child {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ga-orange);
+  line-height: 1;
+}
+.ga-mrv-core-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+.ga-mrv-steps { border: 1px solid rgba(30,77,59,0.1); border-radius: 1rem; overflow: hidden; }
+.ga-mrv-step {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid rgba(30,77,59,0.1);
+}
+.ga-mrv-step:last-child { border-right: none; }
+.ga-mrv-step--alt { background: #f8faf9; }
+.ga-mrv-step-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--ga-orange);
+  margin-bottom: 0.75rem;
+}
+.ga-mrv-step-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ga-green);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+.ga-mrv-step-body { font-size: 0.88rem; color: #5a6270; line-height: 1.78; margin: 0; }
+
+.ga-meas-card {
+  border-radius: 0.875rem;
+  padding: 1.5rem 1.25rem;
+  height: 100%;
+}
+.ga-meas-card--gap {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.ga-meas-card--ok {
+  background: rgba(244,154,39,0.08);
+  border: 1px solid rgba(244,154,39,0.25);
+}
+.ga-meas-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.55);
+}
+.ga-meas-card--ok .ga-meas-label { color: var(--ga-orange); }
+.ga-meas-list { list-style: none; padding: 0; margin: 0; }
+.ga-meas-list li {
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  position: relative;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.65);
+}
+.ga-meas-card--ok .ga-meas-list li { color: rgba(255,255,255,0.82); }
+.ga-meas-list li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: rgba(220,53,69,0.6);
+  font-size: 0.7rem;
+  top: 0.45rem;
+}
+.ga-meas-card--ok .ga-meas-list li::before { content: '✓'; color: var(--ga-orange); }
+
+.ga-framework-card {
+  background: #f8faf9;
+  border: 1px solid rgba(30,77,59,0.1);
+  border-radius: 1rem;
+  padding: 1.875rem;
+  height: 100%;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.ga-framework-card:hover { box-shadow: 0 12px 36px rgba(30,77,59,0.1); transform: translateY(-3px); }
+.ga-framework-badge {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ga-orange);
+  background: rgba(244,154,39,0.1);
+  border: 1px solid rgba(244,154,39,0.25);
+  border-radius: 4px;
+  padding: 0.2em 0.65em;
+  margin-bottom: 0.875rem;
+}
+.ga-framework-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--ga-green);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+.ga-framework-body { font-size: 0.88rem; color: #5a6270; line-height: 1.75; margin-bottom: 1rem; }
+.ga-framework-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ga-green);
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+.ga-pilot-notice {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1.25rem 2rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.75rem;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ga-pilot-notice p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.65;
+}
+
+@media (max-width: 767.98px) {
+  .ga-mrv-step { border-right: none; border-bottom: 1px solid rgba(30,77,59,0.1); }
+  .ga-mrv-step:last-child { border-bottom: none; }
+}
+
+/* --- Trust & Compliance Page --- */
+.ga-cert-card {
+  border-radius: 1rem;
+  padding: 1.75rem;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: box-shadow 0.22s;
+}
+.ga-cert-card--active {
+  background: #f8faf9;
+  border-color: rgba(30,77,59,0.12);
+}
+.ga-cert-card--roadmap {
+  background: #fff;
+  border-color: rgba(30,77,59,0.07);
+  border-style: dashed;
+}
+.ga-cert-card:hover { box-shadow: 0 8px 28px rgba(30,77,59,0.09); }
+.ga-cert-status {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.2em 0.65em;
+  border-radius: 4px;
+  margin-bottom: 0.875rem;
+}
+.ga-cert-status--done {
+  background: rgba(30,77,59,0.1);
+  color: var(--ga-green);
+  border: 1px solid rgba(30,77,59,0.2);
+}
+.ga-cert-status--roadmap {
+  background: rgba(244,154,39,0.1);
+  color: var(--ga-orange);
+  border: 1px solid rgba(244,154,39,0.25);
+}
+.ga-cert-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--ga-green);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+.ga-cert-body { font-size: 0.86rem; color: #5a6270; line-height: 1.72; margin: 0; }
+
+.ga-esg-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  padding: 1.875rem 1.5rem;
+  height: 100%;
+  transition: background 0.22s, border-color 0.22s;
+}
+.ga-esg-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+.ga-esg-card--highlight {
+  border-color: rgba(244,154,39,0.4);
+  background: rgba(244,154,39,0.06);
+}
+.ga-esg-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.ga-esg-scope {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ga-orange);
+  margin-bottom: 1rem;
+}
+.ga-esg-body { font-size: 0.86rem; color: rgba(255,255,255,0.72); line-height: 1.72; margin: 0; }
+
+.ga-data-card {
+  background: #f8faf9;
+  border: 1px solid rgba(30,77,59,0.1);
+  border-radius: 0.875rem;
+  padding: 1.5rem 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ga-data-card--no { background: #fff5f5; border-color: rgba(220,53,69,0.12); }
+.ga-data-icon { line-height: 1; }
+.ga-data-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ga-green);
+}
+.ga-data-list { list-style: none; padding: 0; margin: 0; }
+.ga-data-list li {
+  font-size: 0.83rem;
+  color: #5a6270;
+  line-height: 1.6;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(30,77,59,0.06);
+}
+.ga-data-list li:last-child { border-bottom: none; }
 
 /* --- Responsive --- */
 @media (max-width: 991.98px) {

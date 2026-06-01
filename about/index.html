@@ -1,160 +1,243 @@
 ---
 layout: default
 lang: en
-title: GreenAiriva – About
-description: GreenAiriva About Page - Learn about our journey and mission.
+title: GreenAiriva – About Us
+description: GreenAiriva develops modular, energy-positive urban units that capture greenhouse gases at street level with verifiable MRV data. Learn about our vision, mission, and roadmap.
 alternate_url: /tr/about/
 ---
 
-<!-- Masthead -->
-<header class="masthead" style="background-image: url('{{ site.baseurl }}/assets/img/solutions-bg.webp');">
-    <div class="container">
-        <div class="masthead-heading">Rise<br>for a</div>
-        <div class="masthead-subheading-script">Cleaner</div>
-        <div class="masthead-heading">Planet</div>
-        <div class="masthead-btn-row">
-            <a class="btn btn-primary btn-xl text-uppercase" href="#about">Who We Are?</a>
-        </div>
-    </div>
-</header>
+<link rel="stylesheet" href="{{ site.baseurl }}/css/timeline1.css">
 
-<!-- About Us -->
-<section class="page-section" id="about">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Who We Are</h2>
-            <h3 class="section-subheading text-muted">
-                GreenAiriva works to improve urban air quality, protect public health, and make concrete, measurable contributions to the fight against climate change. We set a new standard in sustainable urbanism with data-driven technologies.
-            </h3>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-                    <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.webp" alt="Good Health and Well-Being image" style="max-width:100%; max-height:100%;">
-                </span>
-                <h4 class="my-3">Good Health & Well-Being</h4>
-                <p class="text-muted">We create healthier communities in cities by removing an average of 360 kg of particulate matter (PM) per device each year.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-                    <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.webp" alt="Sustainable Cities and Communities image" style="max-width:100%; max-height:100%;">
-                </span>
-                <h4 class="my-3">Sustainable Cities & Communities</h4>
-                <p class="text-muted">We model cities with our sensor network and lead more sustainable urban transformation through real-time air quality and data analytics.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
-                    <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.webp" alt="Climate Action image" style="max-width:100%; max-height:100%;">
-                </span>
-                <h4 class="my-3">Climate Action</h4>
-                <p class="text-muted">Each of our devices directly captures a minimum of 5 and up to 30 tons of CO<sub>2</sub>e emissions annually, making a concrete contribution to climate action.</p>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="ga-seg-hero" style="background-image:url('{{ site.baseurl }}/assets/img/solutions-bg.webp'); background-size:cover; background-position:center; background-blend-mode:multiply;">
+  <div class="container">
+    <div class="col-lg-7">
+      <p class="masthead-eyebrow" style="color:var(--ga-orange);">About GreenAiriva</p>
+      <h1 class="ga-seg-heading">Engineering Credibility Into Every Claim We Make.</h1>
+      <p class="ga-seg-sub">We build urban greenhouse gas capture technology designed from the ground up for verifiability — because a reduction that can't be audited isn't a reduction at all.</p>
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a class="btn btn-primary btn-xl" href="{{ site.baseurl }}/demo/">Request Demo / PoC</a>
+        <a class="btn btn-outline-light btn-xl" href="{{ site.baseurl }}/solutions/">Our Solution</a>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="page-section" id="about">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-heading text-uppercase">Who We Are</h2>
+      <h3 class="section-subheading text-muted">
+        GreenAiriva works to improve urban air quality, protect public health, and make concrete, measurable contributions to the fight against climate change. We set a new standard in sustainable urbanism with data-driven, auditable technology.
+      </h3>
+    </div>
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-3.webp" alt="Good Health and Well-Being" style="max-width:100%; max-height:100%;" loading="lazy">
+        </span>
+        <h4 class="my-3">Good Health &amp; Well-Being</h4>
+        <p class="text-muted">Actively removing greenhouse gases and pollutants from urban airflows — protecting public health where exposure is highest.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-11.webp" alt="Sustainable Cities and Communities" style="max-width:100%; max-height:100%;" loading="lazy">
+        </span>
+        <h4 class="my-3">Sustainable Cities &amp; Communities</h4>
+        <p class="text-muted">Modular, solar-powered infrastructure that integrates into any urban environment — no grid dependency, no visual disruption, no civil works.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="service-img-wrap" style="display:inline-block; width:144px; height:144px; margin-bottom:20px;">
+          <img src="{{ site.baseurl }}/assets/img/Solution/SDG-13.webp" alt="Climate Action" style="max-width:100%; max-height:100%;" loading="lazy">
+        </span>
+        <h4 class="my-3">Climate Action</h4>
+        <p class="text-muted">Each unit delivers a documented, auditable greenhouse gas reduction — verified by mass-based measurement, not modelled estimates.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- VISION -->
 <section class="page-section bg-light" id="vision">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Vision</h2>
-                <p style="text-align:justify;">
-                    Our vision at GreenAiriva is to take concrete and measurable steps for healthier, more livable, and sustainable cities, leading the way in environmental health and the fight against climate change. With our technology that directly contributes to SDG-3, SDG-11, and SDG-13, we reduce air pollution and greenhouse gas emissions, protecting public health. Our dream is to pioneer the world’s first zero-carbon-footprint operations and production processes, setting a new global standard for sustainability.
-                </p>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (1).webp" alt="Vision" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
-        </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-start mb-4 mb-md-0">
+        <h2 class="section-heading text-uppercase">Vision</h2>
+        <p style="text-align:justify;">
+          Our vision at GreenAiriva is to take concrete and measurable steps toward healthier, more livable, and sustainable cities — pioneering environmental accountability at the point of emission, not offset away from it. With our technology aligned with SDG-3, SDG-11, and SDG-13, we reduce greenhouse gas concentrations and protect public health in the environments where people actually live and work. Our ambition is to set a new global standard: active, local, verifiable urban climate intervention — as a documented asset, not a claim.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 order-1 order-md-2 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
+        <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (1).webp" alt="GreenAiriva vision" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;" loading="lazy">
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- MISSION -->
 <section class="page-section bg-white" id="mission">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-1 order-md-1 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (2).webp" alt="Mission" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
-            <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Mission</h2>
-                <p style="text-align:justify;">
-                    Our mission at GreenAiriva is to improve urban air quality and protect public health by offering innovative, science-based solutions that effectively capture harmful particles and greenhouse gases.<br><br>
-                    We are committed to supporting sustainable urban transformation by integrating advanced technology, data, and community engagement. By prioritizing measurable environmental outcomes, we aim to empower cities and organizations to reach climate targets, enhance quality of life, and promote a culture of sustainability.<br><br>
-                    Through continuous innovation, transparency, and collaboration, we strive to set new standards in clean air technologies and become a trusted partner for sustainable progress worldwide.
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 order-1 order-md-1 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
+        <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (2).webp" alt="GreenAiriva mission" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;" loading="lazy">
+      </div>
+      <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-start mb-4 mb-md-0">
+        <h2 class="section-heading text-uppercase">Mission</h2>
+        <p style="text-align:justify;">
+          Our mission at GreenAiriva is to improve urban air quality and protect public health by offering innovative, science-based solutions that actively capture greenhouse gases from the environments where emissions peak.
+        </p>
+        <p style="text-align:justify;">
+          We are committed to supporting sustainable urban transformation through advanced technology, real-time data, and institutional collaboration. By prioritising measurable, documented environmental outcomes, we empower cities and organisations to satisfy climate obligations, enhance quality of life, and demonstrate credible progress to the stakeholders that matter.
+        </p>
+        <p style="text-align:justify;">
+          Through continuous innovation, transparency, and verifiable evidence, we aim to become the trusted infrastructure partner for urban decarbonisation — globally scalable, locally accountable.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Why GreenAiriva? -->
+<!-- WHY GREENAIRIVA -->
 <section class="page-section bg-light" id="whyus">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-2 order-md-1 mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Why GreenAiriva?</h2>
-                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; text-align: justify;">
-                    <li><b>Innovative Technology:</b> We go beyond traditional Direct Air Capture (DAC) methods, offering a low-energy, physical adsorption-based solution.</li>
-                    <li><b>Real-Time Monitoring:</b> We enable smart city integration with instant air quality analytics.</li>
-                    <li><b>Economic & Eco-Friendly:</b> We create economic value for our clients through carbon credit generation, sustainability reporting, and commercialization of captured pollutants.</li>
-                    <li><b>Global Vision:</b> Fully aligned with the EU Green Deal and the 2050 Net Zero Emissions goal, GreenAiriva is scalable from Turkey to the world.</li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (4).webp" alt="Why Us" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
-        </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 order-2 order-md-1 mb-4 mb-md-0">
+        <h2 class="section-heading text-uppercase">Why GreenAiriva?</h2>
+        <ul style="list-style-type:none; padding-left:0; margin-bottom:0;">
+          <li style="margin-bottom:1rem;"><b>Deployable Urban Scale:</b> Goes beyond centralised, large-scale capture facilities — modular and deployable in any urban environment without grid dependency or infrastructure complexity.</li>
+          <li style="margin-bottom:1rem;"><b>Auditable Measurement:</b> Mass-based, real-time data — not modelled estimates. Every reduction figure is structured for third-party verification and compliance reporting.</li>
+          <li style="margin-bottom:1rem;"><b>Compliance Value:</b> Supports ESG disclosure, CBAM documentation, and municipal climate plan reporting — delivering measurable climate value that is documented, attributed, and usable.</li>
+          <li><b>Global Alignment:</b> Designed to satisfy Net Zero 2053, EU Green Deal, CBAM, and TSRS-ESG requirements — scalable from Turkey to any urban market.</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 order-1 order-md-2 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
+        <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (4).webp" alt="Why GreenAiriva" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;" loading="lazy">
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Social and Environmental Contribution -->
+<!-- SOCIAL & ENVIRONMENTAL CONTRIBUTION -->
 <section class="page-section bg-white" id="contribution">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 order-1 order-md-1 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
-                <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (3).webp" alt="Contribution" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;">
-            </div>
-            <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="section-heading text-uppercase">Social and Environmental Contribution</h2>
-                <p style="text-align:justify;">
-                    GreenAiriva operates year-round with nearly all its energy supplied by solar power, achieving an almost zero carbon footprint. Its filtration technology causes no additional environmental harm, and all components are highly durable. In terms of cost-effectiveness and climate benefit, GreenAiriva outperforms current greenhouse gas reduction alternatives, delivering 2–4 times greater impact than converting a CNG bus to electric. This makes it a sustainable, economical, and eco-friendly solution.
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 order-1 order-md-1 text-center d-flex align-items-center justify-content-center mb-4 mb-md-0">
+        <img src="{{ site.baseurl }}/assets/img/about/Adsız tasarım (3).webp" alt="Social and Environmental Contribution" class="img-fluid shadow" style="max-width:480px; width:100%; height:auto;" loading="lazy">
+      </div>
+      <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-start mb-4 mb-md-0">
+        <h2 class="section-heading text-uppercase">Social and Environmental Contribution</h2>
+        <p style="text-align:justify;">
+          GreenAiriva operates year-round with its energy supplied by solar power — an energy-positive system with no grid dependency and no operating carbon footprint. Units are designed for long-service urban deployment: compact, weather-resistant, and low-maintenance.
+        </p>
+        <p style="text-align:justify;">
+          In terms of documented climate impact per unit of urban footprint occupied, GreenAiriva delivers active, mass-based greenhouse gas reduction at a location-specificity that passive or offset-based approaches cannot replicate. The result is infrastructure that contributes to public health, meets institutional compliance needs, and produces the kind of evidence that auditors, city councils, and ESG teams can act on.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Contact -->
-<section class="page-section" id="contact">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Do not hesitate to give us your feedback.</h3>
-        </div>
-        <form action="https://formspree.io/f/mblyjkpa" method="POST">
-            <div class="row align-items-stretch mb-5">
-                <div class="col-md-6">
-                    <div class="form-group mb-3">
-                        <input class="form-control" type="text" name="name" placeholder="Your Name *" required />
-                    </div>
-                    <div class="form-group mb-3">
-                        <input class="form-control" type="email" name="email" placeholder="Your Email *" required />
-                    </div>
-                    <div class="form-group mb-3">
-                        <input class="form-control" type="tel" name="phone" placeholder="Your Phone *" required />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group mb-3">
-                        <textarea class="form-control" name="message" placeholder="Your Message *" rows="8" required></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
-            </div>
-        </form>
+<!-- ROADMAP -->
+<section class="ps-timeline-sec" id="roadmap">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h2 class="section-heading text-uppercase">Development Roadmap</h2>
     </div>
+    <p class="text-center text-muted mb-5">📍 Current Stage: TRL 3 → TRL 4 Transition</p>
+    <ol class="ps-timeline">
+      <li>
+        <div class="img-handler-top">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-research.webp" alt="Research phase" loading="lazy"/>
+        </div>
+        <div class="ps-bot">
+          <p>Scientific Research &amp; Feasibility (Completed – TRL 3 validated)</p>
+        </div>
+        <span class="ps-sp-top">01</span>
+      </li>
+      <li>
+        <div class="img-handler-bot">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-design.webp" alt="Design phase" loading="lazy"/>
+        </div>
+        <div class="ps-top">
+          <p>Material Testing &amp; System Design (Final iterations in progress)</p>
+        </div>
+        <span class="ps-sp-bot">02</span>
+      </li>
+      <li>
+        <div class="img-handler-top">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-prototip.webp" alt="Prototype phase" loading="lazy"/>
+        </div>
+        <div class="ps-bot">
+          <p>Prototype Manufacturing (Target: Q2–Q4 2026)</p>
+        </div>
+        <span class="ps-sp-top">03</span>
+      </li>
+      <li>
+        <div class="img-handler-bot">
+          <img src="{{ site.baseurl }}/assets/img/roadmap/road-map-pilot.webp" alt="Pilot deployment" loading="lazy"/>
+        </div>
+        <div class="ps-top">
+          <p>Pilot Deployment (Planned with municipal partners)</p>
+        </div>
+        <span class="ps-sp-bot">04</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- PARTNER / ADVISOR PLACEHOLDER -->
+<section class="page-section bg-white">
+  <div class="container text-center">
+    <p class="ga-proof-logos-label">Partners, Advisors &amp; References — Q3 2026</p>
+    <div class="ga-proof-logo-placeholders justify-content-center">
+      <div class="ga-logo-ph" aria-hidden="true"></div>
+      <div class="ga-logo-ph" aria-hidden="true"></div>
+      <div class="ga-logo-ph" aria-hidden="true"></div>
+      <div class="ga-logo-ph" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="ga-cta-banner">
+  <div class="container text-center">
+    <h2 class="ga-cta-heading">Ready to Start the Technical Conversation?</h2>
+    <p class="ga-cta-sub">A 30-minute briefing gives your team everything needed to evaluate a PoC — no commitment, full documentation provided.</p>
+    <a class="btn btn-primary btn-xl" href="{{ site.baseurl }}/demo/">Request Demo / PoC &rarr;</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="page-section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Contact Us</h2>
+      <h3 class="section-subheading text-muted">Partnership, media, or technical inquiries — we respond to every message.</h3>
+    </div>
+    <p class="text-center text-muted mb-4">Direct contact: <a href="mailto:info@greenairiva.com.tr">info@greenairiva.com.tr</a></p>
+    <form action="https://formspree.io/f/mblyjkpa" method="POST">
+      <div class="row align-items-stretch mb-5">
+        <div class="col-md-6">
+          <div class="form-group mb-3">
+            <input class="form-control" type="text" name="name" placeholder="Your Name *" required />
+          </div>
+          <div class="form-group mb-3">
+            <input class="form-control" type="email" name="email" placeholder="Your Email *" required />
+          </div>
+          <div class="form-group mb-3">
+            <input class="form-control" type="text" name="organization" placeholder="Your Organisation" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group mb-3">
+            <textarea class="form-control" name="message" placeholder="Your Message *" rows="8" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+      </div>
+    </form>
+  </div>
 </section>

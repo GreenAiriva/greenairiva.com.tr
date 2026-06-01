@@ -1,23 +1,75 @@
-<footer class="footer py-4">
+<footer class="ga-footer">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-4 text-lg-start mb-3 mb-lg-0">
-        Telif Hakkı &copy; GreenAiriva 2025
+    <div class="row g-4 ga-footer-top">
+
+      <!-- Marka -->
+      <div class="col-lg-3 col-md-6">
+        <a href="{{ site.baseurl }}/tr/" class="ga-footer-brand">
+          <img src="{{ site.baseurl }}/assets/img/navbar-logo.svg" alt="GreenAiriva" style="height:36px; filter:brightness(0) invert(1);" />
+        </a>
+        <p class="ga-footer-tagline">Modüler, enerji-pozitif kentsel sera gazı yakalama — kütlesel MRV ile doğrulanmış.</p>
+        <div class="ga-footer-social">
+          <a href="https://www.instagram.com/greenairiva/" aria-label="Instagram" class="ga-social-btn">
+            <img src="{{ site.baseurl }}/assets/img/logos/icons8-instagram-500.svg" alt="Instagram" style="width:18px;height:18px;filter:invert(1);"/>
+          </a>
+          <a href="https://www.linkedin.com/company/greenairiva/" aria-label="LinkedIn" class="ga-social-btn">
+            <img src="{{ site.baseurl }}/assets/img/logos/icons8-linkedin-500.svg" alt="LinkedIn" style="width:18px;height:18px;filter:invert(1);"/>
+          </a>
+          <a href="https://x.com/greenairiva/" aria-label="X" class="ga-social-btn">
+            <img src="{{ site.baseurl }}/assets/img/logos/icons8-x-500.svg" alt="X" style="width:18px;height:18px;filter:invert(1);"/>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-4 my-3 my-lg-0 text-center">
-        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/greenairiva/" aria-label="Instagram">
-          <img src="{{ site.baseurl }}/assets/img/logos/icons8-instagram-500.svg" alt="Instagram" style="width:24px; height:24px; object-fit:contain; filter:invert(1);" />
-        </a>
-        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/company/greenairiva/" aria-label="LinkedIn">
-          <img src="{{ site.baseurl }}/assets/img/logos/icons8-linkedin-500.svg" alt="LinkedIn" style="width:24px; height:24px; object-fit:contain; filter:invert(1);" />
-        </a>
-        <a class="btn btn-dark btn-social mx-2" href="https://x.com/greenairiva/" aria-label="X">
-          <img src="{{ site.baseurl }}/assets/img/logos/icons8-x-500.svg" alt="X" style="width:24px; height:24px; object-fit:contain; filter:invert(1);" />
-        </a>
+
+      <!-- Çözümler -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="ga-footer-heading">Çözümler</p>
+        <ul class="ga-footer-list">
+          <li><a href="{{ site.baseurl }}/tr/solutions/">Genel Bakış</a></li>
+          <li><a href="{{ site.baseurl }}/tr/solutions/municipality/">Belediyeler</a></li>
+          <li><a href="{{ site.baseurl }}/tr/solutions/industry/">Sanayi Bölgeleri</a></li>
+          <li><a href="{{ site.baseurl }}/tr/solutions/telecom/">Telekom &amp; AHR</a></li>
+        </ul>
       </div>
-      <div class="col-lg-4 text-lg-end text-center">
-        <a class="link-dark text-decoration-none me-3" href="{{ site.baseurl }}/privacy/">Gizlilik Politikası</a>
-        <a class="link-dark text-decoration-none" href="{{ site.baseurl }}/terms/">Kullanım Şartları</a>
+
+      <!-- Şirket -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="ga-footer-heading">Şirket</p>
+        <ul class="ga-footer-list">
+          <li><a href="{{ site.baseurl }}/tr/about/">Hakkımızda</a></li>
+          <li><a href="{{ site.baseurl }}/tr/impact/">Etki &amp; MRV</a></li>
+          <li><a href="{{ site.baseurl }}/tr/trust/">Güven &amp; Uyum</a></li>
+          <li><a href="{{ site.baseurl }}/tr/career/">Kariyer</a></li>
+        </ul>
+      </div>
+
+      <!-- Kaynaklar -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="ga-footer-heading">Kaynaklar</p>
+        <ul class="ga-footer-list">
+          <li><a href="https://blog.greenairiva.com.tr/tr/" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="{{ site.baseurl }}/tr/impact/">MRV Metodolojisi</a></li>
+          <li><a href="{{ site.baseurl }}/tr/trust/">Durum Tespiti</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="col-lg-3 col-md-6">
+        <p class="ga-footer-heading">Başlangıç Noktanız</p>
+        <p class="ga-footer-cta-text">PoC veya teknik brifing başlatmaya hazır mısınız?</p>
+        <a class="btn btn-primary btn-sm px-4 py-2" href="{{ site.baseurl }}/tr/demo/" style="font-family:'Poppins',sans-serif;font-size:0.82rem;">Demo / PoC Talep Et &rarr;</a>
+        <p class="ga-footer-email mt-3">
+          <a href="mailto:info@greenairiva.com.tr">info@greenairiva.com.tr</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="ga-footer-bottom">
+      <p class="ga-footer-copy">Telif Hakkı &copy; GreenAiriva 2025</p>
+      <div class="ga-footer-legal">
+        <a href="{{ site.baseurl }}/privacy/">Gizlilik Politikası</a>
+        <a href="{{ site.baseurl }}/terms/">Kullanım Şartları</a>
       </div>
     </div>
   </div>
