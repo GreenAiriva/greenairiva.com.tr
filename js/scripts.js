@@ -88,6 +88,57 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// ── PROMPT 7: Scroll-reveal & Card stagger ──────────────────────────────────
+(function () {
+  // IntersectionObserver desteklenmiyorsa hiçbir şey yapma (tüm içerik görünür kalır)
+  if (!('IntersectionObserver' in window)) return;
+
+  // Reduced-motion tercihine saygı göster
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.body.classList.add('ga-scroll-animated');
+
+  // Card selectors — stagger animasyonu alacak elementler
+  const CARD_SELECTORS = [
+    '.ga-diff-card', '.ga-segment-card', '.ga-metric-card',
+    '.ga-outcome-card', '.ga-pain-card', '.ga-framework-card',
+    '.ga-mrv-step', '.ga-proof-card', '.ga-cert-card',
+    '.ga-esg-card', '.ga-model-card', '.ga-compare-card',
+    '.ga-data-card', '.blog-card', '.ga-step'
+  ].join(', ');
+
+  // Heading reveals
+  const HEADING_SELECTORS = [
+    '.section-heading', '.ga-band-heading', '.ga-seg-heading',
+    '.ga-demo-heading', '.ga-cta-heading', '.ga-form-section-title'
+  ].join(', ');
+
+  // Cards: stagger delay hesapla (her container içinde 0–3 index, 85ms artış)
+  const containerSeen = new WeakMap();
+  document.querySelectorAll(CARD_SELECTORS).forEach(card => {
+    card.classList.add('ga-stagger-child');
+    const parent = card.parentElement;
+    if (!containerSeen.has(parent)) containerSeen.set(parent, 0);
+    const idx = containerSeen.get(parent);
+    card.style.transitionDelay = (idx % 4 * 85) + 'ms';
+    containerSeen.set(parent, idx + 1);
+  });
+
+  // Headings
+  document.querySelectorAll(HEADING_SELECTORS).forEach(h => h.classList.add('ga-reveal-heading'));
+
+  // Single observer — threshold 0 karşılamak element görünür olduğunda hemen tetikle
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('revealed');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.ga-stagger-child, .ga-reveal-heading').forEach(el => obs.observe(el));
+})();
+
 // Sadece dropdown içindeki item veya gerçek nav-link'e tıklanınca menüyü kapat
 document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function(element) {
   element.addEventListener('click', function(e) {

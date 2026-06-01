@@ -3374,6 +3374,175 @@ h1, h2, h3, h4, h5 {
 }
 .ga-data-list li:last-child { border-bottom: none; }
 
+/* =========================================================
+   PROMPT 7 — Design Polish
+   Elevation tokens · Focus rings · Scroll-reveal · Typography
+   ========================================================= */
+
+/* Extended elevation & design token set (appended to :root cascade) */
+:root {
+  --shadow-xs:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.13), 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-xl:  0 16px 64px rgba(0,0,0,0.16), 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-2xl: 0 32px 80px rgba(0,0,0,0.20), 0 16px 40px rgba(0,0,0,0.12);
+
+  --shadow-green-xs:  0 2px 8px rgba(30,77,59,0.08);
+  --shadow-green-sm:  0 4px 16px rgba(30,77,59,0.12);
+  --shadow-green-md:  0 8px 32px rgba(30,77,59,0.16);
+  --shadow-green-lg:  0 16px 52px rgba(30,77,59,0.22);
+
+  --radius-xs:  0.25rem;
+  --radius-sm:  0.5rem;
+  --radius-md:  0.75rem;
+  --radius-lg:  1rem;
+  --radius-xl:  1.5rem;
+  --radius-2xl: 2rem;
+
+  --transition-fast: 0.16s ease;
+  --transition-base: 0.24s ease;
+  --transition-slow: 0.40s ease;
+
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  6rem;
+  --space-2xl: 9rem;
+}
+
+/* ── Elevation token overrides for key components ── */
+.ga-diff-card {
+  box-shadow: var(--shadow-green-xs);
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.ga-diff-card:hover {
+  box-shadow: var(--shadow-green-lg);
+  transform: translateY(-5px);
+}
+.ga-diff-card--featured { box-shadow: var(--shadow-green-sm); }
+
+.ga-segment-card {
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+.ga-segment-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-5px); }
+
+.ga-metric-card {
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+.ga-metric-card:hover { transform: translateY(-3px); }
+
+.ga-framework-card {
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.ga-framework-card:hover { box-shadow: var(--shadow-green-md); transform: translateY(-4px); }
+
+.ga-proof-card {
+  border-radius: var(--radius-md);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.ga-proof-card:hover { box-shadow: var(--shadow-green-sm); transform: translateY(-3px); }
+
+.ga-pain-card {
+  border-radius: var(--radius-md);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.ga-pain-card:hover { box-shadow: var(--shadow-green-sm); transform: translateY(-3px); }
+
+.ga-cert-card { transition: box-shadow var(--transition-base), transform var(--transition-base); }
+.ga-cert-card:hover { transform: translateY(-3px); }
+
+.ga-model-card { transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base); }
+.ga-model-card:hover { transform: translateY(-4px); }
+
+.hero-device-wrap { box-shadow: var(--shadow-2xl); border-radius: var(--radius-xl); }
+.ga-solutions-visual { box-shadow: var(--shadow-xl); border-radius: var(--radius-xl); }
+.ga-verify-visual { box-shadow: var(--shadow-sm); border-radius: var(--radius-xl); }
+
+/* ── Button transitions ── */
+.btn { transition: background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast); }
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn:active { transform: translateY(0); box-shadow: var(--shadow-xs); }
+.btn-primary:hover { box-shadow: 0 8px 24px rgba(244,154,39,0.35); }
+
+/* ── Focus rings — WCAG AA ── */
+:focus-visible {
+  outline: 2px solid var(--ga-orange);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+.btn:focus-visible { outline-offset: 4px; }
+.form-control:focus {
+  border-color: var(--ga-green);
+  box-shadow: 0 0 0 3px rgba(30,77,59,0.12);
+  outline: none;
+}
+.accordion-button:focus { outline: none; }
+.accordion-button:focus-visible { outline: 2px solid var(--ga-orange); outline-offset: -2px; }
+
+/* ── Scroll-reveal — body.ga-scroll-animated controls visibility ── */
+body.ga-scroll-animated .ga-stagger-child {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+body.ga-scroll-animated .ga-stagger-child.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+body.ga-scroll-animated .ga-reveal-heading {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.38s ease, transform 0.38s ease;
+}
+body.ga-scroll-animated .ga-reveal-heading.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.ga-scroll-animated .ga-stagger-child,
+  body.ga-scroll-animated .ga-reveal-heading { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Display heading ── */
+.ga-display {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+}
+
+/* ── Prose readability ── */
+.ga-prose {
+  max-width: 68ch;
+  line-height: 1.82;
+}
+
+/* ── Subtle section divider ── */
+.ga-divider {
+  height: 1px;
+  border: none;
+  background: linear-gradient(to right, transparent, rgba(30,77,59,0.12), transparent);
+  margin: 0;
+}
+
+/* ── Blog card elevated ── */
+.blog-card {
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-green-md); }
+
+/* ── Navbar smooth transition ── */
+#mainNav { transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; }
+#mainNav.navbar-shrink { box-shadow: var(--shadow-md); }
+
 /* --- Responsive --- */
 @media (max-width: 991.98px) {
   .masthead-heading-v2 { font-size: 2.6rem; }
