@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<main class="blog-post-page py-5" id="blog-post">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        <article class="blog-article">
+          <header class="blog-article-header mb-4">
+            {% if page.tags %}
+              <ul class="blog-article-tags list-unstyled">
+                {% for tag in page.tags %}
+                  <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            <h1 class="blog-article-title">{{ page.title }}</h1>
+            <p class="blog-article-meta">
+              {% if page.date %}
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+              {% endif %}
+              {% if page.reading_time %}
+                · {{ page.reading_time }}
+              {% endif %}
+            </p>
+          </header>
+
+          {% if page.image %}
+            <figure class="blog-article-figure">
+              <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" loading="lazy" />
+              {% if page.image_caption %}
+                <figcaption>{{ page.image_caption }}</figcaption>
+              {% endif %}
+            </figure>
+          {% endif %}
+
+          <div class="blog-article-content">
+            {{ content }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</main>

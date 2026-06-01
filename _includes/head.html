@@ -1,0 +1,82 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- SEO -->
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.{% endif %}" />
+  <meta name="author" content="GreenAiriva" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical & Alternate (hreflang) -->
+  <link rel="canonical" href="https://www.greenairiva.com.tr{{ page.url }}" />
+  {% if page.alternate_url %}
+    {% if page.lang == "tr" %}
+  <link rel="alternate" hreflang="tr" href="https://www.greenairiva.com.tr{{ page.url }}" />
+  <link rel="alternate" hreflang="en" href="https://www.greenairiva.com.tr{{ page.alternate_url }}" />
+    {% else %}
+  <link rel="alternate" hreflang="en" href="https://www.greenairiva.com.tr{{ page.url }}" />
+  <link rel="alternate" hreflang="tr" href="https://www.greenairiva.com.tr{{ page.alternate_url }}" />
+    {% endif %}
+  <link rel="alternate" hreflang="x-default" href="https://www.greenairiva.com.tr/" />
+  {% endif %}
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GreenAiriva" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Innovative Air Purification Solutions{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.{% endif %}" />
+  <meta property="og:url" content="https://www.greenairiva.com.tr{{ page.url }}" />
+  <meta property="og:image" content="https://www.greenairiva.com.tr/assets/img/header-bg.webp" />
+  <meta property="og:locale" content="{% if page.lang == 'tr' %}tr_TR{% else %}en_US{% endif %}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@greenairiva" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Innovative Air Purification Solutions{% endif %}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.{% endif %}" />
+  <meta name="twitter:image" content="https://www.greenairiva.com.tr/assets/img/header-bg.webp" />
+
+  <!-- Dinamik başlık -->
+  <title>{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Innovative Air Purification Solutions{% endif %}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico" />
+
+  <!-- Ana stil dosyası -->
+  <link href="{{ site.baseurl }}/css/styles.css" rel="stylesheet" />
+
+  <!-- Lang-switch butonu için ekstra stiller -->
+  <style>
+    .lang-switcher {
+      gap: 0.5rem;
+    }
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: #fff;
+      font-size: 0.85rem;
+      line-height: 1;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+    }
+    .lang-switch:hover,
+    .lang-switch:focus {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    .lang-switch.lang-active,
+    .lang-switch[aria-current="true"] {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      border-color: transparent;
+      cursor: default;
+      pointer-events: none;
+    }
+  </style>
+</head>

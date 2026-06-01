@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">GreenAiriva blog placeholder</title>
+  <desc id="desc">Abstract gradient background with GreenAiriva logotype placeholder text.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27ae60" />
+      <stop offset="100%" stop-color="#2980ef" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#grad)" rx="28" />
+  <g fill="#ffffff" opacity="0.25">
+    <circle cx="120" cy="90" r="70" />
+    <circle cx="520" cy="320" r="90" />
+  </g>
+  <text x="50%" y="52%" fill="#ffffff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="600" text-anchor="middle">GreenAiriva Blog</text>
+  <text x="50%" y="62%" fill="#f2f6ff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" text-anchor="middle">Clean air insights &amp; updates</text>
+</svg>

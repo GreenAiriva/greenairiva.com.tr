@@ -1,0 +1,38 @@
+---
+layout: none
+---
+
+## Position: Chemist / Materials Science Specialist
+
+### Job Description
+GreenAiriva is an environmental technology startup developing innovative, solar-powered urban air purification systems to improve city air quality and reduce greenhouse gas emissions.  
+Our project is a high-tech R&D initiative aiming to secure support from TÜBİTAK and international funding programs.  
+As a Chemist / Materials Science Specialist, you will work on adsorbent selection and development, material characterization, and performance testing on a project-based basis.
+
+### Key Responsibilities
+- Selection and/or synthesis of adsorbent materials for N₂O, CH₄, CO₂, and F-gases
+- Hydrophobic modification and optimization of adsorbents
+- Testing adsorbent regeneration processes
+- Conducting or coordinating material characterization analyses (XRD, BET, SEM, TGA, etc.)
+- Verifying adsorbent performance through laboratory experiments
+- Providing technical support for filter integration with the hardware team
+
+### Requirements
+- Bachelor’s or Master’s degree in Chemistry, Chemical Engineering, Materials Science, or related fields
+- Knowledge or experience in adsorbent technologies (COF, MOF, zeolite, etc.)
+- Experience with material analysis techniques (XRD, BET, SEM, TGA, etc.)
+- Preferably, experience in developing materials for environmental applications
+- Ability to attend project activities in Ankara when required
+
+### Opportunities & Benefits
+- Active role in R&D within an innovative environmental technology startup
+- Opportunity to participate in TÜBİTAK, EU, and technopark-supported projects
+- Social security and tax benefits if technopark application is approved (for long-term collaborations)
+- Project-based compensation (payment upon grant/funding approval)
+- Long-term equity opportunities (equity/sweet equity model)
+- Flexible work arrangements (remote/hybrid) and access to equipment via laboratory partnerships
+
+### Application Process
+Applications should be submitted via GreenAiriva’s application form.  
+Candidates must attach their CV and, if available, links to projects/portfolios.  
+No application deadline — evaluations will be conducted on a rolling basis.
