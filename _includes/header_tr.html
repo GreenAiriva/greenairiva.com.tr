@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="{{ site.baseurl }}/tr/">
+      <img src="{{ site.baseurl }}/assets/img/navbar-logo.svg" alt="GreenAiriva logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Navigasyonu aç/kapat">
+      Menü
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 30 30" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;">
+        <path d="M4 7h22M4 15h22M4 23h22"/>
+      </svg>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}/tr/solutions/" id="solutionsDropdownTr" data-bs-toggle="dropdown" aria-expanded="false">Çözümler</a>
+          <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="solutionsDropdownTr">
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/solutions/">Genel Bakış</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/solutions/municipality/">Belediyeler</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/solutions/industry/">Sanayi Bölgeleri</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/solutions/telecom/">Telekom &amp; AHR</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/tr/impact/">Etki</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.baseurl }}/tr/trust/">Güven</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}/tr/about/" id="aboutDropdownTr" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
+          <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdownTr">
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/about/">Hakkımızda</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/about/#vizyon">Vizyon</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/about/#misyon">Misyon</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/about/#whyus">Neden GreenAiriva?</a></li>
+            <li><a class="dropdown-item custom-dropdown-item" href="{{ site.baseurl }}/tr/career/">Kariyer</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://blog.greenairiva.com.tr/tr/" target="_blank" rel="noopener">Kaynaklar</a>
+        </li>
+        <!-- Language Switch -->
+        <li class="nav-item d-flex align-items-center lang-switcher" aria-label="Dil seçici">
+          <span class="lang-switch lang-active" aria-current="true">TR</span>
+          <a class="lang-switch" data-lang="en" href="{{ site.baseurl }}{{ page.alternate_url | default: '/' }}" rel="alternate" hreflang="en">EN</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-primary btn-sm px-3 py-2" href="{{ site.baseurl }}/tr/demo/" style="font-family:'Poppins',sans-serif;font-size:0.78rem;letter-spacing:0.5px;border-radius:6px;">Demo &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

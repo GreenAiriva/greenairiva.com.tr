@@ -1,0 +1,21 @@
+title: GreenAiriva
+email: info@greenairiva.com.tr
+description: >-
+  GreenAiriva is an innovative air purification solution that captures particulate matter and greenhouse gases, improving urban air quality and contributing to climate action.
+baseurl: "" # GitHub Pages için
+url: "https://www.greenairiva.com.tr"
+twitter_username: greenairiva
+github_username: greenairiva
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Bu dosyaları build’e dahil et
+include:
+  - career/jobs.json
+  - career/tr/jobs.json
+  - career/jobs        # İngilizce ilan .md dosyaları
+  - career/tr/jobs     # Türkçe ilan .md dosyaları
