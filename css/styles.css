@@ -1681,12 +1681,20 @@ header.masthead {
   justify-content: flex-end;
   align-items: flex-start;
   color: #fff;
-  background-image: url("../assets/img/header-bg.webp");
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(4, 20, 10, 0.82) 0%,
+      rgba(4, 20, 10, 0.55) 45%,
+      rgba(4, 20, 10, 0.18) 100%
+    ),
+    url("../assets/img/header-bg.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 90px 0 5rem 0;
   box-sizing: border-box;
+  position: relative;
 }
 header.masthead .container {
   display: block;
@@ -3573,6 +3581,212 @@ body.ga-scroll-animated .ga-reveal-heading.revealed {
 /* ── Navbar smooth transition ── */
 #mainNav { transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; }
 #mainNav.navbar-shrink { box-shadow: var(--shadow-md); }
+
+/* ── Navbar Demo button — belirgin CTA ── */
+#mainNav .btn-primary {
+  background-color: var(--ga-orange);
+  border-color: var(--ga-orange);
+  color: #fff;
+  font-weight: 700;
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+#mainNav .btn-primary:hover {
+  background-color: var(--ga-orange-dark);
+  border-color: var(--ga-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(244,154,39,0.4);
+}
+
+/* ── Card orange-top accent ── */
+.ga-diff-card--featured {
+  border-top: 3px solid var(--ga-orange);
+}
+.ga-model-card--featured {
+  border-top: 3px solid var(--ga-orange);
+}
+
+/* ── Smooth image loads ── */
+img[loading="lazy"] {
+  transition: opacity 0.4s ease;
+}
+
+/* ── Dark section soft top border ── */
+.ga-problem-band,
+.ga-impact-band,
+.ga-wow-band,
+.ga-product-showcase {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ── Section heading letter-spacing ── */
+.section-heading.text-uppercase {
+  letter-spacing: 0.08em;
+}
+
+/* ── Masthead eyebrow stronger ── */
+.masthead-eyebrow {
+  letter-spacing: 4px;
+}
+
+/* ── WOW number shadow glow ── */
+.ga-wow-number {
+  text-shadow: 0 0 60px rgba(244,154,39,0.35), 0 0 120px rgba(244,154,39,0.15);
+}
+
+/* =========================================================
+   "Az Kütle, Devasa Etki" WOW Band + GWP Chart
+   ========================================================= */
+.ga-wow-band {
+  background: #040d08;
+  padding: 7rem 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.ga-wow-band::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(244,154,39,0.10) 0%, rgba(244,154,39,0.03) 50%, transparent 70%);
+  pointer-events: none;
+}
+.ga-wow-band::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(30,77,59,0.25) 0%, transparent 65%);
+  pointer-events: none;
+}
+.ga-wow-headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  max-width: 680px;
+}
+.ga-wow-number {
+  color: var(--ga-orange);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  display: block;
+}
+.ga-wow-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.62);
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  line-height: 1.75;
+}
+
+/* GWP bar chart */
+.ga-gwp-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 820px;
+  margin-bottom: 2rem;
+}
+.ga-gwp-row {
+  display: grid;
+  grid-template-columns: 76px 1fr 150px;
+  align-items: center;
+  gap: 1.25rem;
+}
+.ga-gwp-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: right;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+}
+.ga-gwp-row--hero .ga-gwp-label { color: var(--ga-orange); }
+.ga-gwp-bar-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  height: 38px;
+  position: relative;
+  overflow: hidden;
+}
+.ga-gwp-bar {
+  height: 100%;
+  border-radius: 6px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+}
+.ga-gwp-bar.revealed { transform: scaleX(1); }
+.ga-gwp-bar--co2 {
+  width: 0.5%;
+  background: rgba(255,255,255,0.18);
+  min-width: 5px;
+}
+.ga-gwp-bar--n2o {
+  width: 27.3%;
+  background: linear-gradient(to right, var(--ga-orange), #f7b347);
+}
+.ga-gwp-bar--fgas {
+  width: 100%;
+  background: linear-gradient(to right, #e06000, #ff8c42, #ffb347);
+}
+.ga-gwp-bar-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(0,0,0,0.6);
+  white-space: nowrap;
+}
+.ga-gwp-bar--co2 .ga-gwp-bar-label { display: none; }
+.ga-gwp-val {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+}
+.ga-gwp-row--hero .ga-gwp-val { color: var(--ga-orange); font-size: 0.88rem; }
+.ga-gwp-row--fgas .ga-gwp-val { color: rgba(255,180,80,0.85); }
+/* ga-bar-animate: bar reveal kontrolü — ga-stagger-child ile çakışmaz */
+.ga-bar-animate { /* initial state scaleX(0) .ga-gwp-bar CSS'inden geliyor */ }
+.ga-bar-animate.revealed { transform: scaleX(1); }
+.ga-wow-source {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.28);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.ga-wow-caveat {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  font-style: italic;
+  max-width: 620px;
+  line-height: 1.6;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid rgba(244,154,39,0.3);
+  margin-top: 1rem;
+}
+@media (max-width: 767.98px) {
+  .ga-gwp-row { grid-template-columns: 60px 1fr 110px; gap: 0.75rem; }
+  .ga-gwp-bar-track { height: 30px; }
+  .ga-wow-number { font-size: 2.5rem; }
+}
+@media (max-width: 575.98px) {
+  .ga-gwp-row { grid-template-columns: 50px 1fr 90px; gap: 0.5rem; }
+  .ga-gwp-val { font-size: 0.7rem; }
+}
 
 /* --- Responsive --- */
 @media (max-width: 991.98px) {

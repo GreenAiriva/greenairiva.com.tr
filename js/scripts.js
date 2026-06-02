@@ -137,6 +137,16 @@ window.addEventListener('DOMContentLoaded', event => {
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.ga-stagger-child, .ga-reveal-heading').forEach(el => obs.observe(el));
+
+  // GWP bar chart — ayrı IntersectionObserver (scaleX animasyonu, translateY ile çakışmaz)
+  const barObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.ga-bar-animate').forEach(b => b.classList.add('revealed'));
+      barObs.unobserve(e.target);
+    });
+  }, { threshold: 0.3, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.ga-gwp-chart').forEach(chart => barObs.observe(chart));
 })();
 
 // Sadece dropdown içindeki item veya gerçek nav-link'e tıklanınca menüyü kapat
