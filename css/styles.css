@@ -2881,29 +2881,39 @@ h1, h2, h3, h4, h5 {
 }
 .ga-mrv-claim p { font-size: 0.88rem; color: #5a6270; line-height: 1.65; margin: 0; }
 
-/* ── Model video placeholder ── */
+/* ── Model video / image area — extends edge-to-edge inside card ── */
 .ga-model-video-wrap {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  margin-bottom: 1.25rem;
-  line-height: 0;
-  aspect-ratio: 16/9;
+  background: #fff;
+  /* negative margins counteract card's padding (2rem top, 1.75rem sides) */
+  margin: -2rem -1.75rem 1.5rem;
+  border-radius: 0;
+  border: none;
+  aspect-ratio: 4/3;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
-.ga-model-video-wrap video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ga-model-video-wrap video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .ga-model-video-placeholder {
-  color: rgba(255,255,255,0.25);
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  color: rgba(30,77,59,0.25);
   font-family: 'Poppins', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-align: center;
-  padding: 1rem;
 }
 @media (max-width: 767.98px) {
   .ga-solutions-visual { max-width: 100%; }
@@ -3021,6 +3031,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   flex-direction: column;
   transition: background 0.22s, border-color 0.22s;
+  overflow: hidden;
 }
 .ga-model-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(244,154,39,0.3); }
 .ga-model-card--featured { border-color: rgba(244,154,39,0.4); background: rgba(244,154,39,0.06); }
