@@ -2828,7 +2828,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 12px 32px rgba(0,0,0,0.35);
+  /*box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 12px 32px rgba(0,0,0,0.35); */
   line-height: 0;
 }
 .ga-showcase-video {
