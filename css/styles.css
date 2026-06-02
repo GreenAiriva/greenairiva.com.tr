@@ -3029,10 +3029,30 @@ h1, h2, h3, h4, h5 {
   max-width: 540px;
 }
 .ga-seg-hero-img {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.25);
+  filter: brightness(0) invert(1) opacity(0.18);
+}
+
+/* ── Segment hero visual differentiation ── */
+.ga-seg-hero--muni {
+  background: linear-gradient(145deg, #1a4535 0%, #1e4d3b 55%, #245c47 100%);
+}
+.ga-seg-hero--muni::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.15) 0%, rgba(30,77,59,0.05) 100%);
+}
+.ga-seg-hero--industry {
+  background: linear-gradient(145deg, #172e26 0%, #1e4d3b 55%, #1a3d32 100%);
+}
+.ga-seg-hero--industry::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.22) 0%, rgba(10,30,20,0.1) 100%);
+}
+.ga-seg-hero--telecom {
+  background: linear-gradient(145deg, #1e4d3b 0%, #235549 55%, #1c4a3d 100%);
+}
+.ga-seg-hero--telecom::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.18) 0%, rgba(244,154,39,0.04) 100%);
 }
 .ga-pain-card {
   background: #f8faf9;

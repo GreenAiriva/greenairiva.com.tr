@@ -26,7 +26,7 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Innovative Air Purification Solutions{% endif %}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}GreenAiriva is a modular, energy-positive urban unit that captures N₂O and high-GWP greenhouse gases at street level — verified MRV data for ESG, CBAM, and Net Zero compliance.{% endif %}" />
   <meta property="og:url" content="https://www.greenairiva.com.tr{{ page.url }}" />
-  <meta property="og:image" content="https://www.greenairiva.com.tr/assets/img/header-bg.webp" />
+  <meta property="og:image" content="https://www.greenairiva.com.tr{% if page.og_image %}{{ page.og_image }}{% else %}/assets/img/header-bg.webp{% endif %}" />
   <meta property="og:locale" content="{% if page.lang == 'tr' %}tr_TR{% else %}en_US{% endif %}" />
 
   <!-- Twitter Card -->
@@ -34,10 +34,32 @@
   <meta name="twitter:site" content="@greenairiva" />
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Innovative Air Purification Solutions{% endif %}" />
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}GreenAiriva is a modular, energy-positive urban unit that captures N₂O and high-GWP greenhouse gases at street level — verified MRV data for ESG, CBAM, and Net Zero compliance.{% endif %}" />
-  <meta name="twitter:image" content="https://www.greenairiva.com.tr/assets/img/header-bg.webp" />
+  <meta name="twitter:image" content="https://www.greenairiva.com.tr{% if page.og_image %}{{ page.og_image }}{% else %}/assets/img/header-bg.webp{% endif %}" />
 
   <!-- Dinamik başlık -->
   <title>{% if page.title %}{{ page.title }}{% else %}GreenAiriva – Verified Urban GHG Capture Technology{% endif %}</title>
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GreenAiriva",
+    "url": "https://www.greenairiva.com.tr",
+    "logo": "https://www.greenairiva.com.tr/assets/img/navbar-logo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@greenairiva.com.tr",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/greenairiva/",
+      "https://www.instagram.com/greenairiva/",
+      "https://x.com/greenairiva/"
+    ],
+    "description": "GreenAiriva is a modular, energy-positive urban unit that selectively captures N₂O and high-GWP greenhouse gases at street level with verified, mass-based MRV data."
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicon.svg" />
